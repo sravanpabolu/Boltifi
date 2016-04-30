@@ -11,28 +11,29 @@
 		A0A97BC41CD3DB32008420D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0A97BC21CD3DB32008420D4 /* Main.storyboard */; };
 		A0A97BC61CD3DB32008420D4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0A97BC51CD3DB32008420D4 /* Images.xcassets */; };
 		A0A97BC91CD3DB32008420D4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0A97BC71CD3DB32008420D4 /* LaunchScreen.xib */; };
-		A0A97BD51CD3DB32008420D4 /* BoltifiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A97BD41CD3DB32008420D4 /* BoltifiTests.swift */; };
+		A0BB39411CD4BA7F00AE0AFB /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A0BB393F1CD4BA7F00AE0AFB /* GoogleMaps.bundle */; };
+		A0BB39421CD4BA7F00AE0AFB /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0BB39401CD4BA7F00AE0AFB /* GoogleMaps.framework */; };
+		A0BB39441CD4BA9600AE0AFB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0BB39431CD4BA9600AE0AFB /* AVFoundation.framework */; };
+		A0BB394F1CD4BAFC00AE0AFB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0BB39451CD4BAFC00AE0AFB /* CoreData.framework */; };
+		A0BB39501CD4BAFC00AE0AFB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0BB39461CD4BAFC00AE0AFB /* CoreLocation.framework */; };
+		A0BB39511CD4BAFC00AE0AFB /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0BB39471CD4BAFC00AE0AFB /* CoreText.framework */; };
+		A0BB39521CD4BAFC00AE0AFB /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0BB39481CD4BAFC00AE0AFB /* GLKit.framework */; };
+		A0BB39531CD4BAFC00AE0AFB /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0BB39491CD4BAFC00AE0AFB /* ImageIO.framework */; };
+		A0BB39541CD4BAFC00AE0AFB /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A0BB394A1CD4BAFC00AE0AFB /* libc++.dylib */; };
+		A0BB39551CD4BAFC00AE0AFB /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A0BB394B1CD4BAFC00AE0AFB /* libz.dylib */; };
+		A0BB39561CD4BAFC00AE0AFB /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0BB394C1CD4BAFC00AE0AFB /* OpenGLES.framework */; };
+		A0BB39571CD4BAFC00AE0AFB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0BB394D1CD4BAFC00AE0AFB /* QuartzCore.framework */; };
+		A0BB39581CD4BAFC00AE0AFB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0BB394E1CD4BAFC00AE0AFB /* SystemConfiguration.framework */; };
+		A0BB395A1CD4BB0800AE0AFB /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A0BB39591CD4BB0800AE0AFB /* libicucore.dylib */; };
+		A0BB395B1CD4BC2F00AE0AFB /* GoogleMaps.bundle in Frameworks */ = {isa = PBXBuildFile; fileRef = A0BB393F1CD4BA7F00AE0AFB /* GoogleMaps.bundle */; };
+		A0BB395C1CD4BC3F00AE0AFB /* GoogleMaps.bundle in Sources */ = {isa = PBXBuildFile; fileRef = A0BB393F1CD4BA7F00AE0AFB /* GoogleMaps.bundle */; };
+		A0BB39611CD4BF7400AE0AFB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BB39601CD4BF7400AE0AFB /* Constants.swift */; };
 		A0CDA65E1CD3FE9500F18955 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CDA6581CD3FE9500F18955 /* Utils.swift */; };
-		A0CDA65F1CD3FE9500F18955 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CDA6581CD3FE9500F18955 /* Utils.swift */; };
 		A0CDA6601CD3FE9500F18955 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CDA65A1CD3FE9500F18955 /* BaseViewController.swift */; };
-		A0CDA6611CD3FE9500F18955 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CDA65A1CD3FE9500F18955 /* BaseViewController.swift */; };
 		A0CDA6621CD3FE9500F18955 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CDA65B1CD3FE9500F18955 /* LoginViewController.swift */; };
-		A0CDA6631CD3FE9500F18955 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CDA65B1CD3FE9500F18955 /* LoginViewController.swift */; };
 		A0CDA6641CD3FE9500F18955 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CDA65C1CD3FE9500F18955 /* MapViewController.swift */; };
-		A0CDA6651CD3FE9500F18955 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CDA65C1CD3FE9500F18955 /* MapViewController.swift */; };
 		A0CDA6661CD3FE9500F18955 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CDA65D1CD3FE9500F18955 /* RegistrationViewController.swift */; };
-		A0CDA6671CD3FE9500F18955 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CDA65D1CD3FE9500F18955 /* RegistrationViewController.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		A0A97BCF1CD3DB32008420D4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A0A97BB11CD3DB32008420D4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A0A97BB81CD3DB32008420D4;
-			remoteInfo = Boltifi;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		A0A97BB91CD3DB32008420D4 /* Boltifi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Boltifi.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,9 +42,23 @@
 		A0A97BC31CD3DB32008420D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A0A97BC51CD3DB32008420D4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A0A97BC81CD3DB32008420D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		A0A97BCE1CD3DB32008420D4 /* BoltifiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BoltifiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0A97BD31CD3DB32008420D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0A97BD41CD3DB32008420D4 /* BoltifiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoltifiTests.swift; sourceTree = "<group>"; };
+		A0BB393F1CD4BA7F00AE0AFB /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleMaps.bundle; sourceTree = "<group>"; };
+		A0BB39401CD4BA7F00AE0AFB /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
+		A0BB39431CD4BA9600AE0AFB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		A0BB39451CD4BAFC00AE0AFB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		A0BB39461CD4BAFC00AE0AFB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		A0BB39471CD4BAFC00AE0AFB /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		A0BB39481CD4BAFC00AE0AFB /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		A0BB39491CD4BAFC00AE0AFB /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		A0BB394A1CD4BAFC00AE0AFB /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		A0BB394B1CD4BAFC00AE0AFB /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		A0BB394C1CD4BAFC00AE0AFB /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		A0BB394D1CD4BAFC00AE0AFB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		A0BB394E1CD4BAFC00AE0AFB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		A0BB39591CD4BB0800AE0AFB /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		A0BB39601CD4BF7400AE0AFB /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A0CDA6581CD3FE9500F18955 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		A0CDA65A1CD3FE9500F18955 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		A0CDA65B1CD3FE9500F18955 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -57,13 +72,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A0A97BCB1CD3DB32008420D4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				A0BB395B1CD4BC2F00AE0AFB /* GoogleMaps.bundle in Frameworks */,
+				A0BB395A1CD4BB0800AE0AFB /* libicucore.dylib in Frameworks */,
+				A0BB394F1CD4BAFC00AE0AFB /* CoreData.framework in Frameworks */,
+				A0BB39501CD4BAFC00AE0AFB /* CoreLocation.framework in Frameworks */,
+				A0BB39511CD4BAFC00AE0AFB /* CoreText.framework in Frameworks */,
+				A0BB39521CD4BAFC00AE0AFB /* GLKit.framework in Frameworks */,
+				A0BB39531CD4BAFC00AE0AFB /* ImageIO.framework in Frameworks */,
+				A0BB39541CD4BAFC00AE0AFB /* libc++.dylib in Frameworks */,
+				A0BB39551CD4BAFC00AE0AFB /* libz.dylib in Frameworks */,
+				A0BB39561CD4BAFC00AE0AFB /* OpenGLES.framework in Frameworks */,
+				A0BB39571CD4BAFC00AE0AFB /* QuartzCore.framework in Frameworks */,
+				A0BB39581CD4BAFC00AE0AFB /* SystemConfiguration.framework in Frameworks */,
+				A0BB39441CD4BA9600AE0AFB /* AVFoundation.framework in Frameworks */,
+				A0BB39421CD4BA7F00AE0AFB /* GoogleMaps.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +95,18 @@
 		A0A97BB01CD3DB32008420D4 = {
 			isa = PBXGroup;
 			children = (
+				A0BB39591CD4BB0800AE0AFB /* libicucore.dylib */,
+				A0BB39451CD4BAFC00AE0AFB /* CoreData.framework */,
+				A0BB39461CD4BAFC00AE0AFB /* CoreLocation.framework */,
+				A0BB39471CD4BAFC00AE0AFB /* CoreText.framework */,
+				A0BB39481CD4BAFC00AE0AFB /* GLKit.framework */,
+				A0BB39491CD4BAFC00AE0AFB /* ImageIO.framework */,
+				A0BB394A1CD4BAFC00AE0AFB /* libc++.dylib */,
+				A0BB394B1CD4BAFC00AE0AFB /* libz.dylib */,
+				A0BB394C1CD4BAFC00AE0AFB /* OpenGLES.framework */,
+				A0BB394D1CD4BAFC00AE0AFB /* QuartzCore.framework */,
+				A0BB394E1CD4BAFC00AE0AFB /* SystemConfiguration.framework */,
+				A0BB39431CD4BA9600AE0AFB /* AVFoundation.framework */,
 				A0A97BBB1CD3DB32008420D4 /* Boltifi */,
 				A0A97BD11CD3DB32008420D4 /* BoltifiTests */,
 				A0A97BBA1CD3DB32008420D4 /* Products */,
@@ -83,7 +117,6 @@
 			isa = PBXGroup;
 			children = (
 				A0A97BB91CD3DB32008420D4 /* Boltifi.app */,
-				A0A97BCE1CD3DB32008420D4 /* BoltifiTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -91,6 +124,9 @@
 		A0A97BBB1CD3DB32008420D4 /* Boltifi */ = {
 			isa = PBXGroup;
 			children = (
+				A0BB395F1CD4BF7400AE0AFB /* Constants */,
+				A0BB393F1CD4BA7F00AE0AFB /* GoogleMaps.bundle */,
+				A0BB39401CD4BA7F00AE0AFB /* GoogleMaps.framework */,
 				A0CDA6571CD3FE9500F18955 /* Utils */,
 				A0CDA6591CD3FE9500F18955 /* ViewControllers */,
 				A0A97BBE1CD3DB32008420D4 /* AppDelegate.swift */,
@@ -126,6 +162,14 @@
 				A0A97BD31CD3DB32008420D4 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A0BB395F1CD4BF7400AE0AFB /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				A0BB39601CD4BF7400AE0AFB /* Constants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		A0CDA6571CD3FE9500F18955 /* Utils */ = {
@@ -167,24 +211,6 @@
 			productReference = A0A97BB91CD3DB32008420D4 /* Boltifi.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A0A97BCD1CD3DB32008420D4 /* BoltifiTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A0A97BDB1CD3DB32008420D4 /* Build configuration list for PBXNativeTarget "BoltifiTests" */;
-			buildPhases = (
-				A0A97BCA1CD3DB32008420D4 /* Sources */,
-				A0A97BCB1CD3DB32008420D4 /* Frameworks */,
-				A0A97BCC1CD3DB32008420D4 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A0A97BD01CD3DB32008420D4 /* PBXTargetDependency */,
-			);
-			name = BoltifiTests;
-			productName = BoltifiTests;
-			productReference = A0A97BCE1CD3DB32008420D4 /* BoltifiTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -196,10 +222,6 @@
 				TargetAttributes = {
 					A0A97BB81CD3DB32008420D4 = {
 						CreatedOnToolsVersion = 6.3;
-					};
-					A0A97BCD1CD3DB32008420D4 = {
-						CreatedOnToolsVersion = 6.3;
-						TestTargetID = A0A97BB81CD3DB32008420D4;
 					};
 				};
 			};
@@ -217,7 +239,6 @@
 			projectRoot = "";
 			targets = (
 				A0A97BB81CD3DB32008420D4 /* Boltifi */,
-				A0A97BCD1CD3DB32008420D4 /* BoltifiTests */,
 			);
 		};
 /* End PBXProject section */
@@ -230,13 +251,7 @@
 				A0A97BC41CD3DB32008420D4 /* Main.storyboard in Resources */,
 				A0A97BC91CD3DB32008420D4 /* LaunchScreen.xib in Resources */,
 				A0A97BC61CD3DB32008420D4 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A0A97BCC1CD3DB32008420D4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				A0BB39411CD4BA7F00AE0AFB /* GoogleMaps.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,37 +262,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0BB395C1CD4BC3F00AE0AFB /* GoogleMaps.bundle in Sources */,
 				A0CDA6661CD3FE9500F18955 /* RegistrationViewController.swift in Sources */,
 				A0CDA6621CD3FE9500F18955 /* LoginViewController.swift in Sources */,
 				A0A97BBF1CD3DB32008420D4 /* AppDelegate.swift in Sources */,
 				A0CDA65E1CD3FE9500F18955 /* Utils.swift in Sources */,
 				A0CDA6641CD3FE9500F18955 /* MapViewController.swift in Sources */,
 				A0CDA6601CD3FE9500F18955 /* BaseViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A0A97BCA1CD3DB32008420D4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A0CDA6671CD3FE9500F18955 /* RegistrationViewController.swift in Sources */,
-				A0CDA6631CD3FE9500F18955 /* LoginViewController.swift in Sources */,
-				A0A97BD51CD3DB32008420D4 /* BoltifiTests.swift in Sources */,
-				A0CDA65F1CD3FE9500F18955 /* Utils.swift in Sources */,
-				A0CDA6651CD3FE9500F18955 /* MapViewController.swift in Sources */,
-				A0CDA6611CD3FE9500F18955 /* BaseViewController.swift in Sources */,
+				A0BB39611CD4BF7400AE0AFB /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		A0A97BD01CD3DB32008420D4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A0A97BB81CD3DB32008420D4 /* Boltifi */;
-			targetProxy = A0A97BCF1CD3DB32008420D4 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A0A97BC21CD3DB32008420D4 /* Main.storyboard */ = {
@@ -384,9 +380,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Boltifi",
+				);
 				INFOPLIST_FILE = Boltifi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/sravan/Documents/iOSWorkspace/Boltifi App/30042016 1530/Boltifi/Boltifi/Boltifi/Boltifi-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -394,43 +396,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Boltifi",
+				);
 				INFOPLIST_FILE = Boltifi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		A0A97BDC1CD3DB32008420D4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = BoltifiTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Boltifi.app/Boltifi";
-			};
-			name = Debug;
-		};
-		A0A97BDD1CD3DB32008420D4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = BoltifiTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Boltifi.app/Boltifi";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/sravan/Documents/iOSWorkspace/Boltifi App/30042016 1530/Boltifi/Boltifi/Boltifi/Boltifi-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -451,15 +425,6 @@
 			buildConfigurations = (
 				A0A97BD91CD3DB32008420D4 /* Debug */,
 				A0A97BDA1CD3DB32008420D4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A0A97BDB1CD3DB32008420D4 /* Build configuration list for PBXNativeTarget "BoltifiTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A0A97BDC1CD3DB32008420D4 /* Debug */,
-				A0A97BDD1CD3DB32008420D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

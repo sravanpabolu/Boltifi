@@ -1,0 +1,11 @@
+//
+//  Constants.swift
+//  Boltifi
+//
+//  Created by Sravan on 30/04/16.
+//  Copyright (c) 2016 Boltifi. All rights reserved.
+//
+
+import Foundation
+
+let GOOGLE_MAPS_API_KEY = "AIzaSyDeQl_MfFQ1a8Ox7NmUhJWzSywNevT2w2w"

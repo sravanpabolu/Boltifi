@@ -9,6 +9,6 @@
 #ifndef Boltifi_Boltifi_Bridging_Header_h
 #define Boltifi_Boltifi_Bridging_Header_h
 
-
+#import <GoogleMaps/GoogleMaps.h>
 
 #endif
