@@ -8,11 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		A0A97BBF1CD3DB32008420D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A97BBE1CD3DB32008420D4 /* AppDelegate.swift */; };
-		A0A97BC11CD3DB32008420D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A97BC01CD3DB32008420D4 /* ViewController.swift */; };
 		A0A97BC41CD3DB32008420D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0A97BC21CD3DB32008420D4 /* Main.storyboard */; };
 		A0A97BC61CD3DB32008420D4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0A97BC51CD3DB32008420D4 /* Images.xcassets */; };
 		A0A97BC91CD3DB32008420D4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0A97BC71CD3DB32008420D4 /* LaunchScreen.xib */; };
 		A0A97BD51CD3DB32008420D4 /* BoltifiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A97BD41CD3DB32008420D4 /* BoltifiTests.swift */; };
+		A0CDA65E1CD3FE9500F18955 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CDA6581CD3FE9500F18955 /* Utils.swift */; };
+		A0CDA65F1CD3FE9500F18955 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CDA6581CD3FE9500F18955 /* Utils.swift */; };
+		A0CDA6601CD3FE9500F18955 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CDA65A1CD3FE9500F18955 /* BaseViewController.swift */; };
+		A0CDA6611CD3FE9500F18955 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CDA65A1CD3FE9500F18955 /* BaseViewController.swift */; };
+		A0CDA6621CD3FE9500F18955 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CDA65B1CD3FE9500F18955 /* LoginViewController.swift */; };
+		A0CDA6631CD3FE9500F18955 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CDA65B1CD3FE9500F18955 /* LoginViewController.swift */; };
+		A0CDA6641CD3FE9500F18955 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CDA65C1CD3FE9500F18955 /* MapViewController.swift */; };
+		A0CDA6651CD3FE9500F18955 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CDA65C1CD3FE9500F18955 /* MapViewController.swift */; };
+		A0CDA6661CD3FE9500F18955 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CDA65D1CD3FE9500F18955 /* RegistrationViewController.swift */; };
+		A0CDA6671CD3FE9500F18955 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CDA65D1CD3FE9500F18955 /* RegistrationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +38,18 @@
 		A0A97BB91CD3DB32008420D4 /* Boltifi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Boltifi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0A97BBD1CD3DB32008420D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0A97BBE1CD3DB32008420D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A0A97BC01CD3DB32008420D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A0A97BC31CD3DB32008420D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A0A97BC51CD3DB32008420D4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A0A97BC81CD3DB32008420D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		A0A97BCE1CD3DB32008420D4 /* BoltifiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BoltifiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0A97BD31CD3DB32008420D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0A97BD41CD3DB32008420D4 /* BoltifiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoltifiTests.swift; sourceTree = "<group>"; };
+		A0CDA6581CD3FE9500F18955 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		A0CDA65A1CD3FE9500F18955 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		A0CDA65B1CD3FE9500F18955 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A0CDA65C1CD3FE9500F18955 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		A0CDA65D1CD3FE9500F18955 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		A0CDA6681CD48A7900F18955 /* Boltifi-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Boltifi-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +91,14 @@
 		A0A97BBB1CD3DB32008420D4 /* Boltifi */ = {
 			isa = PBXGroup;
 			children = (
+				A0CDA6571CD3FE9500F18955 /* Utils */,
+				A0CDA6591CD3FE9500F18955 /* ViewControllers */,
 				A0A97BBE1CD3DB32008420D4 /* AppDelegate.swift */,
-				A0A97BC01CD3DB32008420D4 /* ViewController.swift */,
 				A0A97BC21CD3DB32008420D4 /* Main.storyboard */,
 				A0A97BC51CD3DB32008420D4 /* Images.xcassets */,
 				A0A97BC71CD3DB32008420D4 /* LaunchScreen.xib */,
 				A0A97BBC1CD3DB32008420D4 /* Supporting Files */,
+				A0CDA6681CD48A7900F18955 /* Boltifi-Bridging-Header.h */,
 			);
 			path = Boltifi;
 			sourceTree = "<group>";
@@ -110,6 +126,25 @@
 				A0A97BD31CD3DB32008420D4 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A0CDA6571CD3FE9500F18955 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A0CDA6581CD3FE9500F18955 /* Utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		A0CDA6591CD3FE9500F18955 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A0CDA65A1CD3FE9500F18955 /* BaseViewController.swift */,
+				A0CDA65B1CD3FE9500F18955 /* LoginViewController.swift */,
+				A0CDA65C1CD3FE9500F18955 /* MapViewController.swift */,
+				A0CDA65D1CD3FE9500F18955 /* RegistrationViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,8 +247,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0A97BC11CD3DB32008420D4 /* ViewController.swift in Sources */,
+				A0CDA6661CD3FE9500F18955 /* RegistrationViewController.swift in Sources */,
+				A0CDA6621CD3FE9500F18955 /* LoginViewController.swift in Sources */,
 				A0A97BBF1CD3DB32008420D4 /* AppDelegate.swift in Sources */,
+				A0CDA65E1CD3FE9500F18955 /* Utils.swift in Sources */,
+				A0CDA6641CD3FE9500F18955 /* MapViewController.swift in Sources */,
+				A0CDA6601CD3FE9500F18955 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,7 +260,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0CDA6671CD3FE9500F18955 /* RegistrationViewController.swift in Sources */,
+				A0CDA6631CD3FE9500F18955 /* LoginViewController.swift in Sources */,
 				A0A97BD51CD3DB32008420D4 /* BoltifiTests.swift in Sources */,
+				A0CDA65F1CD3FE9500F18955 /* Utils.swift in Sources */,
+				A0CDA6651CD3FE9500F18955 /* MapViewController.swift in Sources */,
+				A0CDA6611CD3FE9500F18955 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +453,7 @@
 				A0A97BDA1CD3DB32008420D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A0A97BDB1CD3DB32008420D4 /* Build configuration list for PBXNativeTarget "BoltifiTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +462,7 @@
 				A0A97BDD1CD3DB32008420D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
