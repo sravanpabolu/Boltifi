@@ -10,8 +10,9 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="splash_screen" translatesAutoresizingMaskIntoConstraints="NO" id="3dT-Oe-u00">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="splash_screen_bike" translatesAutoresizingMaskIntoConstraints="NO" id="3dT-Oe-u00">
                     <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -43,6 +44,6 @@
         </view>
     </objects>
     <resources>
-        <image name="splash_screen" width="500" height="333"/>
+        <image name="splash_screen_bike" width="500" height="281"/>
     </resources>
 </document>

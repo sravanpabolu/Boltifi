@@ -9,3 +9,5 @@
 import Foundation
 
 let GOOGLE_MAPS_API_KEY = "AIzaSyDeQl_MfFQ1a8Ox7NmUhJWzSywNevT2w2w"
+let PICK_UP_LOCATION = "Set as pickup location"
+let DROP_LOCAION = ""

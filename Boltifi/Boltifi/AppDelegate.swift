@@ -9,7 +9,7 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate {
 
     var window: UIWindow?
 
@@ -18,6 +18,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         GMSServices.provideAPIKey(GOOGLE_MAPS_API_KEY)
+        
+        
+        // get current location
+//        if CLLocationManager.authorizationStatus() == CLAuthorizationStatus.Authorized {
+//            locationManager.startUpdatingLocation()
+//        }
         
         return true
     }
