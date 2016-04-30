@@ -46,7 +46,10 @@ class RegistrationViewController : BaseViewController, UITextFieldDelegate {
     }
     
     //MARK: - TextField Delegate methods
-    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
     
     func textFieldDidEndEditing(textField: UITextField) {
         if(textField == self.txtEmail) {
@@ -67,10 +70,17 @@ class RegistrationViewController : BaseViewController, UITextFieldDelegate {
             self.txtMobile.text.isEmpty
             ) {
                 println(ERROR_MANDATORY_EMPTY_FIELD)
+                self.showAlertWithText(ERROR_MANDATORY_EMPTY_FIELD)
                 return false
-        } else {
-            return true
         }
+        
+        if (self.txtPassword.text != self.txtConfirmPassword.text) {
+            println(ERROR_PASSWORDS_NO_MATCH)
+            self.showAlertWithText(ERROR_PASSWORDS_NO_MATCH)
+            return false
+        }
+        
+        return true
     }
     
 

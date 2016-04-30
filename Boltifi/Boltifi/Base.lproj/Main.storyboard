@@ -67,7 +67,7 @@
                                                     <constraint firstAttribute="height" constant="30" id="wf1-jj-9g6"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
                                                         <exclude reference="wf1-jj-9g6"/>
@@ -85,7 +85,7 @@
                                                     <constraint firstAttribute="height" constant="30" id="uMK-VI-Sb6"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
                                                         <exclude reference="uMK-VI-Sb6"/>
@@ -103,7 +103,7 @@
                                                     <constraint firstAttribute="height" constant="30" id="cIs-56-voU"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
                                                         <exclude reference="cIs-56-voU"/>
@@ -121,7 +121,7 @@
                                                     <constraint firstAttribute="height" constant="30" id="9Qq-q6-O7b"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
                                                         <exclude reference="9Qq-q6-O7b"/>

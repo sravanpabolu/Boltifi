@@ -13,5 +13,10 @@ let PICK_UP_LOCATION = "Set as pickup point"
 let DROP_LOCAION = "Set as drop point"
 
 let ERROR_MANDATORY_EMPTY_FIELD = "Please fill all mandatory fields"
+let ERROR_PASSWORDS_NO_MATCH = "Oops.., Passwords doesn't match"
 
 let KEY_APP_LAUNCH_FIRST_TIME = "isFirstLaunch"
+
+let ALERT_TITLE = "Alert"
+let ALERT_BUTTON_OK = "OK"
+let ALERT_BUTTON_CANCEL = "Cancel"

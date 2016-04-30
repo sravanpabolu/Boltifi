@@ -31,6 +31,10 @@ class BaseViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    func showAlertWithText(alertText: NSString) {
+        let alert = UIAlertController(title: ALERT_TITLE, message: alertText as String, preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: ALERT_BUTTON_OK, style: UIAlertActionStyle.Default, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
 }
 

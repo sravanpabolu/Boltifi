@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class LoginViewController : BaseViewController {
+class LoginViewController : BaseViewController, UITextFieldDelegate {
     
     @IBOutlet weak var txtPassword: UITextField!
     @IBOutlet weak var txtEmailAddress: UITextField!
@@ -27,7 +27,11 @@ class LoginViewController : BaseViewController {
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
-    
+    //MARK: - TextField Delegate methods
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
