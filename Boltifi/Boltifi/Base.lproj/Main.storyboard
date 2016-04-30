@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Boltifi-->
+        <!--Registration View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="RegistrationViewController" customModule="Boltifi" customModuleProvider="target" sceneMemberID="viewController">
@@ -404,7 +404,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Boltifi" id="XgL-Lp-CHZ"/>
+                    <navigationItem key="navigationItem" id="XgL-Lp-CHZ"/>
                     <connections>
                         <outlet property="btnDriver" destination="hCJ-7X-l6b" id="RlE-mJ-zYh"/>
                         <outlet property="btnSender" destination="gPK-tz-azx" id="7EM-k7-JnD"/>

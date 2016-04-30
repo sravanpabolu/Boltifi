@@ -47,15 +47,18 @@ class MapViewController : BaseViewController, CLLocationManagerDelegate, GMSMapV
             self.locationManager.startUpdatingLocation()
 //        }
         
-        let camera: GMSCameraPosition = GMSCameraPosition.cameraWithLatitude(48.857165, longitude: 2.354613, zoom: 0.0)
-        mapView.camera = camera
-        mapView.delegate = self
+//        let camera: GMSCameraPosition = GMSCameraPosition.cameraWithLatitude(48.857165, longitude: 2.354613, zoom: 0.0)
+//        self.mapView.camera = camera
+        self.mapView.delegate = self
+
+        self.mapView.myLocationEnabled = true
+        self.mapView.settings.myLocationButton = true
         
 //        mapView.addObserver(self, forKeyPath: "myLocation", options: NSKeyValueObservingOptions.New, context: nil)
         
         let coordinate = CLLocationCoordinate2D(latitude: 48.857165, longitude: 2.354613)
         
-//        self.viewMap.camera = GMSCameraPosition.cameraWithTarget(coordinate, zoom: 14.0)
+        self.mapView.camera = GMSCameraPosition.cameraWithTarget(coordinate, zoom: 14.0)
         
         self.setupLocationMarker(coordinate)
         
@@ -85,8 +88,8 @@ class MapViewController : BaseViewController, CLLocationManagerDelegate, GMSMapV
             var locationObj = locationArray.lastObject as! CLLocation
             var coord = locationObj.coordinate
             
-            println(coord.latitude)
-            println(coord.longitude)
+//            println(coord.latitude)
+//            println(coord.longitude)
 //        }
     }
     
@@ -148,9 +151,57 @@ class MapViewController : BaseViewController, CLLocationManagerDelegate, GMSMapV
         self.locationMarker.opacity = 0.75
         
         self.locationMarker.flat = true
-        self.locationMarker.snippet = "The best place on earth."
+//        self.locationMarker.snippet = "The best place on earth."
+    }
+
+    func didTapMyLocationButtonForMapView(mapView: GMSMapView!) -> Bool {
+        println("Current location button : \(__FUNCTION__)")
+        return true
     }
     
+    func mapView(mapView: GMSMapView!, didTapInfoWindowOfMarker marker: GMSMarker!) {
+        println(__FUNCTION__)
+        self.showFareEstimateView()
+    }
     
+    func showFareEstimateView() {
+        println(__FUNCTION__)
+        
+    }
     
+//    func mapView(mapView: GMSMapView!, didTapMarker marker: GMSMarker!) -> Bool {
+//        println(__FUNCTION__)
+//        
+////        self.locationMarker = GMSMarker(position: coordinate)
+////        marker.map = mapView
+//        
+//        
+//        
+//        marker.title = PICK_UP_LOCATION
+//        marker.appearAnimation = kGMSMarkerAnimationPop
+//        marker.icon = GMSMarker.markerImageWithColor(UIColor.redColor())
+//        marker.opacity = 0.75
+//        
+//        marker.flat = true
+//        marker.snippet = "The best place on earth."
+//        
+//        return true
+//    }
+    
+    func mapView(mapView: GMSMapView!, didTapOverlay overlay: GMSOverlay!) {
+        println(__FUNCTION__)
+    }
+    
+//    func mapView(mapView: GMSMapView!, markerInfoContents marker: GMSMarker!) -> UIView! {
+//        println(__FUNCTION__)
+//    }
+//    
+//    func mapView(mapView: GMSMapView!, markerInfoWindow marker: GMSMarker!) -> UIView! {
+//        println(__FUNCTION__)
+//    }
+    
+    func mapView(mapView: GMSMapView!, didTapAtCoordinate coordinate: CLLocationCoordinate2D) {
+        println(__FUNCTION__)
+    }
+
 }
