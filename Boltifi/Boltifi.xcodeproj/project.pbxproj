@@ -42,10 +42,8 @@
 		A0A97BC31CD3DB32008420D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A0A97BC51CD3DB32008420D4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A0A97BC81CD3DB32008420D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		A0A97BD31CD3DB32008420D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A0A97BD41CD3DB32008420D4 /* BoltifiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoltifiTests.swift; sourceTree = "<group>"; };
-		A0BB393F1CD4BA7F00AE0AFB /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleMaps.bundle; sourceTree = "<group>"; };
-		A0BB39401CD4BA7F00AE0AFB /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
+		A0BB393F1CD4BA7F00AE0AFB /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = Boltifi/GoogleMaps.bundle; sourceTree = "<group>"; };
+		A0BB39401CD4BA7F00AE0AFB /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Boltifi/GoogleMaps.framework; sourceTree = "<group>"; };
 		A0BB39431CD4BA9600AE0AFB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		A0BB39451CD4BAFC00AE0AFB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		A0BB39461CD4BAFC00AE0AFB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -95,20 +93,7 @@
 		A0A97BB01CD3DB32008420D4 = {
 			isa = PBXGroup;
 			children = (
-				A0BB39591CD4BB0800AE0AFB /* libicucore.dylib */,
-				A0BB39451CD4BAFC00AE0AFB /* CoreData.framework */,
-				A0BB39461CD4BAFC00AE0AFB /* CoreLocation.framework */,
-				A0BB39471CD4BAFC00AE0AFB /* CoreText.framework */,
-				A0BB39481CD4BAFC00AE0AFB /* GLKit.framework */,
-				A0BB39491CD4BAFC00AE0AFB /* ImageIO.framework */,
-				A0BB394A1CD4BAFC00AE0AFB /* libc++.dylib */,
-				A0BB394B1CD4BAFC00AE0AFB /* libz.dylib */,
-				A0BB394C1CD4BAFC00AE0AFB /* OpenGLES.framework */,
-				A0BB394D1CD4BAFC00AE0AFB /* QuartzCore.framework */,
-				A0BB394E1CD4BAFC00AE0AFB /* SystemConfiguration.framework */,
-				A0BB39431CD4BA9600AE0AFB /* AVFoundation.framework */,
 				A0A97BBB1CD3DB32008420D4 /* Boltifi */,
-				A0A97BD11CD3DB32008420D4 /* BoltifiTests */,
 				A0A97BBA1CD3DB32008420D4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -125,8 +110,6 @@
 			isa = PBXGroup;
 			children = (
 				A0BB395F1CD4BF7400AE0AFB /* Constants */,
-				A0BB393F1CD4BA7F00AE0AFB /* GoogleMaps.bundle */,
-				A0BB39401CD4BA7F00AE0AFB /* GoogleMaps.framework */,
 				A0CDA6571CD3FE9500F18955 /* Utils */,
 				A0CDA6591CD3FE9500F18955 /* ViewControllers */,
 				A0A97BBE1CD3DB32008420D4 /* AppDelegate.swift */,
@@ -142,26 +125,32 @@
 		A0A97BBC1CD3DB32008420D4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A0B5EFDE1CD4C1E800AFDBF4 /* Frameworks */,
 				A0A97BBD1CD3DB32008420D4 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		A0A97BD11CD3DB32008420D4 /* BoltifiTests */ = {
+		A0B5EFDE1CD4C1E800AFDBF4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A0A97BD41CD3DB32008420D4 /* BoltifiTests.swift */,
-				A0A97BD21CD3DB32008420D4 /* Supporting Files */,
+				A0BB39591CD4BB0800AE0AFB /* libicucore.dylib */,
+				A0BB393F1CD4BA7F00AE0AFB /* GoogleMaps.bundle */,
+				A0BB39401CD4BA7F00AE0AFB /* GoogleMaps.framework */,
+				A0BB39451CD4BAFC00AE0AFB /* CoreData.framework */,
+				A0BB39461CD4BAFC00AE0AFB /* CoreLocation.framework */,
+				A0BB39471CD4BAFC00AE0AFB /* CoreText.framework */,
+				A0BB39481CD4BAFC00AE0AFB /* GLKit.framework */,
+				A0BB39491CD4BAFC00AE0AFB /* ImageIO.framework */,
+				A0BB394A1CD4BAFC00AE0AFB /* libc++.dylib */,
+				A0BB394B1CD4BAFC00AE0AFB /* libz.dylib */,
+				A0BB394C1CD4BAFC00AE0AFB /* OpenGLES.framework */,
+				A0BB394D1CD4BAFC00AE0AFB /* QuartzCore.framework */,
+				A0BB394E1CD4BAFC00AE0AFB /* SystemConfiguration.framework */,
+				A0BB39431CD4BA9600AE0AFB /* AVFoundation.framework */,
 			);
-			path = BoltifiTests;
-			sourceTree = "<group>";
-		};
-		A0A97BD21CD3DB32008420D4 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				A0A97BD31CD3DB32008420D4 /* Info.plist */,
-			);
-			name = "Supporting Files";
+			name = Frameworks;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		A0BB395F1CD4BF7400AE0AFB /* Constants */ = {

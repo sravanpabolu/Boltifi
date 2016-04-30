@@ -12,44 +12,34 @@ import UIKit
 
 class MapViewController : BaseViewController, CLLocationManagerDelegate, GMSMapViewDelegate {
     
-    
     @IBOutlet weak var mapView: GMSMapView!
-   
-    
     var locationManager = CLLocationManager()
-    
     var didFindMyLocation = false
-    
-    
     var locationMarker: GMSMarker!
-    
     var originMarker: GMSMarker!
-    
     var destinationMarker: GMSMarker!
-    
     var routePolyline: GMSPolyline!
-    
     var markersArray: Array<GMSMarker> = []
-    
     var waypointsArray: Array<String> = []
-    
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         locationManager.delegate = self
-        
         locationManager.requestWhenInUseAuthorization()
         
-        let camera: GMSCameraPosition = GMSCameraPosition.cameraWithLatitude(48.857165, longitude: 2.354613, zoom: 8.0)
-        mapView.camera = camera
+//        let camera: GMSCameraPosition = GMSCameraPosition.cameraWithLatitude(48.857165, longitude: 2.354613, zoom: 8.0)
+//        mapView.camera = camera
         mapView.delegate = self
         
         mapView.addObserver(self, forKeyPath: "myLocation", options: NSKeyValueObservingOptions.New, context: nil)
-
         
+        
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        mapView.removeObserver(self, forKeyPath: "myLocation");
     }
     
     override func didReceiveMemoryWarning() {
@@ -67,7 +57,7 @@ class MapViewController : BaseViewController, CLLocationManagerDelegate, GMSMapV
             didFindMyLocation = true
         }
     }
-
+    
     // MARK: CLLocationManagerDelegate method implementation
     
     func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
@@ -109,6 +99,6 @@ class MapViewController : BaseViewController, CLLocationManagerDelegate, GMSMapV
         locationMarker.snippet = "The best place on earth."
     }
     
-
-
+    
+    
 }
