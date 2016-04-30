@@ -13,6 +13,9 @@ import UIKit
 class MapViewController : BaseViewController, CLLocationManagerDelegate, GMSMapViewDelegate {
     
     @IBOutlet weak var mapView: GMSMapView!
+    @IBOutlet weak var buttonsView: UIView!
+    @IBOutlet weak var fareEstimateView: UIView!
+    
     var locationManager = CLLocationManager()
     var didFindMyLocation = false
     var locationMarker: GMSMarker!
@@ -35,6 +38,9 @@ class MapViewController : BaseViewController, CLLocationManagerDelegate, GMSMapV
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
+        self.buttonsView.hidden = false
+        self.fareEstimateView.hidden = true
+        
         // Ask for Authorisation from the User.
         self.locationManager.requestAlwaysAuthorization()
         
@@ -93,7 +99,7 @@ class MapViewController : BaseViewController, CLLocationManagerDelegate, GMSMapV
 //        }
     }
     
-    // MARK: CLLocationManagerDelegate method implementation
+    // MARK: - CLLocationManagerDelegate method implementation
     
     // authorization status
     func locationManager(manager: CLLocationManager!,
@@ -113,16 +119,16 @@ class MapViewController : BaseViewController, CLLocationManagerDelegate, GMSMapV
             }
             NSNotificationCenter.defaultCenter().postNotificationName("LabelHasbeenUpdated", object: nil)
             if (shouldIAllow == true) {
-                NSLog("Location to Allowed")
+                NSLog("\(__FUNCTION__) Location to Allowed")
                 // Start location services
                 locationManager.startUpdatingLocation()
             } else {
-                NSLog("Denied access: \(locationStatus)")
+                NSLog("\(__FUNCTION__) Denied access: \(locationStatus)")
             }
     }
     
     
-    // MARK: Custom method implementation
+    // MARK: - Custom method implementation
     
 //    func showAlertWithMessage(message: String) {
 //        let alertController = UIAlertController(title: "GMapsDemo", message: message, preferredStyle: UIAlertControllerStyle.Alert)
@@ -146,6 +152,7 @@ class MapViewController : BaseViewController, CLLocationManagerDelegate, GMSMapV
         self.locationMarker.map = mapView
         
         self.locationMarker.title = PICK_UP_LOCATION
+
         self.locationMarker.appearAnimation = kGMSMarkerAnimationPop
         self.locationMarker.icon = GMSMarker.markerImageWithColor(UIColor.redColor())
         self.locationMarker.opacity = 0.75
@@ -166,6 +173,8 @@ class MapViewController : BaseViewController, CLLocationManagerDelegate, GMSMapV
     
     func showFareEstimateView() {
         println(__FUNCTION__)
+        self.buttonsView.hidden = true
+        self.fareEstimateView.hidden = false
         
     }
     
