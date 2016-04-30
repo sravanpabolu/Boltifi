@@ -14,7 +14,7 @@ class MapViewController : BaseViewController, CLLocationManagerDelegate, GMSMapV
     
     @IBOutlet weak var mapView: GMSMapView!
     @IBOutlet weak var buttonsView: UIView!
-    @IBOutlet weak var fareEstimateView: UIView!
+//    @IBOutlet weak var fareEstimateView: UIView!
     
     var locationManager = CLLocationManager()
     var didFindMyLocation = false
@@ -38,8 +38,8 @@ class MapViewController : BaseViewController, CLLocationManagerDelegate, GMSMapV
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
-        self.buttonsView.hidden = false
-        self.fareEstimateView.hidden = true
+//        self.buttonsView.hidden = false
+//        self.fareEstimateView.hidden = true
         
         // Ask for Authorisation from the User.
         self.locationManager.requestAlwaysAuthorization()
@@ -173,9 +173,12 @@ class MapViewController : BaseViewController, CLLocationManagerDelegate, GMSMapV
     
     func showFareEstimateView() {
         println(__FUNCTION__)
-        self.buttonsView.hidden = true
-        self.fareEstimateView.hidden = false
-        
+//        self.buttonsView.hidden = true
+//        self.fareEstimateView.hidden = false
+
+        let controller = self.storyboard?.instantiateViewControllerWithIdentifier(IDENTIFIER_TRIP_CONFIRMATION_VIEW_CONTROLLER) as! TripConfirmationViewController
+        self.navigationController?.pushViewController(controller, animated: true)
+
     }
     
 //    func mapView(mapView: GMSMapView!, didTapMarker marker: GMSMarker!) -> Bool {

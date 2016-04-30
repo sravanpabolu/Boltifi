@@ -24,8 +24,8 @@ class RegistrationViewController : BaseViewController, UITextFieldDelegate {
         if(!self.validateTextFields()) {
             return
         }
-        
-        let controller = self.storyboard?.instantiateViewControllerWithIdentifier("mapViewController") as! MapViewController
+    
+        let controller = self.storyboard?.instantiateViewControllerWithIdentifier(IDENTIFIER_MAP_VIEW_CONTROLLER) as! MapViewController
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
@@ -34,7 +34,7 @@ class RegistrationViewController : BaseViewController, UITextFieldDelegate {
             return
         }
         
-        let controller = self.storyboard?.instantiateViewControllerWithIdentifier("LoginViewController") as! LoginViewController
+        let controller = self.storyboard?.instantiateViewControllerWithIdentifier(IDENTIFIER_LOGIN_VIEW_CONTROLLER) as! LoginViewController
         self.navigationController?.pushViewController(controller, animated: true)
     }
     

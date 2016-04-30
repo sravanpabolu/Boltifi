@@ -9,16 +9,14 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate /*,CLLocationManagerDelegate*/ {
+class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-//        if(!(NSUserDefaults.standardUserDefaults().boolForKey(KEY_APP_LAUNCH_FIRST_TIME))) {
-        
-            
-            //Set first time launch to false
+        if(!(NSUserDefaults.standardUserDefaults().boolForKey(KEY_APP_LAUNCH_FIRST_TIME))) {
+            //Set first time launch
             NSUserDefaults.standardUserDefaults().setBool(true, forKey: KEY_APP_LAUNCH_FIRST_TIME)
             NSUserDefaults.standardUserDefaults().synchronize()
            
@@ -30,27 +28,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate /*,CLLocationManagerDelega
             // Then push that view controller onto the navigation stack
             var rootViewController = self.window!.rootViewController as! UINavigationController
             rootViewController.pushViewController(viewController, animated: true)
-////        } else {
-//            //Show Login Screen
-//            // Access the storyboard and fetch an instance of the view controller
-//            var storyboard = UIStoryboard(name: "Main", bundle: nil)
-//            var viewController: LoginViewController = storyboard.instantiateViewControllerWithIdentifier("LoginViewController") as! LoginViewController
-//            
-//            // Then push that view controller onto the navigation stack
-//            var rootViewController = self.window!.rootViewController as! UINavigationController
-//            rootViewController.pushViewController(viewController, animated: true)
-//        }
-        
+        } else {
+            //Show Login Screen
+            // Access the storyboard and fetch an instance of the view controller
+            var storyboard = UIStoryboard(name: "Main", bundle: nil)
+            var viewController: LoginViewController = storyboard.instantiateViewControllerWithIdentifier("LoginViewController") as! LoginViewController
+            
+            // Then push that view controller onto the navigation stack
+            var rootViewController = self.window!.rootViewController as! UINavigationController
+            rootViewController.pushViewController(viewController, animated: true)
+        }
         
         
         //For Google Maps
         GMSServices.provideAPIKey(GOOGLE_MAPS_API_KEY)
-        
-        
-        // get current location
-//        if CLLocationManager.authorizationStatus() == CLAuthorizationStatus.Authorized {
-//            locationManager.startUpdatingLocation()
-//        }
         
         return true
     }

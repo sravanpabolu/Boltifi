@@ -20,10 +20,11 @@ class LoginViewController : BaseViewController, UITextFieldDelegate {
             txtPassword.text.isEmpty || txtEmailAddress.text.isEmpty
             ) {
                 println(ERROR_MANDATORY_EMPTY_FIELD)
+                self.showAlertWithText(ERROR_MANDATORY_EMPTY_FIELD)
             return
         }
         
-        let controller = self.storyboard?.instantiateViewControllerWithIdentifier("mapViewController") as! MapViewController
+        let controller = self.storyboard?.instantiateViewControllerWithIdentifier(IDENTIFIER_MAP_VIEW_CONTROLLER) as! MapViewController
         self.navigationController?.pushViewController(controller, animated: true)
     }
     

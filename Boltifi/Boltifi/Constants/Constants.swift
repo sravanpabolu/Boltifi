@@ -17,6 +17,12 @@ let ERROR_PASSWORDS_NO_MATCH = "Oops.., Passwords doesn't match"
 
 let KEY_APP_LAUNCH_FIRST_TIME = "isFirstLaunch"
 
+let IDENTIFIER_MAP_VIEW_CONTROLLER = "MapViewController"
+let IDENTIFIER_REGISTRATION_VIEW_CONTROLLER = "RegistrationViewController"
+let IDENTIFIER_LOGIN_VIEW_CONTROLLER = "LoginViewController"
+let IDENTIFIER_FARE_ESTIMATE_VIEW_CONTROLLER = "FareEstimateViewController"
+let IDENTIFIER_TRIP_CONFIRMATION_VIEW_CONTROLLER = "TripConfirmationViewController"
+
 let ALERT_TITLE = "Alert"
 let ALERT_BUTTON_OK = "OK"
 let ALERT_BUTTON_CANCEL = "Cancel"

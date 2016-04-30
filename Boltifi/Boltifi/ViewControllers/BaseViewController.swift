@@ -8,6 +8,14 @@
 
 import UIKit
 
+//extension NSObject {
+//    class func fromClassName(className : String) -> NSObject {
+//        let className = NSBundle.mainBundle().infoDictionary!["CFBundleName"] as! String + "." + className
+//        let aClass = NSClassFromString(className) as! UIViewController.Type
+//        return aClass.init()
+//    }
+//}
+
 extension UIViewController {
     func hideKeyboardWhenTappedAround() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
@@ -36,5 +44,16 @@ class BaseViewController: UIViewController {
         alert.addAction(UIAlertAction(title: ALERT_BUTTON_OK, style: UIAlertActionStyle.Default, handler: nil))
         self.presentViewController(alert, animated: true, completion: nil)
     }
+    
+    //TODO:
+//    func navigateToViewController(identifier:String) {
+//        
+//        let aClass: AnyClass! = NSClassFromString(identifier)
+//        
+//        let controller = self.storyboard?.instantiateViewControllerWithIdentifier(identifier as String) as! aClass
+//        self.navigationController?.pushViewController(controller, animated: true)
+//    }
+    
+    
 }
 
