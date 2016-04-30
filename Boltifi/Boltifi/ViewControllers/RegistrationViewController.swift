@@ -34,7 +34,7 @@ class RegistrationViewController : BaseViewController, UITextFieldDelegate {
             return
         }
         
-        let controller = self.storyboard?.instantiateViewControllerWithIdentifier("loginViewController") as! LoginViewController
+        let controller = self.storyboard?.instantiateViewControllerWithIdentifier("LoginViewController") as! LoginViewController
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
@@ -46,6 +46,7 @@ class RegistrationViewController : BaseViewController, UITextFieldDelegate {
     }
     
     //MARK: - TextField Delegate methods
+    
     
     func textFieldDidEndEditing(textField: UITextField) {
         if(textField == self.txtEmail) {

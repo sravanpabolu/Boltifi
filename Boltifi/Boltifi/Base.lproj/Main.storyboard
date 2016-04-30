@@ -9,7 +9,7 @@
         <!--Registration View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="RegistrationViewController" customModule="Boltifi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegistrationViewController" id="vXZ-lx-hvc" customClass="RegistrationViewController" customModule="Boltifi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -355,7 +355,8 @@
                                         <exclude reference="ugw-Na-ipe"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="736"/>
                                     <mask key="subviews">
                                         <include reference="u67-tD-oXD"/>
                                     </mask>
@@ -422,7 +423,7 @@
         <!--Login View Controller-->
         <scene sceneID="ypT-NA-Tkg">
             <objects>
-                <viewController storyboardIdentifier="loginViewController" id="ave-pw-UMt" customClass="LoginViewController" customModule="Boltifi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="ave-pw-UMt" customClass="LoginViewController" customModule="Boltifi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Mpd-7m-vzR"/>
                         <viewControllerLayoutGuide type="bottom" id="KEF-2i-8c3"/>
@@ -539,9 +540,6 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="JqJ-Ox-5p9"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2QW-k4-yID" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
