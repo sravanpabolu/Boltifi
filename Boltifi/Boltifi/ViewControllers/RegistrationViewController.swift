@@ -21,11 +21,19 @@ class RegistrationViewController : BaseViewController, UITextFieldDelegate {
     
     //MARK: - Button action methods
     @IBAction func btnSenderTapped(sender: AnyObject) {
+        if(!self.validateTextFields()) {
+            return
+        }
+        
         let controller = self.storyboard?.instantiateViewControllerWithIdentifier("mapViewController") as! MapViewController
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
     @IBAction func btnDriverTapped(sender: AnyObject) {
+        if(!self.validateTextFields()) {
+            return
+        }
+        
         let controller = self.storyboard?.instantiateViewControllerWithIdentifier("loginViewController") as! LoginViewController
         self.navigationController?.pushViewController(controller, animated: true)
     }
@@ -34,7 +42,7 @@ class RegistrationViewController : BaseViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.hideKeyboardWhenTappedAround() 
     }
     
     //MARK: - TextField Delegate methods
@@ -49,6 +57,22 @@ class RegistrationViewController : BaseViewController, UITextFieldDelegate {
         }
     }
     
+    func validateTextFields() -> Bool {
+        //Check for empty string 
+        if (self.txtName.text.isEmpty ||
+            self.txtPassword.text.isEmpty ||
+            self.txtEmail.text.isEmpty ||
+            self.txtConfirmPassword.text.isEmpty ||
+            self.txtMobile.text.isEmpty
+            ) {
+                println(ERROR_MANDATORY_EMPTY_FIELD)
+                return false
+        } else {
+            return true
+        }
+    }
+    
+
     
     
     

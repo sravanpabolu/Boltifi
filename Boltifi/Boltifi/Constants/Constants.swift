@@ -12,3 +12,4 @@ let GOOGLE_MAPS_API_KEY = "AIzaSyDeQl_MfFQ1a8Ox7NmUhJWzSywNevT2w2w"
 let PICK_UP_LOCATION = "Set as pickup point"
 let DROP_LOCAION = "Set as drop point"
 
+let ERROR_MANDATORY_EMPTY_FIELD = "Please fill all mandatory fields"

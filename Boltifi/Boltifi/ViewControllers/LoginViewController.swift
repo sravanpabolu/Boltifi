@@ -15,13 +15,23 @@ class LoginViewController : BaseViewController {
     @IBOutlet weak var txtEmailAddress: UITextField!
     
     @IBAction func loginBtnTapped(sender: AnyObject) {
+        
+        if (txtPassword.text == nil || txtEmailAddress.text == nil ||
+            txtPassword.text.isEmpty || txtEmailAddress.text.isEmpty
+            ) {
+                println(ERROR_MANDATORY_EMPTY_FIELD)
+            return
+        }
+        
         let controller = self.storyboard?.instantiateViewControllerWithIdentifier("mapViewController") as! MapViewController
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.hideKeyboardWhenTappedAround() 
     }
     
     override func didReceiveMemoryWarning() {
