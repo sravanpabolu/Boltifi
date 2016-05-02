@@ -87,11 +87,11 @@ class MapViewController : BaseViewController, CLLocationManagerDelegate, GMSMapV
     }
     
     
-    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
 //        if (locationFixAchieved == false) {
             locationFixAchieved = true
-            var locationArray = locations as NSArray
-            var locationObj = locationArray.lastObject as! CLLocation
+            let locationArray = locations as NSArray
+            let locationObj = locationArray.lastObject as! CLLocation
             var coord = locationObj.coordinate
             
 //            println(coord.latitude)
@@ -102,7 +102,7 @@ class MapViewController : BaseViewController, CLLocationManagerDelegate, GMSMapV
     // MARK: - CLLocationManagerDelegate method implementation
     
     // authorization status
-    func locationManager(manager: CLLocationManager!,
+    func locationManager(manager: CLLocationManager,
         didChangeAuthorizationStatus status: CLAuthorizationStatus) {
             var shouldIAllow = false
             
@@ -162,17 +162,17 @@ class MapViewController : BaseViewController, CLLocationManagerDelegate, GMSMapV
     }
 
     func didTapMyLocationButtonForMapView(mapView: GMSMapView!) -> Bool {
-        println("Current location button : \(__FUNCTION__)")
+        print("Current location button : \(__FUNCTION__)")
         return true
     }
     
     func mapView(mapView: GMSMapView!, didTapInfoWindowOfMarker marker: GMSMarker!) {
-        println(__FUNCTION__)
+        print(__FUNCTION__)
         self.showFareEstimateView()
     }
     
     func showFareEstimateView() {
-        println(__FUNCTION__)
+        print(__FUNCTION__)
 //        self.buttonsView.hidden = true
 //        self.fareEstimateView.hidden = false
 
@@ -201,7 +201,7 @@ class MapViewController : BaseViewController, CLLocationManagerDelegate, GMSMapV
 //    }
     
     func mapView(mapView: GMSMapView!, didTapOverlay overlay: GMSOverlay!) {
-        println(__FUNCTION__)
+        print(__FUNCTION__)
     }
     
 //    func mapView(mapView: GMSMapView!, markerInfoContents marker: GMSMarker!) -> UIView! {
@@ -213,7 +213,7 @@ class MapViewController : BaseViewController, CLLocationManagerDelegate, GMSMapV
 //    }
     
     func mapView(mapView: GMSMapView!, didTapAtCoordinate coordinate: CLLocationCoordinate2D) {
-        println(__FUNCTION__)
+        print(__FUNCTION__)
     }
 
 }

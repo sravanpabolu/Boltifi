@@ -17,9 +17,9 @@ class LoginViewController : BaseViewController, UITextFieldDelegate {
     @IBAction func loginBtnTapped(sender: AnyObject) {
         
         if (txtPassword.text == nil || txtEmailAddress.text == nil ||
-            txtPassword.text.isEmpty || txtEmailAddress.text.isEmpty
+            txtPassword.text!.isEmpty || txtEmailAddress.text!.isEmpty
             ) {
-                println(ERROR_MANDATORY_EMPTY_FIELD)
+                print(ERROR_MANDATORY_EMPTY_FIELD)
                 self.showAlertWithText(ERROR_MANDATORY_EMPTY_FIELD)
             return
         }

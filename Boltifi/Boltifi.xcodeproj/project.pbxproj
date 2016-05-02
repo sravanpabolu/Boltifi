@@ -212,6 +212,8 @@
 		A0A97BB11CD3DB32008420D4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0720;
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = Boltifi;
 				TargetAttributes = {

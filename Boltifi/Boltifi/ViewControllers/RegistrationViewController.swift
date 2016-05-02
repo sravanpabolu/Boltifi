@@ -53,29 +53,29 @@ class RegistrationViewController : BaseViewController, UITextFieldDelegate {
     
     func textFieldDidEndEditing(textField: UITextField) {
         if(textField == self.txtEmail) {
-            if(Utils.isValidEmail(textField.text)) {
-                println("Valid Email") ;
+            if(Utils.isValidEmail(textField.text!)) {
+                print("Valid Email") ;
             } else {
-                println("Invalid Email") ;
+                print("Invalid Email") ;
             }
         }
     }
     
     func validateTextFields() -> Bool {
         //Check for empty string 
-        if (self.txtName.text.isEmpty ||
-            self.txtPassword.text.isEmpty ||
-            self.txtEmail.text.isEmpty ||
-            self.txtConfirmPassword.text.isEmpty ||
-            self.txtMobile.text.isEmpty
+        if (self.txtName.text!.isEmpty ||
+            self.txtPassword.text!.isEmpty ||
+            self.txtEmail.text!.isEmpty ||
+            self.txtConfirmPassword.text!.isEmpty ||
+            self.txtMobile.text!.isEmpty
             ) {
-                println(ERROR_MANDATORY_EMPTY_FIELD)
+                print(ERROR_MANDATORY_EMPTY_FIELD)
                 self.showAlertWithText(ERROR_MANDATORY_EMPTY_FIELD)
                 return false
         }
         
         if (self.txtPassword.text != self.txtConfirmPassword.text) {
-            println(ERROR_PASSWORDS_NO_MATCH)
+            print(ERROR_PASSWORDS_NO_MATCH)
             self.showAlertWithText(ERROR_PASSWORDS_NO_MATCH)
             return false
         }
