@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 let GOOGLE_MAPS_API_KEY = "AIzaSyDeQl_MfFQ1a8Ox7NmUhJWzSywNevT2w2w"
 let PICK_UP_LOCATION = "Set as pickup point"
@@ -26,3 +27,6 @@ let IDENTIFIER_TRIP_CONFIRMATION_VIEW_CONTROLLER = "TripConfirmationViewControll
 let ALERT_TITLE = "Alert"
 let ALERT_BUTTON_OK = "OK"
 let ALERT_BUTTON_CANCEL = "Cancel"
+
+let NAVIGATION_BAR_COLOR = UIColor(rgb: 0xFDCC42)//F9C143
+let UNDERLINE_COLOR = UIColor(rgb: 0xDCDCDC)

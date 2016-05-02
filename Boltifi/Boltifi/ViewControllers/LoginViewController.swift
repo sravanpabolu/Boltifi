@@ -13,6 +13,9 @@ class LoginViewController : BaseViewController, UITextFieldDelegate {
     
     @IBOutlet weak var txtPassword: UITextField!
     @IBOutlet weak var txtEmailAddress: UITextField!
+    @IBOutlet weak var vwUserCredentials: UIView!
+    
+    let styleObj = CPStylist()
     
     @IBAction func loginBtnTapped(sender: AnyObject) {
         
@@ -36,7 +39,17 @@ class LoginViewController : BaseViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.hideKeyboardWhenTappedAround() 
+        
+        self.vwUserCredentials.layer.borderColor = UIColor.lightGrayColor().CGColor
+        self.vwUserCredentials.layer.borderWidth = 1
+        self.vwUserCredentials.layer.cornerRadius = 10
+        
+        styleObj.applyStyle(CPStylist.MyStylesheet.UserNameViewStyle, view:self.txtEmailAddress) //for image on the left side
+        styleObj.applyStyle(CPStylist.MyStylesheet.PasswordViewStyle, view:self.txtPassword) //for image on the left side
+        styleObj.applyStyle(CPStylist.MyStylesheet.TextFieldStyle, view: self.txtEmailAddress) //for underline
+        
+        self.hideKeyboardWhenTappedAround()
+        
     }
     
     override func didReceiveMemoryWarning() {

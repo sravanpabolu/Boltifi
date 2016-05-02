@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A044680D1CD7CB96000C5A67 /* CPStylist.swift in Sources */ = {isa = PBXBuildFile; fileRef = A044680C1CD7CB96000C5A67 /* CPStylist.swift */; };
+		A04468101CD7CD0F000C5A67 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A044680F1CD7CD0F000C5A67 /* UIColorExtension.swift */; };
 		A0A97BBF1CD3DB32008420D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A97BBE1CD3DB32008420D4 /* AppDelegate.swift */; };
 		A0A97BC41CD3DB32008420D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0A97BC21CD3DB32008420D4 /* Main.storyboard */; };
 		A0A97BC61CD3DB32008420D4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0A97BC51CD3DB32008420D4 /* Images.xcassets */; };
@@ -38,6 +40,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A044680C1CD7CB96000C5A67 /* CPStylist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPStylist.swift; sourceTree = "<group>"; };
+		A044680F1CD7CD0F000C5A67 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		A0A97BB91CD3DB32008420D4 /* Boltifi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Boltifi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0A97BBD1CD3DB32008420D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0A97BBE1CD3DB32008420D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +98,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A044680E1CD7CCFD000C5A67 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A044680F1CD7CD0F000C5A67 /* UIColorExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		A0A97BB01CD3DB32008420D4 = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +125,7 @@
 		A0A97BBB1CD3DB32008420D4 /* Boltifi */ = {
 			isa = PBXGroup;
 			children = (
+				A044680E1CD7CCFD000C5A67 /* Extensions */,
 				A0BB395F1CD4BF7400AE0AFB /* Constants */,
 				A0CDA6571CD3FE9500F18955 /* Utils */,
 				A0CDA6591CD3FE9500F18955 /* ViewControllers */,
@@ -169,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				A0CDA6581CD3FE9500F18955 /* Utils.swift */,
+				A044680C1CD7CB96000C5A67 /* CPStylist.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -262,6 +276,7 @@
 				A0B68EAD1CD55352005CECE7 /* FareEstimateViewController.swift in Sources */,
 				A0BB395C1CD4BC3F00AE0AFB /* GoogleMaps.bundle in Sources */,
 				A0B68EAF1CD557C8005CECE7 /* TripConfirmationViewController.swift in Sources */,
+				A044680D1CD7CB96000C5A67 /* CPStylist.swift in Sources */,
 				A0CDA6661CD3FE9500F18955 /* RegistrationViewController.swift in Sources */,
 				A0CDA6621CD3FE9500F18955 /* LoginViewController.swift in Sources */,
 				A0A97BBF1CD3DB32008420D4 /* AppDelegate.swift in Sources */,
@@ -269,6 +284,7 @@
 				A0CDA6641CD3FE9500F18955 /* MapViewController.swift in Sources */,
 				A0CDA6601CD3FE9500F18955 /* BaseViewController.swift in Sources */,
 				A0BB39611CD4BF7400AE0AFB /* Constants.swift in Sources */,
+				A04468101CD7CD0F000C5A67 /* UIColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
