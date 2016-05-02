@@ -34,12 +34,20 @@ class MapViewController : BaseViewController, CLLocationManagerDelegate, GMSMapV
     @IBAction func largeBtnTapped(sender: AnyObject) {
     }
     
+    @IBAction func globalMenuBtnTapped(sender: AnyObject) {
+        let objGlobalMenuTableController:GlobalMenuTableController = GlobalMenuTableController()
+        
+        self.presentViewController(objGlobalMenuTableController, animated: false, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
 //        self.buttonsView.hidden = false
 //        self.fareEstimateView.hidden = true
+        
+
         
         // Ask for Authorisation from the User.
         self.locationManager.requestAlwaysAuthorization()
@@ -71,6 +79,9 @@ class MapViewController : BaseViewController, CLLocationManagerDelegate, GMSMapV
     }
     
     
+    
+    
+    //TODO: Verify these methods
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         application.setStatusBarHidden(true, withAnimation: .None)

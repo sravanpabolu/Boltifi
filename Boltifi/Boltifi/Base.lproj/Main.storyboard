@@ -356,7 +356,8 @@
                                         <exclude reference="ugw-Na-ipe"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="4" y="0.0" width="392" height="736"/>
                                     <mask key="subviews">
                                         <include reference="u67-tD-oXD"/>
                                     </mask>
@@ -405,7 +406,9 @@
                             </mask>
                         </variation>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="XgL-Lp-CHZ"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="btnDriver" destination="hCJ-7X-l6b" id="RlE-mJ-zYh"/>
                         <outlet property="btnSender" destination="gPK-tz-azx" id="7EM-k7-JnD"/>
@@ -619,7 +622,7 @@
             </objects>
             <point key="canvasLocation" x="615" y="-363.75"/>
         </scene>
-        <!--Map View Controller-->
+        <!--Title-->
         <scene sceneID="MdU-AV-jNq">
             <objects>
                 <viewController storyboardIdentifier="MapViewController" id="Mte-8s-sHp" customClass="MapViewController" customModule="Boltifi" customModuleProvider="target" sceneMemberID="viewController">
@@ -806,6 +809,15 @@
                         </variation>
                     </view>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Title" id="njH-5E-IKN">
+                        <barButtonItem key="rightBarButtonItem" image="global_menu_icon" id="hLs-O1-2At">
+                            <inset key="imageInsets" minX="33" minY="16" maxX="4" maxY="22"/>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="globalMenuBtnTapped:" destination="Mte-8s-sHp" id="sa5-Kf-afX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -1002,6 +1014,98 @@
             </objects>
             <point key="canvasLocation" x="3390" y="-411.75"/>
         </scene>
+        <!--Table View Controller-->
+        <scene sceneID="tRG-Cr-USx">
+            <objects>
+                <tableViewController id="lXJ-sd-DfF" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="raY-aW-40B">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableCell" id="Pkn-xx-tg3">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Pkn-xx-tg3" id="NHQ-TU-Y1g">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="lXJ-sd-DfF" id="3lg-67-dd6"/>
+                            <outlet property="delegate" destination="lXJ-sd-DfF" id="GkS-Ai-5Kg"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XVW-4d-Ljq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1942.5" y="279"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tL3-DW-hOw">
+            <objects>
+                <viewController id="f2d-rh-Im9" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="r7U-Z4-vGn"/>
+                        <viewControllerLayoutGuide type="bottom" id="yb0-ya-YHl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="laX-NN-1TQ">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zAb-ZD-a3T">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="kyK-po-HHT">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kyK-po-HHT" id="viw-UG-xCY">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="f2d-rh-Im9" id="LE7-Og-6Ww"/>
+                                    <outlet property="delegate" destination="f2d-rh-Im9" id="VVA-wL-rgK"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zAb-ZD-a3T" firstAttribute="trailing" secondItem="laX-NN-1TQ" secondAttribute="trailingMargin" id="H3Z-Ci-ifG"/>
+                            <constraint firstItem="yb0-ya-YHl" firstAttribute="top" secondItem="zAb-ZD-a3T" secondAttribute="bottom" constant="20" id="Wmv-Yh-oLc"/>
+                            <constraint firstItem="zAb-ZD-a3T" firstAttribute="top" secondItem="r7U-Z4-vGn" secondAttribute="bottom" id="bsT-ey-pkB"/>
+                            <constraint firstItem="zAb-ZD-a3T" firstAttribute="leading" secondItem="laX-NN-1TQ" secondAttribute="leadingMargin" id="tdo-sU-CbB"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="zAb-ZD-a3T"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="H3Z-Ci-ifG"/>
+                                <exclude reference="bsT-ey-pkB"/>
+                                <exclude reference="tdo-sU-CbB"/>
+                                <exclude reference="Wmv-Yh-oLc"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="zAb-ZD-a3T"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="H3Z-Ci-ifG"/>
+                                <include reference="bsT-ey-pkB"/>
+                                <include reference="tdo-sU-CbB"/>
+                                <include reference="Wmv-Yh-oLc"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="tblGlobalMenu" destination="zAb-ZD-a3T" id="uY2-I1-u9n"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bGT-py-1Gg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2604" y="279"/>
+        </scene>
         <!--Fare Estimate View Controller-->
         <scene sceneID="Ufb-fr-yFg">
             <objects>
@@ -1053,6 +1157,7 @@
     </scenes>
     <resources>
         <image name="bike" width="64" height="64"/>
+        <image name="global_menu_icon" width="66" height="66"/>
         <image name="payment_view_bg" width="1021" height="304"/>
         <image name="truck" width="64" height="64"/>
         <image name="van" width="64" height="64"/>
