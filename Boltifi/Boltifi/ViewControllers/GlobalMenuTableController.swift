@@ -32,6 +32,17 @@ class GlobalMenuTableController:UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        self.dismissViewControllerAnimated(false, completion: nil);
+        
+//        if indexPath.row == 3 {
+//            //about
+//            self.dismissViewControllerAnimated(false, completion: { () -> Void in
+//                let objAboutViewController:AboutViewController = AboutViewController()
+//                
+//                self.presentViewController(objAboutViewController, animated: false, completion: nil)
+//
+//            })
+//        } else {
+            self.dismissViewControllerAnimated(false, completion: nil);
+//        }
     }
 }

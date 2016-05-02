@@ -38,6 +38,7 @@
 		A0CDA6641CD3FE9500F18955 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CDA65C1CD3FE9500F18955 /* MapViewController.swift */; };
 		A0CDA6661CD3FE9500F18955 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CDA65D1CD3FE9500F18955 /* RegistrationViewController.swift */; };
 		A0FCD1D81CD7E860004C5905 /* GlobalMenuTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FCD1D71CD7E860004C5905 /* GlobalMenuTableController.swift */; };
+		A0FCD1DC1CD7F2A2004C5905 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FCD1DB1CD7F2A2004C5905 /* AboutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +74,7 @@
 		A0CDA65D1CD3FE9500F18955 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		A0CDA6681CD48A7900F18955 /* Boltifi-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Boltifi-Bridging-Header.h"; sourceTree = "<group>"; };
 		A0FCD1D71CD7E860004C5905 /* GlobalMenuTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalMenuTableController.swift; sourceTree = "<group>"; };
+		A0FCD1DB1CD7F2A2004C5905 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +201,7 @@
 				A0B68EAE1CD557C8005CECE7 /* TripConfirmationViewController.swift */,
 				A0B68EAC1CD55352005CECE7 /* FareEstimateViewController.swift */,
 				A0FCD1D71CD7E860004C5905 /* GlobalMenuTableController.swift */,
+				A0FCD1DB1CD7F2A2004C5905 /* AboutViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 				A0B68EAD1CD55352005CECE7 /* FareEstimateViewController.swift in Sources */,
 				A0BB395C1CD4BC3F00AE0AFB /* GoogleMaps.bundle in Sources */,
 				A0B68EAF1CD557C8005CECE7 /* TripConfirmationViewController.swift in Sources */,
+				A0FCD1DC1CD7F2A2004C5905 /* AboutViewController.swift in Sources */,
 				A044680D1CD7CB96000C5A67 /* CPStylist.swift in Sources */,
 				A0FCD1D81CD7E860004C5905 /* GlobalMenuTableController.swift in Sources */,
 				A0CDA6661CD3FE9500F18955 /* RegistrationViewController.swift in Sources */,

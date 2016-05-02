@@ -1014,6 +1014,102 @@
             </objects>
             <point key="canvasLocation" x="3390" y="-411.75"/>
         </scene>
+        <!--About View Controller-->
+        <scene sceneID="fCG-in-az4">
+            <objects>
+                <viewController id="iYa-Yg-5uc" customClass="AboutViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="loz-SW-pZY"/>
+                        <viewControllerLayoutGuide type="bottom" id="cae-XZ-Qpi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="j2w-Fx-vmz">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ATY-d5-aLH">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="296" id="QFv-tK-jMd"/>
+                                </constraints>
+                                <string key="text">The biggest proudest tech-logistic company in the industry. We pride ourselves in the solutions we bring.
+
+Anything. Everything.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="QFv-tK-jMd"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="QFv-tK-jMd"/>
+                                    </mask>
+                                </variation>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icr-xT-e0z">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Fvf-3f-LT0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Fvf-3f-LT0"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Fvf-3f-LT0"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ATY-d5-aLH" firstAttribute="top" secondItem="icr-xT-e0z" secondAttribute="bottom" constant="18" id="3eQ-Uo-Vqw"/>
+                            <constraint firstItem="icr-xT-e0z" firstAttribute="trailing" secondItem="j2w-Fx-vmz" secondAttribute="trailingMargin" id="ErY-D9-gjM"/>
+                            <constraint firstItem="icr-xT-e0z" firstAttribute="leading" secondItem="j2w-Fx-vmz" secondAttribute="leadingMargin" id="Ioe-Km-cli"/>
+                            <constraint firstItem="ATY-d5-aLH" firstAttribute="trailing" secondItem="j2w-Fx-vmz" secondAttribute="trailingMargin" id="NTz-Hn-0yJ"/>
+                            <constraint firstItem="icr-xT-e0z" firstAttribute="top" secondItem="loz-SW-pZY" secondAttribute="bottom" constant="33" id="iHD-b9-foU"/>
+                            <constraint firstItem="ATY-d5-aLH" firstAttribute="leading" secondItem="j2w-Fx-vmz" secondAttribute="leadingMargin" id="shc-pi-epj"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="ATY-d5-aLH"/>
+                                <exclude reference="icr-xT-e0z"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="ErY-D9-gjM"/>
+                                <exclude reference="Ioe-Km-cli"/>
+                                <exclude reference="iHD-b9-foU"/>
+                                <exclude reference="3eQ-Uo-Vqw"/>
+                                <exclude reference="NTz-Hn-0yJ"/>
+                                <exclude reference="shc-pi-epj"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="ATY-d5-aLH"/>
+                                <include reference="icr-xT-e0z"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="ErY-D9-gjM"/>
+                                <include reference="Ioe-Km-cli"/>
+                                <include reference="iHD-b9-foU"/>
+                                <include reference="3eQ-Uo-Vqw"/>
+                                <include reference="NTz-Hn-0yJ"/>
+                                <include reference="shc-pi-epj"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hsg-WQ-ttA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4113" y="-411.75"/>
+        </scene>
         <!--Table View Controller-->
         <scene sceneID="tRG-Cr-USx">
             <objects>
