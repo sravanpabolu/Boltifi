@@ -15,6 +15,7 @@ class MapViewController : BaseViewController, CLLocationManagerDelegate, GMSMapV
     @IBOutlet weak var mapView: GMSMapView!
     @IBOutlet weak var buttonsView: UIView!
 //    @IBOutlet weak var fareEstimateView: UIView!
+    @IBOutlet weak var slider: UISlider!
     
     var locationManager = CLLocationManager()
     var didFindMyLocation = false
@@ -24,15 +25,37 @@ class MapViewController : BaseViewController, CLLocationManagerDelegate, GMSMapV
     var locationStatus : NSString = "Not Started"
     
     //MARK: - btn action methods
-    
-    @IBAction func smallBtnTapped(sender: AnyObject) {
+    @IBAction func sliderValueChanged(sender: AnyObject) {
+        var sliderImage:UIImage
+        if self.slider.value < 1 {
+            sliderImage = UIImage(named: "bike")!
+        } else if self.slider.value > 1 && self.slider.value < 2 {
+            sliderImage = UIImage(named: "van")!
+        } else {
+            sliderImage = UIImage(named: "truck")!
+        }
+        
+        let center = self.xPositionFromSliderValue(self.slider)
+        print("\(self.slider.value) ======= \(center)"  )
+        self.slider.setThumbImage(sliderImage, forState: UIControlState.Normal)
     }
     
-    @IBAction func mediumBtnTapped(sender: AnyObject) {
+    func xPositionFromSliderValue(aSlider:UISlider) -> CGFloat {
+        let sliderRange:CGFloat = aSlider.frame.size.width - aSlider.currentThumbImage!.size.width;
+        let sliderOrigin:CGFloat = aSlider.frame.origin.x + (aSlider.currentThumbImage!.size.width / 2.0);
+        
+        let sliderValueToPixels:CGFloat = (CGFloat((aSlider.value - aSlider.minimumValue)/(aSlider.maximumValue - aSlider.minimumValue)) * sliderRange) + sliderOrigin;
+        
+        return sliderValueToPixels;
     }
-    
-    @IBAction func largeBtnTapped(sender: AnyObject) {
-    }
+//    @IBAction func smallBtnTapped(sender: AnyObject) {
+//    }
+//    
+//    @IBAction func mediumBtnTapped(sender: AnyObject) {
+//    }
+//    
+//    @IBAction func largeBtnTapped(sender: AnyObject) {
+//    }
     
     @IBAction func globalMenuBtnTapped(sender: AnyObject) {
         let objGlobalMenuTableController:GlobalMenuTableController = GlobalMenuTableController()
@@ -46,6 +69,14 @@ class MapViewController : BaseViewController, CLLocationManagerDelegate, GMSMapV
 
 //        self.buttonsView.hidden = false
 //        self.fareEstimateView.hidden = true
+        
+        //Setup Slider
+        self.slider.minimumValue = 0
+        self.slider.maximumValue = 2
+        self.slider.value = 0 //Default value
+        self.slider.setThumbImage(UIImage(named: "bike"), forState: UIControlState.Normal)
+        self.slider.setMinimumTrackImage(UIImage(named: "grayhorizontallinebg"), forState: UIControlState.Normal)
+        self.slider.setMaximumTrackImage(UIImage(named: "grayhorizontallinebg"), forState: UIControlState.Normal)
         
 
         
