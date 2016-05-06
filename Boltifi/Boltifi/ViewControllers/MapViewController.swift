@@ -12,12 +12,12 @@ import UIKit
 
 class MapViewController : BaseViewController, CLLocationManagerDelegate, GMSMapViewDelegate {
     
-    @IBOutlet weak var btnGlobalMenu: UIBarButtonItem!
+//    @IBOutlet weak var btnGlobalMenu: UIBarButtonItem!
     @IBOutlet weak var mapView: GMSMapView!
     @IBOutlet weak var buttonsView: UIView!
 //    @IBOutlet weak var fareEstimateView: UIView!
     @IBOutlet weak var slider: UISlider!
-    @IBOutlet weak var btnDummy: UIButton!
+    @IBOutlet weak var btnGlobalMenu: UIButton!
     
     var locationManager = CLLocationManager()
     var didFindMyLocation = false
@@ -25,15 +25,6 @@ class MapViewController : BaseViewController, CLLocationManagerDelegate, GMSMapV
     var seenError : Bool = false
     var locationFixAchieved : Bool = true
     var locationStatus : NSString = "Not Started"
-    
-    @IBAction func btnDummyTapped(sender: AnyObject) {
-        if self.revealViewController() != nil
-        {
-            self.btnDummy.addTarget(self.revealViewController(), action: "rightRevealToggle:", forControlEvents: UIControlEvents.TouchUpInside)
-            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-            self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
-        }
-    }
     
     //MARK: - btn action methods
     @IBAction func sliderValueChanged(sender: AnyObject) {
@@ -69,11 +60,23 @@ class MapViewController : BaseViewController, CLLocationManagerDelegate, GMSMapV
 //    }
     
     @IBAction func globalMenuBtnTapped(sender: AnyObject) {
-        let objGlobalMenuTableController:GlobalMenuTableController = GlobalMenuTableController()
+//        let objGlobalMenuTableController:GlobalMenuTableController = GlobalMenuTableController()
+//        
+//        self.presentViewController(objGlobalMenuTableController, animated: false, completion: nil)
         
-        self.presentViewController(objGlobalMenuTableController, animated: false, completion: nil)
+        if self.revealViewController() != nil
+        {
+//            self.btnGlobalMenu.addTarget(self.revealViewController(), action: "rightRevealToggle:", forControlEvents: UIControlEvents.TouchUpInside)
+            self.revealViewController().rightViewRevealOverdraw = 0
+
+            self.btnGlobalMenu.addTarget(self.revealViewController(), action: "rightRevealToggle:", forControlEvents: UIControlEvents.TouchUpInside)
+            
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+            self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
+        }
     }
     
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -88,6 +91,7 @@ class MapViewController : BaseViewController, CLLocationManagerDelegate, GMSMapV
         
 //        self.navigationItem.setRightBarButtonItem(UIBarButtonItem(barButtonSystemItem: .Search, target: self.revealViewController(), action: "revealToggle:"), animated: true)
         
+        self.navigationController?.navigationBarHidden = true
         
         //Setup Slider
         self.slider.minimumValue = 0
