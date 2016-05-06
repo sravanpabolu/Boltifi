@@ -33,6 +33,10 @@ class GlobalMenuTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let revealController:SWRevealViewController = revealViewController()
+        let destination = AboutViewController()
+        let navigationController : UINavigationController = UINavigationController(rootViewController:destination)
+        revealController.pushFrontViewController(navigationController, animated: true)
         
         //        if indexPath.row == 3 {
         //            //about
@@ -43,7 +47,7 @@ class GlobalMenuTableViewController: UITableViewController {
         //
         //            })
         //        } else {
-        self.dismissViewControllerAnimated(false, completion: nil);
+//        self.dismissViewControllerAnimated(false, completion: nil);
         //        }
     }
 }

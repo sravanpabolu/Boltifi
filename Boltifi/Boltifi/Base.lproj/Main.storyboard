@@ -724,21 +724,46 @@
                                             <action selector="globalMenuBtnTapped:" destination="Mte-8s-sHp" eventType="touchUpInside" id="Cba-21-eiM"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Boltifi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kYU-WP-u64">
+                                        <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="AjD-8P-FEd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="AjD-8P-FEd"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="AjD-8P-FEd"/>
+                                            </mask>
+                                        </variation>
+                                    </label>
                                 </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="1ZD-lF-hda"/>
+                                    <constraint firstItem="kYU-WP-u64" firstAttribute="top" secondItem="FYx-xZ-9G3" secondAttribute="top" id="2h0-ab-DSO"/>
+                                    <constraint firstItem="kYU-WP-u64" firstAttribute="leading" secondItem="gB2-SX-Kef" secondAttribute="leading" constant="61" id="EQ2-5E-9VV"/>
                                     <constraint firstAttribute="trailing" secondItem="FYx-xZ-9G3" secondAttribute="trailing" constant="8" id="GoE-hu-N70"/>
+                                    <constraint firstItem="FYx-xZ-9G3" firstAttribute="leading" secondItem="kYU-WP-u64" secondAttribute="trailing" constant="8" id="VAp-a7-Ukq"/>
                                     <constraint firstItem="FYx-xZ-9G3" firstAttribute="leading" secondItem="gB2-SX-Kef" secondAttribute="leading" constant="348" id="mcD-W5-Pq0"/>
                                     <constraint firstItem="FYx-xZ-9G3" firstAttribute="bottom" secondItem="gB2-SX-Kef" secondAttribute="bottomMargin" id="vcx-Sm-LBa"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="subviews">
                                         <exclude reference="FYx-xZ-9G3"/>
+                                        <exclude reference="kYU-WP-u64"/>
                                     </mask>
                                     <mask key="constraints">
                                         <exclude reference="1ZD-lF-hda"/>
+                                        <exclude reference="2h0-ab-DSO"/>
+                                        <exclude reference="EQ2-5E-9VV"/>
                                         <exclude reference="GoE-hu-N70"/>
+                                        <exclude reference="VAp-a7-Ukq"/>
                                         <exclude reference="mcD-W5-Pq0"/>
                                         <exclude reference="vcx-Sm-LBa"/>
                                     </mask>
@@ -746,10 +771,14 @@
                                 <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="subviews">
                                         <include reference="FYx-xZ-9G3"/>
+                                        <include reference="kYU-WP-u64"/>
                                     </mask>
                                     <mask key="constraints">
                                         <include reference="1ZD-lF-hda"/>
+                                        <include reference="2h0-ab-DSO"/>
+                                        <include reference="EQ2-5E-9VV"/>
                                         <include reference="GoE-hu-N70"/>
+                                        <include reference="VAp-a7-Ukq"/>
                                         <include reference="mcD-W5-Pq0"/>
                                         <include reference="vcx-Sm-LBa"/>
                                     </mask>
@@ -1270,7 +1299,7 @@ Anything. Everything.</string>
         </scene>
     </scenes>
     <resources>
-        <image name="GlobalMenu" width="22" height="17"/>
+        <image name="GlobalMenu" width="22" height="22"/>
         <image name="payment_view_bg" width="1021" height="304"/>
         <image name="visa_card" width="115" height="80"/>
     </resources>

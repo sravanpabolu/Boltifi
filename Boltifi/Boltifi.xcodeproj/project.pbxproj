@@ -11,7 +11,6 @@
 		A04468101CD7CD0F000C5A67 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A044680F1CD7CD0F000C5A67 /* UIColorExtension.swift */; };
 		A0A97BBF1CD3DB32008420D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A97BBE1CD3DB32008420D4 /* AppDelegate.swift */; };
 		A0A97BC41CD3DB32008420D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0A97BC21CD3DB32008420D4 /* Main.storyboard */; };
-		A0A97BC61CD3DB32008420D4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0A97BC51CD3DB32008420D4 /* Images.xcassets */; };
 		A0A97BC91CD3DB32008420D4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0A97BC71CD3DB32008420D4 /* LaunchScreen.xib */; };
 		A0B68EAD1CD55352005CECE7 /* FareEstimateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B68EAC1CD55352005CECE7 /* FareEstimateViewController.swift */; };
 		A0B68EAF1CD557C8005CECE7 /* TripConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B68EAE1CD557C8005CECE7 /* TripConfirmationViewController.swift */; };
@@ -34,6 +33,7 @@
 		A0BB39611CD4BF7400AE0AFB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BB39601CD4BF7400AE0AFB /* Constants.swift */; };
 		A0C034661CDCFD040017E108 /* GlobalMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C034651CDCFD040017E108 /* GlobalMenuTableViewController.swift */; };
 		A0C034681CDD03EF0017E108 /* MenuCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C034671CDD03EF0017E108 /* MenuCustomCell.swift */; };
+		A0C0346C1CDD29CE0017E108 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0C0346B1CDD29CE0017E108 /* Images.xcassets */; };
 		A0CDA65E1CD3FE9500F18955 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CDA6581CD3FE9500F18955 /* Utils.swift */; };
 		A0CDA6601CD3FE9500F18955 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CDA65A1CD3FE9500F18955 /* BaseViewController.swift */; };
 		A0CDA6621CD3FE9500F18955 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CDA65B1CD3FE9500F18955 /* LoginViewController.swift */; };
@@ -51,7 +51,6 @@
 		A0A97BBD1CD3DB32008420D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0A97BBE1CD3DB32008420D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0A97BC31CD3DB32008420D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A0A97BC51CD3DB32008420D4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A0A97BC81CD3DB32008420D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		A0B68EAC1CD55352005CECE7 /* FareEstimateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FareEstimateViewController.swift; sourceTree = "<group>"; };
 		A0B68EAE1CD557C8005CECE7 /* TripConfirmationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripConfirmationViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +71,7 @@
 		A0BB39601CD4BF7400AE0AFB /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A0C034651CDCFD040017E108 /* GlobalMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalMenuTableViewController.swift; sourceTree = "<group>"; };
 		A0C034671CDD03EF0017E108 /* MenuCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCustomCell.swift; sourceTree = "<group>"; };
+		A0C0346B1CDD29CE0017E108 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A0CDA6581CD3FE9500F18955 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		A0CDA65A1CD3FE9500F18955 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		A0CDA65B1CD3FE9500F18955 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -143,8 +143,8 @@
 				A0CDA6591CD3FE9500F18955 /* ViewControllers */,
 				A0A97BBE1CD3DB32008420D4 /* AppDelegate.swift */,
 				A0A97BC21CD3DB32008420D4 /* Main.storyboard */,
-				A0A97BC51CD3DB32008420D4 /* Images.xcassets */,
 				A0A97BC71CD3DB32008420D4 /* LaunchScreen.xib */,
+				A0C0346B1CDD29CE0017E108 /* Images.xcassets */,
 				A0A97BBC1CD3DB32008420D4 /* Supporting Files */,
 				A0CDA6681CD48A7900F18955 /* Boltifi-Bridging-Header.h */,
 			);
@@ -285,8 +285,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0A97BC41CD3DB32008420D4 /* Main.storyboard in Resources */,
+				A0C0346C1CDD29CE0017E108 /* Images.xcassets in Resources */,
 				A0A97BC91CD3DB32008420D4 /* LaunchScreen.xib in Resources */,
-				A0A97BC61CD3DB32008420D4 /* Images.xcassets in Resources */,
 				A0BB39411CD4BA7F00AE0AFB /* GoogleMaps.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

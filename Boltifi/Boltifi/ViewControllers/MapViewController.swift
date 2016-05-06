@@ -27,6 +27,15 @@ class MapViewController : BaseViewController, CLLocationManagerDelegate, GMSMapV
     var locationStatus : NSString = "Not Started"
     
     //MARK: - btn action methods
+    @IBAction func globalMenuBtnTapped(sender: AnyObject) {
+        if self.revealViewController() != nil {
+            self.revealViewController().rightViewRevealOverdraw = 0
+            self.btnGlobalMenu.addTarget(self.revealViewController(), action: "rightRevealToggle:", forControlEvents: UIControlEvents.TouchUpInside)
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+            self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
+        }
+    }
+    
     @IBAction func sliderValueChanged(sender: AnyObject) {
         var sliderImage:UIImage
         if self.slider.value < 1 {
@@ -50,48 +59,17 @@ class MapViewController : BaseViewController, CLLocationManagerDelegate, GMSMapV
         
         return sliderValueToPixels;
     }
-//    @IBAction func smallBtnTapped(sender: AnyObject) {
-//    }
-//    
-//    @IBAction func mediumBtnTapped(sender: AnyObject) {
-//    }
-//    
-//    @IBAction func largeBtnTapped(sender: AnyObject) {
-//    }
     
-    @IBAction func globalMenuBtnTapped(sender: AnyObject) {
-//        let objGlobalMenuTableController:GlobalMenuTableController = GlobalMenuTableController()
-//        
-//        self.presentViewController(objGlobalMenuTableController, animated: false, completion: nil)
-        
-        if self.revealViewController() != nil
-        {
-//            self.btnGlobalMenu.addTarget(self.revealViewController(), action: "rightRevealToggle:", forControlEvents: UIControlEvents.TouchUpInside)
-            self.revealViewController().rightViewRevealOverdraw = 0
-
-            self.btnGlobalMenu.addTarget(self.revealViewController(), action: "rightRevealToggle:", forControlEvents: UIControlEvents.TouchUpInside)
-            
-            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-            self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
-        }
-    }
     
-        
+    
+    //MARK: View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
-//        self.buttonsView.hidden = false
-//        self.fareEstimateView.hidden = true
-        
-//        self.navigationItem.rightBarButtonItem = self.btnDummy
-        //self.navigationItem.setRightBarButtonItems(menuBtn, animated: true)
-        
-        // Or if you just want to insert one item.
-        
-//        self.navigationItem.setRightBarButtonItem(UIBarButtonItem(barButtonSystemItem: .Search, target: self.revealViewController(), action: "revealToggle:"), animated: true)
-        
-        self.navigationController?.navigationBarHidden = true
+//        //For global menu
+//        self.navigationController?.navigationBarHidden = true
+//        self.btnGlobalMenu.backgroundColor = UIColor(rgb: 0xF26522)
         
         //Setup Slider
         self.slider.minimumValue = 0
@@ -102,7 +80,6 @@ class MapViewController : BaseViewController, CLLocationManagerDelegate, GMSMapV
         self.slider.setMaximumTrackImage(UIImage(named: "grayhorizontallinebg"), forState: UIControlState.Normal)
         
 
-        
         // Ask for Authorisation from the User.
         self.locationManager.requestAlwaysAuthorization()
         
