@@ -14,7 +14,7 @@ class GlobalMenuTableViewController: UITableViewController {
 //    @IBOutlet weak var tblGlobalMenu: UITableView!
     let identifier: String = "tableCell"
     
-    var arrGlobalMenuItems = ["Home", "See how it works", "About", "Contact Us", "Logout"]
+    var arrGlobalMenuItems = ["HOME", "SEE HOW IT WORKS", "ABOUT", "CONTACT US", "LOGOUT"]
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return arrGlobalMenuItems.count

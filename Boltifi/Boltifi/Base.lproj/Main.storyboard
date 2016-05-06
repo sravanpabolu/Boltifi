@@ -730,7 +730,7 @@
                                             <constraint firstAttribute="height" constant="44" id="AjD-8P-FEd"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.94901960784313721" green="0.396078431372549" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="default">
                                             <mask key="constraints">
@@ -1178,7 +1178,7 @@ Anything. Everything.</string>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Boltifi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dwd-TT-bTl">
                                         <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.94901960780000005" green="0.39607843139999999" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tz5-C2-vaw">
@@ -1226,13 +1226,13 @@ Anything. Everything.</string>
                                         <exclude reference="22B-oV-0tV"/>
                                         <exclude reference="4VC-wV-3UH"/>
                                         <exclude reference="Hgl-ik-O1y"/>
-                                        <exclude reference="WYP-Jm-z2b"/>
-                                        <exclude reference="dFy-h6-W8p"/>
-                                        <exclude reference="g7Q-bb-UkQ"/>
                                         <exclude reference="0zv-bu-ldK"/>
                                         <exclude reference="Of8-lf-5D7"/>
                                         <exclude reference="j8g-Q5-t1P"/>
                                         <exclude reference="pYd-HW-i8H"/>
+                                        <exclude reference="WYP-Jm-z2b"/>
+                                        <exclude reference="dFy-h6-W8p"/>
+                                        <exclude reference="g7Q-bb-UkQ"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
@@ -1246,13 +1246,13 @@ Anything. Everything.</string>
                                         <include reference="22B-oV-0tV"/>
                                         <include reference="4VC-wV-3UH"/>
                                         <include reference="Hgl-ik-O1y"/>
-                                        <include reference="WYP-Jm-z2b"/>
-                                        <include reference="dFy-h6-W8p"/>
-                                        <include reference="g7Q-bb-UkQ"/>
                                         <include reference="0zv-bu-ldK"/>
                                         <include reference="Of8-lf-5D7"/>
                                         <include reference="j8g-Q5-t1P"/>
                                         <include reference="pYd-HW-i8H"/>
+                                        <include reference="WYP-Jm-z2b"/>
+                                        <include reference="dFy-h6-W8p"/>
+                                        <include reference="g7Q-bb-UkQ"/>
                                     </mask>
                                 </variation>
                             </view>
