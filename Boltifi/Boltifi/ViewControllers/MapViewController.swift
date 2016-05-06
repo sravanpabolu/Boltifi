@@ -12,10 +12,12 @@ import UIKit
 
 class MapViewController : BaseViewController, CLLocationManagerDelegate, GMSMapViewDelegate {
     
+    @IBOutlet weak var btnGlobalMenu: UIBarButtonItem!
     @IBOutlet weak var mapView: GMSMapView!
     @IBOutlet weak var buttonsView: UIView!
 //    @IBOutlet weak var fareEstimateView: UIView!
     @IBOutlet weak var slider: UISlider!
+    @IBOutlet weak var btnDummy: UIButton!
     
     var locationManager = CLLocationManager()
     var didFindMyLocation = false
@@ -23,6 +25,15 @@ class MapViewController : BaseViewController, CLLocationManagerDelegate, GMSMapV
     var seenError : Bool = false
     var locationFixAchieved : Bool = true
     var locationStatus : NSString = "Not Started"
+    
+    @IBAction func btnDummyTapped(sender: AnyObject) {
+        if self.revealViewController() != nil
+        {
+            self.btnDummy.addTarget(self.revealViewController(), action: "rightRevealToggle:", forControlEvents: UIControlEvents.TouchUpInside)
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+            self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
+        }
+    }
     
     //MARK: - btn action methods
     @IBAction func sliderValueChanged(sender: AnyObject) {
@@ -69,6 +80,14 @@ class MapViewController : BaseViewController, CLLocationManagerDelegate, GMSMapV
 
 //        self.buttonsView.hidden = false
 //        self.fareEstimateView.hidden = true
+        
+//        self.navigationItem.rightBarButtonItem = self.btnDummy
+        //self.navigationItem.setRightBarButtonItems(menuBtn, animated: true)
+        
+        // Or if you just want to insert one item.
+        
+//        self.navigationItem.setRightBarButtonItem(UIBarButtonItem(barButtonSystemItem: .Search, target: self.revealViewController(), action: "revealToggle:"), animated: true)
+        
         
         //Setup Slider
         self.slider.minimumValue = 0

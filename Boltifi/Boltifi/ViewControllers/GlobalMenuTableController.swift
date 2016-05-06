@@ -20,13 +20,13 @@ class GlobalMenuTableController:UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell: UITableViewCell! = tableView.dequeueReusableCellWithIdentifier(identifier)
+        var cell: MenuCustomCell! = tableView.dequeueReusableCellWithIdentifier(identifier) as? MenuCustomCell
 
         if cell == nil {
-            cell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: identifier)
+            cell = MenuCustomCell(style: UITableViewCellStyle.Value1, reuseIdentifier: identifier)
         }
         
-        cell.textLabel?.text = arrGlobalMenuItems[indexPath.row]
+        cell.menuTitleLabel.text = arrGlobalMenuItems[indexPath.row]
 
         return cell
     }

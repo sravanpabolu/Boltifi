@@ -10,5 +10,6 @@
 #define Boltifi_Boltifi_Bridging_Header_h
 
 #import <GoogleMaps/GoogleMaps.h>
+#import "SWRevealViewController.h"
 
 #endif
