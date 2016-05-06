@@ -1,5 +1,5 @@
 //
-//  MenuCustomCell.swift
+//  GlobalMenuCustomCell.swift
 //  Boltifi
 //
 //  Created by Sravan on 06/05/16.
@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class MenuCustomCell: UITableViewCell {
+class GlobalMenuCustomCell: UITableViewCell {
     @IBOutlet weak var menuTitleLabel: UILabel!
 
 }

@@ -14,17 +14,17 @@ class GlobalMenuTableViewController: UITableViewController {
 //    @IBOutlet weak var tblGlobalMenu: UITableView!
     let identifier: String = "tableCell"
     
-    var arrGlobalMenuItems = ["", "Home", "See how it works", "About", "Contact Us", "Logout"]
+    var arrGlobalMenuItems = ["Home", "See how it works", "About", "Contact Us", "Logout"]
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return arrGlobalMenuItems.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell: MenuCustomCell! = tableView.dequeueReusableCellWithIdentifier(identifier) as? MenuCustomCell
+        var cell: GlobalMenuCustomCell! = tableView.dequeueReusableCellWithIdentifier(identifier) as? GlobalMenuCustomCell
         
         if cell == nil {
-            cell = MenuCustomCell(style: UITableViewCellStyle.Value1, reuseIdentifier: identifier)
+            cell = GlobalMenuCustomCell(style: UITableViewCellStyle.Value1, reuseIdentifier: identifier)
         }
         cell.menuTitleLabel?.text = arrGlobalMenuItems[indexPath.row] as? String
 //        cell.menuTitleLabel?.text = "abcdserewrewrewfref" as String//arrGlobalMenuItems[indexPath.row] as? String
@@ -32,22 +32,39 @@ class GlobalMenuTableViewController: UITableViewController {
         return cell
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let revealController:SWRevealViewController = revealViewController()
-        let destination = AboutViewController()
-        let navigationController : UINavigationController = UINavigationController(rootViewController:destination)
-        revealController.pushFrontViewController(navigationController, animated: true)
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+    {
+//        let viewControllerObj = self.storyboard?.instantiateViewControllerWithIdentifier("AboutViewController") as? AboutViewController
+//        self.navigationController?.pushViewController(mapViewControllerObj!, animated: true)
         
-        //        if indexPath.row == 3 {
-        //            //about
-        //            self.dismissViewControllerAnimated(false, completion: { () -> Void in
-        //                let objAboutViewController:AboutViewController = AboutViewController()
-        //
-        //                self.presentViewController(objAboutViewController, animated: false, completion: nil)
-        //
-        //            })
-        //        } else {
-//        self.dismissViewControllerAnimated(false, completion: nil);
-        //        }
+//        let revealController:SWRevealViewController = revealViewController()
+        
+        switch indexPath.row {
+        case 0 : //Home
+            let viewControllerObj = self.storyboard?.instantiateViewControllerWithIdentifier(IDENTIFIER_HOME_VIEW_CONTROLLER) as? HomeViewController
+            self.navigationController?.pushViewController(viewControllerObj!, animated: true)
+            break
+        case 1: //See How It Works
+            let viewControllerObj = self.storyboard?.instantiateViewControllerWithIdentifier(IDENTIFIER_SEE_HOW_IT_WORKS_VIEW_CONTROLLER) as? SeeHowItWorksViewController
+            self.navigationController?.pushViewController(viewControllerObj!, animated: true)
+            break
+        case 2: //About
+            let viewControllerObj = self.storyboard?.instantiateViewControllerWithIdentifier(IDENTIFIER_ABOUT_VIEW_CONTROLLER) as? AboutViewController
+            self.navigationController?.pushViewController(viewControllerObj!, animated: true)
+
+            break
+        case 2: //Contact Us
+            let viewControllerObj = self.storyboard?.instantiateViewControllerWithIdentifier(IDENTIFIER_CONTACT_US_VIEW_CONTROLLER) as? ContactUsViewController
+            self.navigationController?.pushViewController(viewControllerObj!, animated: true)
+            
+            break
+        case 2: //Logout
+//            let viewControllerObj = self.storyboard?.instantiateViewControllerWithIdentifier(IDENTIFIER_ABOUT_VIEW_CONTROLLER) as? AboutViewController
+//            self.navigationController?.pushViewController(viewControllerObj!, animated: true)
+            
+            break
+        default:
+            print("Not a valid option selected")
+        }
     }
 }

@@ -7,12 +7,15 @@
 //
 
 import Foundation
+import UIKit
 
 class AboutViewController:BaseViewController {
     
+    @IBOutlet weak var btnGlobalMenu: UIButton!
+    @IBAction func globalMenuBtnTapped(sender: AnyObject) {
+        self.setUpGlobalMenu(self.btnGlobalMenu)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.view.backgroundColor = UIColor.orangeColor()
     }
 }

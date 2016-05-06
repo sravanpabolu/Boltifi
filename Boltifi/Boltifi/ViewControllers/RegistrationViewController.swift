@@ -25,7 +25,7 @@ class RegistrationViewController : BaseViewController, UITextFieldDelegate {
             return
         }
     
-        let controller = self.storyboard?.instantiateViewControllerWithIdentifier(IDENTIFIER_MAP_VIEW_CONTROLLER) as! MapViewController
+        let controller = self.storyboard?.instantiateViewControllerWithIdentifier(IDENTIFIER_HOME_VIEW_CONTROLLER) as! HomeViewController
         self.navigationController?.pushViewController(controller, animated: true)
     }
     

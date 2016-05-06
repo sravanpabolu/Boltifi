@@ -48,6 +48,15 @@ class BaseViewController: UIViewController {
         self.presentViewController(alert, animated: true, completion: nil)
     }
     
+    func setUpGlobalMenu(button: UIButton) {
+        if self.revealViewController() != nil {
+            self.revealViewController().rightViewRevealOverdraw = 0
+            button.addTarget(self.revealViewController(), action: "rightRevealToggle:", forControlEvents: UIControlEvents.TouchUpInside)
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+            self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
+        }
+    }
+    
     //TODO:
 //    func navigateToViewController(identifier:String) {
 //        

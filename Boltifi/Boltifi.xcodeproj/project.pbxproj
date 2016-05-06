@@ -32,15 +32,16 @@
 		A0BB395C1CD4BC3F00AE0AFB /* GoogleMaps.bundle in Sources */ = {isa = PBXBuildFile; fileRef = A0BB393F1CD4BA7F00AE0AFB /* GoogleMaps.bundle */; };
 		A0BB39611CD4BF7400AE0AFB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BB39601CD4BF7400AE0AFB /* Constants.swift */; };
 		A0C034661CDCFD040017E108 /* GlobalMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C034651CDCFD040017E108 /* GlobalMenuTableViewController.swift */; };
-		A0C034681CDD03EF0017E108 /* MenuCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C034671CDD03EF0017E108 /* MenuCustomCell.swift */; };
+		A0C034681CDD03EF0017E108 /* GlobalMenuCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C034671CDD03EF0017E108 /* GlobalMenuCustomCell.swift */; };
 		A0C0346C1CDD29CE0017E108 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0C0346B1CDD29CE0017E108 /* Images.xcassets */; };
+		A0C0346E1CDD2FB50017E108 /* SeeHowItWorksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C0346D1CDD2FB50017E108 /* SeeHowItWorksViewController.swift */; };
+		A0C034701CDD2FEC0017E108 /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C0346F1CDD2FEC0017E108 /* ContactUsViewController.swift */; };
 		A0CDA65E1CD3FE9500F18955 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CDA6581CD3FE9500F18955 /* Utils.swift */; };
 		A0CDA6601CD3FE9500F18955 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CDA65A1CD3FE9500F18955 /* BaseViewController.swift */; };
 		A0CDA6621CD3FE9500F18955 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CDA65B1CD3FE9500F18955 /* LoginViewController.swift */; };
-		A0CDA6641CD3FE9500F18955 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CDA65C1CD3FE9500F18955 /* MapViewController.swift */; };
+		A0CDA6641CD3FE9500F18955 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CDA65C1CD3FE9500F18955 /* HomeViewController.swift */; };
 		A0CDA6661CD3FE9500F18955 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CDA65D1CD3FE9500F18955 /* RegistrationViewController.swift */; };
 		A0E4D0041CDBD85600081F0F /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E4D0031CDBD85600081F0F /* SWRevealViewController.m */; };
-		A0FCD1D81CD7E860004C5905 /* GlobalMenuTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FCD1D71CD7E860004C5905 /* GlobalMenuTableController.swift */; };
 		A0FCD1DC1CD7F2A2004C5905 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FCD1DB1CD7F2A2004C5905 /* AboutViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -70,17 +71,18 @@
 		A0BB39591CD4BB0800AE0AFB /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		A0BB39601CD4BF7400AE0AFB /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A0C034651CDCFD040017E108 /* GlobalMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalMenuTableViewController.swift; sourceTree = "<group>"; };
-		A0C034671CDD03EF0017E108 /* MenuCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCustomCell.swift; sourceTree = "<group>"; };
+		A0C034671CDD03EF0017E108 /* GlobalMenuCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalMenuCustomCell.swift; sourceTree = "<group>"; };
 		A0C0346B1CDD29CE0017E108 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A0C0346D1CDD2FB50017E108 /* SeeHowItWorksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeeHowItWorksViewController.swift; sourceTree = "<group>"; };
+		A0C0346F1CDD2FEC0017E108 /* ContactUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
 		A0CDA6581CD3FE9500F18955 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		A0CDA65A1CD3FE9500F18955 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		A0CDA65B1CD3FE9500F18955 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		A0CDA65C1CD3FE9500F18955 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		A0CDA65C1CD3FE9500F18955 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A0CDA65D1CD3FE9500F18955 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		A0CDA6681CD48A7900F18955 /* Boltifi-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Boltifi-Bridging-Header.h"; sourceTree = "<group>"; };
 		A0E4D0021CDBD85600081F0F /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		A0E4D0031CDBD85600081F0F /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
-		A0FCD1D71CD7E860004C5905 /* GlobalMenuTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalMenuTableController.swift; sourceTree = "<group>"; };
 		A0FCD1DB1CD7F2A2004C5905 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -202,16 +204,17 @@
 		A0CDA6591CD3FE9500F18955 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				A0C0346D1CDD2FB50017E108 /* SeeHowItWorksViewController.swift */,
 				A0CDA65A1CD3FE9500F18955 /* BaseViewController.swift */,
 				A0CDA65B1CD3FE9500F18955 /* LoginViewController.swift */,
-				A0CDA65C1CD3FE9500F18955 /* MapViewController.swift */,
+				A0CDA65C1CD3FE9500F18955 /* HomeViewController.swift */,
 				A0CDA65D1CD3FE9500F18955 /* RegistrationViewController.swift */,
 				A0B68EAE1CD557C8005CECE7 /* TripConfirmationViewController.swift */,
 				A0B68EAC1CD55352005CECE7 /* FareEstimateViewController.swift */,
-				A0FCD1D71CD7E860004C5905 /* GlobalMenuTableController.swift */,
 				A0C034651CDCFD040017E108 /* GlobalMenuTableViewController.swift */,
+				A0C0346F1CDD2FEC0017E108 /* ContactUsViewController.swift */,
 				A0FCD1DB1CD7F2A2004C5905 /* AboutViewController.swift */,
-				A0C034671CDD03EF0017E108 /* MenuCustomCell.swift */,
+				A0C034671CDD03EF0017E108 /* GlobalMenuCustomCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -305,16 +308,17 @@
 				A0B68EAF1CD557C8005CECE7 /* TripConfirmationViewController.swift in Sources */,
 				A0FCD1DC1CD7F2A2004C5905 /* AboutViewController.swift in Sources */,
 				A044680D1CD7CB96000C5A67 /* CPStylist.swift in Sources */,
-				A0C034681CDD03EF0017E108 /* MenuCustomCell.swift in Sources */,
-				A0FCD1D81CD7E860004C5905 /* GlobalMenuTableController.swift in Sources */,
+				A0C034681CDD03EF0017E108 /* GlobalMenuCustomCell.swift in Sources */,
 				A0CDA6661CD3FE9500F18955 /* RegistrationViewController.swift in Sources */,
+				A0C0346E1CDD2FB50017E108 /* SeeHowItWorksViewController.swift in Sources */,
 				A0CDA6621CD3FE9500F18955 /* LoginViewController.swift in Sources */,
 				A0A97BBF1CD3DB32008420D4 /* AppDelegate.swift in Sources */,
 				A0CDA65E1CD3FE9500F18955 /* Utils.swift in Sources */,
-				A0CDA6641CD3FE9500F18955 /* MapViewController.swift in Sources */,
+				A0CDA6641CD3FE9500F18955 /* HomeViewController.swift in Sources */,
 				A0CDA6601CD3FE9500F18955 /* BaseViewController.swift in Sources */,
 				A0BB39611CD4BF7400AE0AFB /* Constants.swift in Sources */,
 				A04468101CD7CD0F000C5A67 /* UIColorExtension.swift in Sources */,
+				A0C034701CDD2FEC0017E108 /* ContactUsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

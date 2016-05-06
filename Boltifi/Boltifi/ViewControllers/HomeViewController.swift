@@ -1,5 +1,5 @@
 //
-//  MapViewController.swift
+//  HomeViewController.swift
 //  Boltifi
 //
 //  Created by Sravan on 30/04/16.
@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 
-class MapViewController : BaseViewController, CLLocationManagerDelegate, GMSMapViewDelegate {
+class HomeViewController : BaseViewController, CLLocationManagerDelegate, GMSMapViewDelegate {
     
 //    @IBOutlet weak var btnGlobalMenu: UIBarButtonItem!
     @IBOutlet weak var mapView: GMSMapView!
