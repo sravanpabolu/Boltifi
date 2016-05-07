@@ -9,6 +9,10 @@
 import Foundation
 import UIKit
 
+
+
+
+
 let GOOGLE_MAPS_API_KEY = "AIzaSyDeQl_MfFQ1a8Ox7NmUhJWzSywNevT2w2w"
 let PICK_UP_LOCATION = "Set as pickup point"
 let DROP_LOCAION = "Set as drop point"
@@ -27,6 +31,7 @@ let IDENTIFIER_SEE_HOW_IT_WORKS_VIEW_CONTROLLER = "SeeHowItWorksViewController"
 let IDENTIFIER_ABOUT_VIEW_CONTROLLER = "AboutViewController"
 let IDENTIFIER_CONTACT_US_VIEW_CONTROLLER = "ContactUsViewController"
 let IDENTIFIER_GLOBAL_MENU_CUSTOM_CELL = "GlobalMenuCustomCell"
+let IDENTIFIER_CREDIT_CARD = "credit"
 
 
 let ALERT_TITLE = "Alert"

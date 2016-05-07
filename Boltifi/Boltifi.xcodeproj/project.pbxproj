@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A044680D1CD7CB96000C5A67 /* CPStylist.swift in Sources */ = {isa = PBXBuildFile; fileRef = A044680C1CD7CB96000C5A67 /* CPStylist.swift */; };
 		A04468101CD7CD0F000C5A67 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A044680F1CD7CD0F000C5A67 /* UIColorExtension.swift */; };
+		A09651871CDD94FD00E66DD2 /* CreditCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09651861CDD94FD00E66DD2 /* CreditCardViewController.swift */; };
 		A0A97BBF1CD3DB32008420D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A97BBE1CD3DB32008420D4 /* AppDelegate.swift */; };
 		A0A97BC41CD3DB32008420D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0A97BC21CD3DB32008420D4 /* Main.storyboard */; };
 		A0A97BC91CD3DB32008420D4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0A97BC71CD3DB32008420D4 /* LaunchScreen.xib */; };
@@ -48,6 +49,7 @@
 /* Begin PBXFileReference section */
 		A044680C1CD7CB96000C5A67 /* CPStylist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPStylist.swift; sourceTree = "<group>"; };
 		A044680F1CD7CD0F000C5A67 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		A09651861CDD94FD00E66DD2 /* CreditCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardViewController.swift; sourceTree = "<group>"; };
 		A0A97BB91CD3DB32008420D4 /* Boltifi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Boltifi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0A97BBD1CD3DB32008420D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0A97BBE1CD3DB32008420D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +121,45 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		A09651881CDDA37C00E66DD2 /* SourceCode */ = {
+			isa = PBXGroup;
+			children = (
+				A096518C1CDDA3E800E66DD2 /* Utilities */,
+				A096518B1CDDA3DE00E66DD2 /* Service */,
+				A096518A1CDDA3C000E66DD2 /* Model */,
+				A09651891CDDA3B000E66DD2 /* ViewControllers */,
+			);
+			name = SourceCode;
+			sourceTree = "<group>";
+		};
+		A09651891CDDA3B000E66DD2 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A096518A1CDDA3C000E66DD2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		A096518B1CDDA3DE00E66DD2 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		A096518C1CDDA3E800E66DD2 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
 		A0A97BB01CD3DB32008420D4 = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +179,7 @@
 		A0A97BBB1CD3DB32008420D4 /* Boltifi */ = {
 			isa = PBXGroup;
 			children = (
+				A09651881CDDA37C00E66DD2 /* SourceCode */,
 				A0E4D0011CDBD85600081F0F /* SWRevealViewController */,
 				A044680E1CD7CCFD000C5A67 /* Extensions */,
 				A0BB395F1CD4BF7400AE0AFB /* Constants */,
@@ -215,6 +257,7 @@
 				A0C0346F1CDD2FEC0017E108 /* ContactUsViewController.swift */,
 				A0FCD1DB1CD7F2A2004C5905 /* AboutViewController.swift */,
 				A0C034671CDD03EF0017E108 /* GlobalMenuCustomCell.swift */,
+				A09651861CDD94FD00E66DD2 /* CreditCardViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -309,6 +352,7 @@
 				A0FCD1DC1CD7F2A2004C5905 /* AboutViewController.swift in Sources */,
 				A044680D1CD7CB96000C5A67 /* CPStylist.swift in Sources */,
 				A0C034681CDD03EF0017E108 /* GlobalMenuCustomCell.swift in Sources */,
+				A09651871CDD94FD00E66DD2 /* CreditCardViewController.swift in Sources */,
 				A0CDA6661CD3FE9500F18955 /* RegistrationViewController.swift in Sources */,
 				A0C0346E1CDD2FB50017E108 /* SeeHowItWorksViewController.swift in Sources */,
 				A0CDA6621CD3FE9500F18955 /* LoginViewController.swift in Sources */,

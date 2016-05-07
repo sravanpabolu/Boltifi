@@ -32,7 +32,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             //Show Login Screen
             // Access the storyboard and fetch an instance of the view controller
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let viewController: LoginViewController = storyboard.instantiateViewControllerWithIdentifier("LoginViewController") as! LoginViewController
+            let viewController: LoginViewController = storyboard.instantiateViewControllerWithIdentifier(IDENTIFIER_LOGIN_VIEW_CONTROLLER) as! LoginViewController
+//              let viewController: CreditCardViewController = storyboard.instantiateViewControllerWithIdentifier(IDENTIFIER_CREDIT_CARD) as! CreditCardViewController
             
             // Then push that view controller onto the navigation stack
             let rootViewController = self.window!.rootViewController as! UINavigationController
