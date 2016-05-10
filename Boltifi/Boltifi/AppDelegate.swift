@@ -17,27 +17,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SWRevealViewControllerDel
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-//        UIWindow *window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-//        self.window = window;
-        
-//        FrontViewController *frontViewController = [[FrontViewController alloc] init];
-//        RearViewController *rearViewController = [[RearViewController alloc] init];
-//        
-//        UINavigationController *frontNavigationController = [[UINavigationController alloc] initWithRootViewController:frontViewController];
-//        UINavigationController *rearNavigationController = [[UINavigationController alloc] initWithRootViewController:rearViewController];
-//        
-//        SWRevealViewController *mainRevealController = [[SWRevealViewController alloc]
-//        initWithRearViewController:rearNavigationController frontViewController:frontNavigationController];
-//        
-//        mainRevealController.delegate = self;
-//        
-//        self.viewController = mainRevealController;
-
         let window:UIWindow = UIWindow(frame: UIScreen.mainScreen().bounds)
         self.window = window
-        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let frontVC = storyboard.instantiateViewControllerWithIdentifier("RegistrationViewController")
+        var frontVC:UIViewController
+        
+        if(!(NSUserDefaults.standardUserDefaults().boolForKey(KEY_APP_LAUNCH_FIRST_TIME))) {
+            //Set first time launch
+            NSUserDefaults.standardUserDefaults().setBool(true, forKey: KEY_APP_LAUNCH_FIRST_TIME)
+            NSUserDefaults.standardUserDefaults().synchronize()
+            
+            //Show Registration Screen
+            frontVC = storyboard.instantiateViewControllerWithIdentifier(IDENTIFIER_REGISTRATION_VIEW_CONTROLLER) as! RegistrationViewController
+        } else {
+            //Show Login Screen
+            frontVC = storyboard.instantiateViewControllerWithIdentifier(IDENTIFIER_LOGIN_VIEW_CONTROLLER) as! LoginViewController
+        }
+
+//        let frontVC = storyboard.instantiateViewControllerWithIdentifier("RegistrationViewController")
         let rearVC = storyboard.instantiateViewControllerWithIdentifier("GlobalMenuTableViewController")
         
         let frontNavigationController   = UINavigationController(rootViewController: frontVC)
@@ -45,6 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SWRevealViewControllerDel
         
         let mainRevealController = SWRevealViewController(rearViewController: rearNavigationController,
             frontViewController: frontNavigationController)
+        mainRevealController.rightViewController = rearVC
         
         mainRevealController.delegate = self
         
@@ -107,7 +105,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SWRevealViewControllerDel
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
 }
 

@@ -18,6 +18,7 @@ class RegistrationViewController : BaseViewController, UITextFieldDelegate {
     @IBOutlet weak var txtName: UITextField!
     @IBOutlet weak var btnSender: UIButton!
     @IBOutlet weak var btnDriver: UIButton!
+    @IBOutlet weak var btnGlobalMenu: UIButton!
     
     //MARK: - Button action methods
     @IBAction func btnSenderTapped(sender: AnyObject) {
@@ -37,6 +38,11 @@ class RegistrationViewController : BaseViewController, UITextFieldDelegate {
         let controller = self.storyboard?.instantiateViewControllerWithIdentifier(IDENTIFIER_LOGIN_VIEW_CONTROLLER) as! LoginViewController
         self.navigationController?.pushViewController(controller, animated: true)
     }
+    
+    @IBAction func btnGlobalMenuTapped(sender: AnyObject) {
+        self.setUpGlobalMenu(self.btnGlobalMenu)
+    }
+    
     
     //MARK: - View life cycle methods
     
