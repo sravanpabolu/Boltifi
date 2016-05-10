@@ -7,10 +7,20 @@
 //
 
 import Foundation
+import UIKit
 
 class AboutViewController:BaseViewController {
     
+    @IBOutlet weak var btnGlobalMenu: UIButton!
+    @IBAction func globalMenuBtnTapped(sender: AnyObject) {
+        self.setUpGlobalMenu(self.btnGlobalMenu)
+    }
+
+    @IBAction func btnBackTapped(sender: AnyObject) {
+        self.navigationController?.popViewControllerAnimated(true)
+    }
+
     override func viewDidLoad() {
-        super.viewDidLoad()
+                super.viewDidLoad()
     }
 }

@@ -28,6 +28,7 @@ class CPStylist{
         case OffOnButtonStyle
         case ContentViewStyle
         
+        case SubmitButtonStyle
         case UserNameViewStyle
         case PasswordViewStyle
     }
@@ -53,12 +54,17 @@ class CPStylist{
             textField?.rightView = paddingView
             textField?.rightViewMode = .Always
             
+        case .SubmitButtonStyle :
+            let button = view as? UIButton
+            button?.layer.cornerRadius = 10
+            button?.backgroundColor = UIColor.orangeColor()
+            button?.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
             
         case  .PasswordPaddingStyle :
             let textField = view as? UITextField
             var paddingView: UIImageView!
             paddingView = UIImageView(frame: CGRect(x: 0, y: 0, width: 22, height: 22))
-            paddingView.image = UIImage(named: "Password.png")
+            paddingView.image = UIImage(named: "Password-1.png")
             textField?.rightView = paddingView
             textField?.rightViewMode = .Always
             
@@ -152,9 +158,7 @@ class CPStylist{
             view.layer.shadowOffset = CGSize(width: 0, height: 3)
             view.layer.shadowOpacity = 0.7
             view.layer.shadowRadius = 2
-            
-        default:
-            print("none")
+        
         }
     }
     
