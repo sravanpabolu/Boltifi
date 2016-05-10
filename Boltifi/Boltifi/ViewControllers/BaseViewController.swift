@@ -29,6 +29,9 @@ extension UIViewController {
 
 class BaseViewController: UIViewController {
 
+    //MARK:- Variables & Constants
+    let styleObj = CPStylist()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

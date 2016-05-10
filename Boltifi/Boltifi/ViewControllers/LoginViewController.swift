@@ -11,10 +11,6 @@ import UIKit
 
 class LoginViewController : BaseViewController{
     
-    //MARK:- Variables & Constants
-    let styleObj = CPStylist()
-
-    
     //MARK:- Properties
     
     //UIViews
@@ -98,7 +94,7 @@ class LoginViewController : BaseViewController{
         styleObj.applyStyle(CPStylist.MyStylesheet.TextFieldStyle, view: txtPassword)
         styleObj.applyStyle(CPStylist.MyStylesheet.PasswordPaddingStyle, view: txtPassword)
         styleObj.applyStyle(CPStylist.MyStylesheet.ContentViewStyle, view: contentView)
-        styleObj.applyStyle(CPStylist.MyStylesheet.SubmitButtonStyle, view: signInButton)
+        styleObj.applyStyle(CPStylist.MyStylesheet.ButtonStyle, view: signInButton)
 
         
         underlineImage.backgroundColor = UNDERLINE_COLOR

@@ -9,36 +9,75 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, SWRevealViewControllerDelegate {
 
     var window: UIWindow?
+    var viewController = SWRevealViewController()
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-        if(!(NSUserDefaults.standardUserDefaults().boolForKey(KEY_APP_LAUNCH_FIRST_TIME))) {
-            //Set first time launch
-            NSUserDefaults.standardUserDefaults().setBool(true, forKey: KEY_APP_LAUNCH_FIRST_TIME)
-            NSUserDefaults.standardUserDefaults().synchronize()
-           
-            //Show Registration Screen
-            // Access the storyboard and fetch an instance of the view controller
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let viewController: RegistrationViewController = storyboard.instantiateViewControllerWithIdentifier("RegistrationViewController") as! RegistrationViewController
+//        UIWindow *window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+//        self.window = window;
+        
+//        FrontViewController *frontViewController = [[FrontViewController alloc] init];
+//        RearViewController *rearViewController = [[RearViewController alloc] init];
+//        
+//        UINavigationController *frontNavigationController = [[UINavigationController alloc] initWithRootViewController:frontViewController];
+//        UINavigationController *rearNavigationController = [[UINavigationController alloc] initWithRootViewController:rearViewController];
+//        
+//        SWRevealViewController *mainRevealController = [[SWRevealViewController alloc]
+//        initWithRearViewController:rearNavigationController frontViewController:frontNavigationController];
+//        
+//        mainRevealController.delegate = self;
+//        
+//        self.viewController = mainRevealController;
 
-            // Then push that view controller onto the navigation stack
-            let rootViewController = self.window!.rootViewController as! UINavigationController
-            rootViewController.pushViewController(viewController, animated: true)
-        } else {
-            //Show Login Screen
-            // Access the storyboard and fetch an instance of the view controller
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let viewController: LoginViewController = storyboard.instantiateViewControllerWithIdentifier(IDENTIFIER_LOGIN_VIEW_CONTROLLER) as! LoginViewController
-//              let viewController: CreditCardViewController = storyboard.instantiateViewControllerWithIdentifier(IDENTIFIER_CREDIT_CARD) as! CreditCardViewController
-            
-            // Then push that view controller onto the navigation stack
-            let rootViewController = self.window!.rootViewController as! UINavigationController
-            rootViewController.pushViewController(viewController, animated: true)
-        }
+        let window:UIWindow = UIWindow(frame: UIScreen.mainScreen().bounds)
+        self.window = window
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let frontVC = storyboard.instantiateViewControllerWithIdentifier("RegistrationViewController")
+        let rearVC = storyboard.instantiateViewControllerWithIdentifier("GlobalMenuTableViewController")
+        
+        let frontNavigationController   = UINavigationController(rootViewController: frontVC)
+        let rearNavigationController    = UINavigationController(rootViewController: rearVC)
+        
+        let mainRevealController = SWRevealViewController(rearViewController: rearNavigationController,
+            frontViewController: frontNavigationController)
+        
+        mainRevealController.delegate = self
+        
+        self.viewController = mainRevealController;
+        self.window!.rootViewController = self.viewController;
+        self.window?.makeKeyAndVisible()
+
+        
+        
+//        if(!(NSUserDefaults.standardUserDefaults().boolForKey(KEY_APP_LAUNCH_FIRST_TIME))) {
+//            //Set first time launch
+//            NSUserDefaults.standardUserDefaults().setBool(true, forKey: KEY_APP_LAUNCH_FIRST_TIME)
+//            NSUserDefaults.standardUserDefaults().synchronize()
+//           
+//            //Show Registration Screen
+//            // Access the storyboard and fetch an instance of the view controller
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            let viewController: RegistrationViewController = storyboard.instantiateViewControllerWithIdentifier("RegistrationViewController") as! RegistrationViewController
+//
+//            // Then push that view controller onto the navigation stack
+//            let rootViewController = self.window!.rootViewController as! UINavigationController
+//            rootViewController.pushViewController(viewController, animated: true)
+//        } else {
+//            //Show Login Screen
+//            // Access the storyboard and fetch an instance of the view controller
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            let viewController: LoginViewController = storyboard.instantiateViewControllerWithIdentifier(IDENTIFIER_LOGIN_VIEW_CONTROLLER) as! LoginViewController
+////              let viewController: CreditCardViewController = storyboard.instantiateViewControllerWithIdentifier(IDENTIFIER_CREDIT_CARD) as! CreditCardViewController
+//            
+//            // Then push that view controller onto the navigation stack
+//            let rootViewController = self.window!.rootViewController as! UINavigationController
+//            rootViewController.pushViewController(viewController, animated: true)
+//        }
         
         
         //For Google Maps

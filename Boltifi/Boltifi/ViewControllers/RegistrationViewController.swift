@@ -42,7 +42,15 @@ class RegistrationViewController : BaseViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.hideKeyboardWhenTappedAround() 
+        self.hideKeyboardWhenTappedAround()
+        self.view.backgroundColor = UIColor.whiteColor()
+        self.applyStyles()
+    }
+    
+    //MARK: - Private Methods
+    func applyStyles() {
+        styleObj.applyStyle(CPStylist.MyStylesheet.ButtonStyle, view: self.btnDriver)
+        styleObj.applyStyle(CPStylist.MyStylesheet.ButtonStyle, view: self.btnSender)
     }
     
     //MARK: - TextField Delegate methods

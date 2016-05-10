@@ -28,7 +28,7 @@ class CPStylist{
         case OffOnButtonStyle
         case ContentViewStyle
         
-        case SubmitButtonStyle
+        case ButtonStyle
         case UserNameViewStyle
         case PasswordViewStyle
     }
@@ -54,7 +54,7 @@ class CPStylist{
             textField?.rightView = paddingView
             textField?.rightViewMode = .Always
             
-        case .SubmitButtonStyle :
+        case .ButtonStyle :
             let button = view as? UIButton
             button?.layer.cornerRadius = 10
             button?.backgroundColor = UIColor.orangeColor()

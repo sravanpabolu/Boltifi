@@ -10,10 +10,6 @@ import UIKit
 
 class CreditCardViewController: BaseViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate  {
     
-    
-    //MARK:- Variables & Constants
-    let styleObj = CPStylist()
-    
     //MARK:- Properties
     @IBOutlet weak var month: UITextField!
     @IBOutlet weak var contentView: UIView!
