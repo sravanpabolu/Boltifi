@@ -12,10 +12,8 @@ import UIKit
 
 class HomeViewController : BaseViewController, CLLocationManagerDelegate, GMSMapViewDelegate {
     
-//    @IBOutlet weak var btnGlobalMenu: UIBarButtonItem!
     @IBOutlet weak var mapView: GMSMapView!
     @IBOutlet weak var buttonsView: UIView!
-//    @IBOutlet weak var fareEstimateView: UIView!
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var btnGlobalMenu: UIButton!
     
@@ -29,12 +27,6 @@ class HomeViewController : BaseViewController, CLLocationManagerDelegate, GMSMap
     //MARK: - btn action methods
     @IBAction func globalMenuBtnTapped(sender: AnyObject) {
         self.setUpGlobalMenu(self.btnGlobalMenu)
-//        if self.revealViewController() != nil {
-//            self.revealViewController().rightViewRevealOverdraw = 0
-//            self.btnGlobalMenu.addTarget(self.revealViewController(), action: "rightRevealToggle:", forControlEvents: UIControlEvents.TouchUpInside)
-//            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-//            self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
-//        }
     }
     
     @IBAction func sliderValueChanged(sender: AnyObject) {
@@ -68,10 +60,6 @@ class HomeViewController : BaseViewController, CLLocationManagerDelegate, GMSMap
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
-//        //For global menu
-//        self.navigationController?.navigationBarHidden = true
-//        self.btnGlobalMenu.backgroundColor = UIColor(rgb: 0xF26522)
-        
         //Setup Slider
         self.slider.minimumValue = 0
         self.slider.maximumValue = 2
