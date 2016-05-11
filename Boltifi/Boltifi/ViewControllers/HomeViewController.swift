@@ -28,12 +28,13 @@ class HomeViewController : BaseViewController, CLLocationManagerDelegate, GMSMap
     
     //MARK: - btn action methods
     @IBAction func globalMenuBtnTapped(sender: AnyObject) {
-        if self.revealViewController() != nil {
-            self.revealViewController().rightViewRevealOverdraw = 0
-            self.btnGlobalMenu.addTarget(self.revealViewController(), action: "rightRevealToggle:", forControlEvents: UIControlEvents.TouchUpInside)
-            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-            self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
-        }
+        self.setUpGlobalMenu(self.btnGlobalMenu)
+//        if self.revealViewController() != nil {
+//            self.revealViewController().rightViewRevealOverdraw = 0
+//            self.btnGlobalMenu.addTarget(self.revealViewController(), action: "rightRevealToggle:", forControlEvents: UIControlEvents.TouchUpInside)
+//            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+//            self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
+//        }
     }
     
     @IBAction func sliderValueChanged(sender: AnyObject) {
