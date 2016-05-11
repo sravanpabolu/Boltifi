@@ -34,7 +34,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SWRevealViewControllerDel
             frontVC = storyboard.instantiateViewControllerWithIdentifier(IDENTIFIER_LOGIN_VIEW_CONTROLLER) as! LoginViewController
         }
 
-//        let frontVC = storyboard.instantiateViewControllerWithIdentifier("RegistrationViewController")
+        //TODO: Remove the following line
+        //frontVC = storyboard.instantiateViewControllerWithIdentifier("RegistrationViewController")
         let rearVC = storyboard.instantiateViewControllerWithIdentifier("GlobalMenuTableViewController")
         
         let frontNavigationController   = UINavigationController(rootViewController: frontVC)
