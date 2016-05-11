@@ -60,13 +60,15 @@ class HomeViewController : BaseViewController, CLLocationManagerDelegate, GMSMap
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
+        let SLIDER_BG_IMAGE = "grayhorizontallinebg" //"horizontal_double_line" 
+        
         //Setup Slider
         self.slider.minimumValue = 0
         self.slider.maximumValue = 2
         self.slider.value = 0 //Default value
         self.slider.setThumbImage(UIImage(named: "bike"), forState: UIControlState.Normal)
-        self.slider.setMinimumTrackImage(UIImage(named: "grayhorizontallinebg"), forState: UIControlState.Normal)
-        self.slider.setMaximumTrackImage(UIImage(named: "grayhorizontallinebg"), forState: UIControlState.Normal)
+        self.slider.setMinimumTrackImage(UIImage(named: SLIDER_BG_IMAGE), forState: UIControlState.Normal)
+        self.slider.setMaximumTrackImage(UIImage(named: SLIDER_BG_IMAGE), forState: UIControlState.Normal)
         
 
         // Ask for Authorisation from the User.
@@ -183,7 +185,7 @@ class HomeViewController : BaseViewController, CLLocationManagerDelegate, GMSMap
         self.locationMarker.map = mapView
         
         self.locationMarker.title = PICK_UP_LOCATION
-
+        self.locationMarker.icon = GMSMarker.markerImageWithColor(UIColor.orangeColor())
         self.locationMarker.appearAnimation = kGMSMarkerAnimationPop
         self.locationMarker.icon = GMSMarker.markerImageWithColor(UIColor.redColor())
         self.locationMarker.opacity = 0.75

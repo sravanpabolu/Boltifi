@@ -2,8 +2,8 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "bike-1.png"
+      "filename" : "motor_bike.png",
+      "scale" : "1x"
     },
     {
       "idiom" : "universal",
