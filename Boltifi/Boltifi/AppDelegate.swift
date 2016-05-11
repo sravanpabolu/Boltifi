@@ -35,7 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SWRevealViewControllerDel
         }
 
         //TODO: Remove the following line
-        //frontVC = storyboard.instantiateViewControllerWithIdentifier("RegistrationViewController")
+//        frontVC = storyboard.instantiateViewControllerWithIdentifier("RegistrationViewController")
         let rearVC = storyboard.instantiateViewControllerWithIdentifier("GlobalMenuTableViewController")
         
         let frontNavigationController   = UINavigationController(rootViewController: frontVC)

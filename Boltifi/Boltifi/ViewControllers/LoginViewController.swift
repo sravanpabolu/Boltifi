@@ -28,6 +28,7 @@ class LoginViewController : BaseViewController{
     @IBOutlet weak var forgotPasswordButton: UIButton!
     @IBOutlet weak var googleButton: UIButton!
     @IBOutlet weak var facebookButton: UIButton!
+    @IBOutlet weak var btnGlobalMenu: UIButton!
     
    // @IBOutlet weak var vwUserCredentials: UIView!
     
@@ -52,7 +53,11 @@ class LoginViewController : BaseViewController{
         // Dispose of any resources that can be recreated.
     }
     
-    // MARK:- Actions
+    // MARK:- Button Actions
+    @IBAction func btnGlobalMenuTapped(sender: AnyObject) {
+        self.setUpGlobalMenu(self.btnGlobalMenu)
+    }
+    
     @IBAction func loginBtnTapped(sender: AnyObject) {
         
         if (txtPassword.text == nil || txtEmailAddress.text == nil ||

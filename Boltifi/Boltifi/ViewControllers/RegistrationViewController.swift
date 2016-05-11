@@ -19,6 +19,8 @@ class RegistrationViewController : BaseViewController, UITextFieldDelegate {
     @IBOutlet weak var btnSender: UIButton!
     @IBOutlet weak var btnDriver: UIButton!
     @IBOutlet weak var btnGlobalMenu: UIButton!
+    @IBOutlet weak var underlineView: UIImageView!
+    @IBOutlet weak var contentView: UIView!
     
     //MARK: - Button action methods
     @IBAction func btnSenderTapped(sender: AnyObject) {
@@ -57,6 +59,8 @@ class RegistrationViewController : BaseViewController, UITextFieldDelegate {
     func applyStyles() {
         styleObj.applyStyle(CPStylist.MyStylesheet.ButtonStyle, view: self.btnDriver)
         styleObj.applyStyle(CPStylist.MyStylesheet.ButtonStyle, view: self.btnSender)
+        styleObj.applyStyle(CPStylist.MyStylesheet.ContentViewStyle, view: contentView)
+        self.underlineView.backgroundColor = UNDERLINE_COLOR
     }
     
     //MARK: - TextField Delegate methods
