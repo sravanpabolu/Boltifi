@@ -634,6 +634,10 @@
                                             </mask>
                                         </variation>
                                     </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TeI-go-TzP" userLabel="Orange Line View">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                        <color key="backgroundColor" red="0.94901960780000005" green="0.39607843139999999" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vDm-Ms-z4p">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                         <constraints>
@@ -654,15 +658,9 @@
                                             </mask>
                                         </variation>
                                         <connections>
-                                            <action selector="btnGlobalMenuTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="VE0-dF-780"/>
-                                            <action selector="btnGlobalMenuTapped:" destination="GOC-d5-lQW" eventType="touchUpInside" id="uZu-Ww-Gaa"/>
-                                            <action selector="globalMenuBtnTapped:" destination="Mte-8s-sHp" eventType="touchUpInside" id="HY5-mW-key"/>
+                                            <action selector="globalMenuBtnTapped:" destination="GO0-c3-xu5" eventType="touchUpInside" id="YOI-n6-v3C"/>
                                         </connections>
                                     </button>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TeI-go-TzP" userLabel="Orange Line View">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                        <color key="backgroundColor" red="0.94901960780000005" green="0.39607843139999999" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
-                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -680,8 +678,8 @@
                                 <variation key="default">
                                     <mask key="subviews">
                                         <exclude reference="e8a-iu-M3S"/>
-                                        <exclude reference="vDm-Ms-z4p"/>
                                         <exclude reference="TeI-go-TzP"/>
+                                        <exclude reference="vDm-Ms-z4p"/>
                                     </mask>
                                     <mask key="constraints">
                                         <exclude reference="HRk-mr-gIp"/>
@@ -699,8 +697,8 @@
                                 <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="subviews">
                                         <include reference="e8a-iu-M3S"/>
-                                        <include reference="vDm-Ms-z4p"/>
                                         <include reference="TeI-go-TzP"/>
+                                        <include reference="vDm-Ms-z4p"/>
                                     </mask>
                                     <mask key="constraints">
                                         <include reference="HRk-mr-gIp"/>
@@ -880,6 +878,9 @@ Track your stuff while its being delivered.</string>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="btnGlobalMenu" destination="vDm-Ms-z4p" id="STv-dE-HSs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zkj-XV-Lap" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
