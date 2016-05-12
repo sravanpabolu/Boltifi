@@ -69,6 +69,10 @@ class BaseViewController: UIViewController {
 //        self.navigationController?.pushViewController(controller, animated: true)
 //    }
     
+//    func navigateToViewController(viewController: UIViewController, identifier: NSString) {
+//        let controller = self.storyboard?.instantiateViewControllerWithIdentifier(identifier) as! viewController
+//        self.navigationController?.pushViewController(controller, animated: true)
+//    }
     
 }
 

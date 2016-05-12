@@ -29,6 +29,12 @@ class HomeViewController : BaseViewController, CLLocationManagerDelegate, GMSMap
         self.setUpGlobalMenu(self.btnGlobalMenu)
     }
     
+    @IBAction func btnUserHeaderTapped(sender: AnyObject) {
+        let controller = self.storyboard?.instantiateViewControllerWithIdentifier(IDENTIFIER_CREDITCARD_VIEW_CONTROLLER) as! CreditCardViewController
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    
     @IBAction func sliderValueChanged(sender: AnyObject) {
         var sliderImage:UIImage
         if self.slider.value < 1 {
