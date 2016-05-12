@@ -34,10 +34,13 @@ let IDENTIFIER_CREDITCARD_VIEW_CONTROLLER = "CreditCardViewController"
 let IDENTIFIER_GLOBAL_MENU_CUSTOM_CELL = "GlobalMenuCustomCell"
 //let IDENTIFIER_CREDIT_CARD = "credit"
 
+let ALERT_FARE_ESTIMATE_TEXT = "Estimated Fare is: R 50. Do you want to continue ?"
 
-let ALERT_TITLE = "Alert"
-let ALERT_BUTTON_OK = "OK"
+let ALERT_TITLE         = "Alert"
+let ALERT_BUTTON_OK     = "OK"
 let ALERT_BUTTON_CANCEL = "Cancel"
+//let ALERT_BUTTON_YES    = "YES"
+//let ALERT_BUTTON_NO     = "NO"
 
 let NAVIGATION_BAR_COLOR = UIColor(rgb: 0xFDCC42)//F9C143
 let UNDERLINE_COLOR = UIColor(rgb: 0xDCDCDC)

@@ -215,8 +215,8 @@ class HomeViewController : BaseViewController, CLLocationManagerDelegate, GMSMap
 //        self.buttonsView.hidden = true
 //        self.fareEstimateView.hidden = false
 
-        let controller = self.storyboard?.instantiateViewControllerWithIdentifier(IDENTIFIER_TRIP_CONFIRMATION_VIEW_CONTROLLER) as! TripConfirmationViewController
-        self.navigationController?.pushViewController(controller, animated: true)
+        let controller = self.storyboard?.instantiateViewControllerWithIdentifier(IDENTIFIER_FARE_ESTIMATE_VIEW_CONTROLLER) as? FareEstimateViewController
+        self.navigationController?.pushViewController(controller!, animated: true)
 
     }
     
