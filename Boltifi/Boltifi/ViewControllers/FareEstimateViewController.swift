@@ -15,6 +15,15 @@ class FareEstimateViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Styling
+        self.applyStyles()
+    }
+    
+    //MARK: - Private Methods
+    func applyStyles() {
+        //TODO: Apply styles for text fields
+        styleObj.applyStyle(CPStylist.MyStylesheet.ButtonStyle, view: self.btnEstimateFare)
     }
     
     //MARK: - Button Action Methods
