@@ -12,10 +12,8 @@ import UIKit
 
 class HomeViewController : BaseViewController, CLLocationManagerDelegate, GMSMapViewDelegate {
     
-//    @IBOutlet weak var btnGlobalMenu: UIBarButtonItem!
     @IBOutlet weak var mapView: GMSMapView!
     @IBOutlet weak var buttonsView: UIView!
-//    @IBOutlet weak var fareEstimateView: UIView!
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var btnGlobalMenu: UIButton!
     
@@ -28,13 +26,14 @@ class HomeViewController : BaseViewController, CLLocationManagerDelegate, GMSMap
     
     //MARK: - btn action methods
     @IBAction func globalMenuBtnTapped(sender: AnyObject) {
-        if self.revealViewController() != nil {
-            self.revealViewController().rightViewRevealOverdraw = 0
-            self.btnGlobalMenu.addTarget(self.revealViewController(), action: "rightRevealToggle:", forControlEvents: UIControlEvents.TouchUpInside)
-            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-            self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
-        }
+        self.setUpGlobalMenu(self.btnGlobalMenu)
     }
+    
+    @IBAction func btnUserHeaderTapped(sender: AnyObject) {
+        let controller = self.storyboard?.instantiateViewControllerWithIdentifier(IDENTIFIER_CREDITCARD_VIEW_CONTROLLER) as! CreditCardViewController
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
+    
     
     @IBAction func sliderValueChanged(sender: AnyObject) {
         var sliderImage:UIImage
@@ -67,17 +66,15 @@ class HomeViewController : BaseViewController, CLLocationManagerDelegate, GMSMap
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
-//        //For global menu
-//        self.navigationController?.navigationBarHidden = true
-//        self.btnGlobalMenu.backgroundColor = UIColor(rgb: 0xF26522)
+        let SLIDER_BG_IMAGE = "grayhorizontallinebg" //"horizontal_double_line" 
         
         //Setup Slider
         self.slider.minimumValue = 0
         self.slider.maximumValue = 2
         self.slider.value = 0 //Default value
         self.slider.setThumbImage(UIImage(named: "bike"), forState: UIControlState.Normal)
-        self.slider.setMinimumTrackImage(UIImage(named: "grayhorizontallinebg"), forState: UIControlState.Normal)
-        self.slider.setMaximumTrackImage(UIImage(named: "grayhorizontallinebg"), forState: UIControlState.Normal)
+        self.slider.setMinimumTrackImage(UIImage(named: SLIDER_BG_IMAGE), forState: UIControlState.Normal)
+        self.slider.setMaximumTrackImage(UIImage(named: SLIDER_BG_IMAGE), forState: UIControlState.Normal)
         
 
         // Ask for Authorisation from the User.
@@ -194,7 +191,7 @@ class HomeViewController : BaseViewController, CLLocationManagerDelegate, GMSMap
         self.locationMarker.map = mapView
         
         self.locationMarker.title = PICK_UP_LOCATION
-
+        self.locationMarker.icon = GMSMarker.markerImageWithColor(UIColor.orangeColor())
         self.locationMarker.appearAnimation = kGMSMarkerAnimationPop
         self.locationMarker.icon = GMSMarker.markerImageWithColor(UIColor.redColor())
         self.locationMarker.opacity = 0.75
@@ -218,8 +215,8 @@ class HomeViewController : BaseViewController, CLLocationManagerDelegate, GMSMap
 //        self.buttonsView.hidden = true
 //        self.fareEstimateView.hidden = false
 
-        let controller = self.storyboard?.instantiateViewControllerWithIdentifier(IDENTIFIER_TRIP_CONFIRMATION_VIEW_CONTROLLER) as! TripConfirmationViewController
-        self.navigationController?.pushViewController(controller, animated: true)
+        let controller = self.storyboard?.instantiateViewControllerWithIdentifier(IDENTIFIER_FARE_ESTIMATE_VIEW_CONTROLLER) as? FareEstimateViewController
+        self.navigationController?.pushViewController(controller!, animated: true)
 
     }
     

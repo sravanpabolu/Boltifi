@@ -14,7 +14,7 @@ import UIKit
 
 
 let GOOGLE_MAPS_API_KEY = "AIzaSyDeQl_MfFQ1a8Ox7NmUhJWzSywNevT2w2w"
-let PICK_UP_LOCATION = "Set as pickup point"
+let PICK_UP_LOCATION = "SET PICK/DROP POINT"
 let DROP_LOCAION = "Set as drop point"
 
 let ERROR_MANDATORY_EMPTY_FIELD = "Please fill all mandatory fields"
@@ -30,13 +30,17 @@ let IDENTIFIER_TRIP_CONFIRMATION_VIEW_CONTROLLER = "TripConfirmationViewControll
 let IDENTIFIER_SEE_HOW_IT_WORKS_VIEW_CONTROLLER = "SeeHowItWorksViewController"
 let IDENTIFIER_ABOUT_VIEW_CONTROLLER = "AboutViewController"
 let IDENTIFIER_CONTACT_US_VIEW_CONTROLLER = "ContactUsViewController"
+let IDENTIFIER_CREDITCARD_VIEW_CONTROLLER = "CreditCardViewController"
 let IDENTIFIER_GLOBAL_MENU_CUSTOM_CELL = "GlobalMenuCustomCell"
-let IDENTIFIER_CREDIT_CARD = "credit"
+//let IDENTIFIER_CREDIT_CARD = "credit"
 
+let ALERT_FARE_ESTIMATE_TEXT = "Estimated Fare is: R 50. Do you want to continue ?"
 
-let ALERT_TITLE = "Alert"
-let ALERT_BUTTON_OK = "OK"
+let ALERT_TITLE         = "Alert"
+let ALERT_BUTTON_OK     = "OK"
 let ALERT_BUTTON_CANCEL = "Cancel"
+//let ALERT_BUTTON_YES    = "YES"
+//let ALERT_BUTTON_NO     = "NO"
 
 let NAVIGATION_BAR_COLOR = UIColor(rgb: 0xFDCC42)//F9C143
 let UNDERLINE_COLOR = UIColor(rgb: 0xDCDCDC)

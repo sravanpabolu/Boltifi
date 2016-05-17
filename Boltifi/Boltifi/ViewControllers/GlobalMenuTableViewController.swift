@@ -39,32 +39,63 @@ class GlobalMenuTableViewController: UITableViewController {
         
 //        let revealController:SWRevealViewController = revealViewController()
         
+        
+//        UIViewController *newFrontController = nil;
+//            newFrontController = [[MapViewController alloc] init];
+//        UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:newFrontController];
+//        [revealController pushFrontViewController:navigationController animated:YES];
+//        
+        
+        
+        
         switch indexPath.row {
         case 0 : //Home
-            let viewControllerObj = self.storyboard?.instantiateViewControllerWithIdentifier(IDENTIFIER_HOME_VIEW_CONTROLLER) as? HomeViewController
-            self.navigationController?.pushViewController(viewControllerObj!, animated: true)
+//            let viewControllerObj = self.storyboard?.instantiateViewControllerWithIdentifier(IDENTIFIER_HOME_VIEW_CONTROLLER) as? HomeViewController
+//            self.navigationController?.pushViewController(viewControllerObj!, animated: true)
+            
+            let newFrontViewController = self.storyboard?.instantiateViewControllerWithIdentifier(IDENTIFIER_HOME_VIEW_CONTROLLER) as? HomeViewController
+            let newNavigationController = UINavigationController(rootViewController: newFrontViewController!)
+            self.revealViewController().pushFrontViewController(newNavigationController, animated: true)
+//
             break
         case 1: //See How It Works
-            let viewControllerObj = self.storyboard?.instantiateViewControllerWithIdentifier(IDENTIFIER_SEE_HOW_IT_WORKS_VIEW_CONTROLLER) as? SeeHowItWorksViewController
-            self.navigationController?.pushViewController(viewControllerObj!, animated: true)
+//            let viewControllerObj = self.storyboard?.instantiateViewControllerWithIdentifier(IDENTIFIER_SEE_HOW_IT_WORKS_VIEW_CONTROLLER) as? SeeHowItWorksViewController
+//            self.navigationController?.pushViewController(viewControllerObj!, animated: true)
+
+            let newFrontViewController = self.storyboard?.instantiateViewControllerWithIdentifier(IDENTIFIER_SEE_HOW_IT_WORKS_VIEW_CONTROLLER) as? SeeHowItWorksViewController
+            let newNavigationController = UINavigationController(rootViewController: newFrontViewController!)
+            self.revealViewController().pushFrontViewController(newNavigationController, animated: true)
+            
             break
         case 2: //About
-            let viewControllerObj = self.storyboard?.instantiateViewControllerWithIdentifier(IDENTIFIER_ABOUT_VIEW_CONTROLLER) as? AboutViewController
-            self.navigationController?.pushViewController(viewControllerObj!, animated: true)
-
+//            let viewControllerObj = self.storyboard?.instantiateViewControllerWithIdentifier(IDENTIFIER_ABOUT_VIEW_CONTROLLER) as? AboutViewController
+//            self.navigationController?.pushViewController(viewControllerObj!, animated: true)
+            let newFrontViewController = self.storyboard?.instantiateViewControllerWithIdentifier(IDENTIFIER_ABOUT_VIEW_CONTROLLER) as? AboutViewController
+            let newNavigationController = UINavigationController(rootViewController: newFrontViewController!)
+            self.revealViewController().pushFrontViewController(newNavigationController, animated: true)
+            
             break
         case 2: //Contact Us
-            let viewControllerObj = self.storyboard?.instantiateViewControllerWithIdentifier(IDENTIFIER_CONTACT_US_VIEW_CONTROLLER) as? ContactUsViewController
-            self.navigationController?.pushViewController(viewControllerObj!, animated: true)
+//            let viewControllerObj = self.storyboard?.instantiateViewControllerWithIdentifier(IDENTIFIER_CONTACT_US_VIEW_CONTROLLER) as? ContactUsViewController
+//            self.navigationController?.pushViewController(viewControllerObj!, animated: true)
+
+            let newFrontViewController = self.storyboard?.instantiateViewControllerWithIdentifier(IDENTIFIER_CONTACT_US_VIEW_CONTROLLER) as? ContactUsViewController
+            let newNavigationController = UINavigationController(rootViewController: newFrontViewController!)
+            self.revealViewController().pushFrontViewController(newNavigationController, animated: true)
             
             break
         case 2: //Logout
 //            let viewControllerObj = self.storyboard?.instantiateViewControllerWithIdentifier(IDENTIFIER_ABOUT_VIEW_CONTROLLER) as? AboutViewController
 //            self.navigationController?.pushViewController(viewControllerObj!, animated: true)
+            let newFrontViewController = self.storyboard?.instantiateViewControllerWithIdentifier(IDENTIFIER_ABOUT_VIEW_CONTROLLER) as? AboutViewController
+            let newNavigationController = UINavigationController(rootViewController: newFrontViewController!)
+            self.revealViewController().pushFrontViewController(newNavigationController, animated: true)
             
             break
         default:
             print("Not a valid option selected")
         }
+        
+       
     }
 }

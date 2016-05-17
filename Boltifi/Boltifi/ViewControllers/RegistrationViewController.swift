@@ -18,6 +18,9 @@ class RegistrationViewController : BaseViewController, UITextFieldDelegate {
     @IBOutlet weak var txtName: UITextField!
     @IBOutlet weak var btnSender: UIButton!
     @IBOutlet weak var btnDriver: UIButton!
+    @IBOutlet weak var btnGlobalMenu: UIButton!
+    @IBOutlet weak var underlineView: UIImageView!
+    @IBOutlet weak var contentView: UIView!
     
     //MARK: - Button action methods
     @IBAction func btnSenderTapped(sender: AnyObject) {
@@ -38,11 +41,26 @@ class RegistrationViewController : BaseViewController, UITextFieldDelegate {
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
+    @IBAction func btnGlobalMenuTapped(sender: AnyObject) {
+        self.setUpGlobalMenu(self.btnGlobalMenu)
+    }
+    
+    
     //MARK: - View life cycle methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.hideKeyboardWhenTappedAround() 
+        self.hideKeyboardWhenTappedAround()
+        self.view.backgroundColor = UIColor.whiteColor()
+        self.applyStyles()
+    }
+    
+    //MARK: - Private Methods
+    func applyStyles() {
+        styleObj.applyStyle(CPStylist.MyStylesheet.ButtonStyle, view: self.btnDriver)
+        styleObj.applyStyle(CPStylist.MyStylesheet.ButtonStyle, view: self.btnSender)
+        styleObj.applyStyle(CPStylist.MyStylesheet.ContentViewStyle, view: contentView)
+        self.underlineView.backgroundColor = UNDERLINE_COLOR
     }
     
     //MARK: - TextField Delegate methods

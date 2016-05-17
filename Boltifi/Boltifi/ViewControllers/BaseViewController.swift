@@ -29,6 +29,9 @@ extension UIViewController {
 
 class BaseViewController: UIViewController {
 
+    //MARK:- Variables & Constants
+    let styleObj = CPStylist()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -42,12 +45,21 @@ class BaseViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    //MARK: Alert Methods
     func showAlertWithText(alertText: NSString) {
         let alert = UIAlertController(title: ALERT_TITLE, message: alertText as String, preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction(UIAlertAction(title: ALERT_BUTTON_OK, style: UIAlertActionStyle.Default, handler: nil))
         self.presentViewController(alert, animated: true, completion: nil)
     }
     
+    func showAlertWithTextButtons(alertText: NSString, okBtnText: String, cancelBtnText:String) {
+        let alert = UIAlertController(title: ALERT_TITLE, message: alertText as String, preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: okBtnText, style: UIAlertActionStyle.Default, handler: nil))
+        alert.addAction(UIAlertAction(title: cancelBtnText, style: UIAlertActionStyle.Cancel, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    //MARK: Global Menu Methods
     func setUpGlobalMenu(button: UIButton) {
         if self.revealViewController() != nil {
             self.revealViewController().rightViewRevealOverdraw = 0
@@ -65,7 +77,6 @@ class BaseViewController: UIViewController {
 //        let controller = self.storyboard?.instantiateViewControllerWithIdentifier(identifier as String) as! aClass
 //        self.navigationController?.pushViewController(controller, animated: true)
 //    }
-    
     
 }
 

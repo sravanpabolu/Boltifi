@@ -11,10 +11,6 @@ import UIKit
 
 class LoginViewController : BaseViewController{
     
-    //MARK:- Variables & Constants
-    let styleObj = CPStylist()
-
-    
     //MARK:- Properties
     
     //UIViews
@@ -32,6 +28,7 @@ class LoginViewController : BaseViewController{
     @IBOutlet weak var forgotPasswordButton: UIButton!
     @IBOutlet weak var googleButton: UIButton!
     @IBOutlet weak var facebookButton: UIButton!
+    @IBOutlet weak var btnGlobalMenu: UIButton!
     
    // @IBOutlet weak var vwUserCredentials: UIView!
     
@@ -56,7 +53,11 @@ class LoginViewController : BaseViewController{
         // Dispose of any resources that can be recreated.
     }
     
-    // MARK:- Actions
+    // MARK:- Button Actions
+    @IBAction func btnGlobalMenuTapped(sender: AnyObject) {
+        self.setUpGlobalMenu(self.btnGlobalMenu)
+    }
+    
     @IBAction func loginBtnTapped(sender: AnyObject) {
         
         if (txtPassword.text == nil || txtEmailAddress.text == nil ||
@@ -98,7 +99,7 @@ class LoginViewController : BaseViewController{
         styleObj.applyStyle(CPStylist.MyStylesheet.TextFieldStyle, view: txtPassword)
         styleObj.applyStyle(CPStylist.MyStylesheet.PasswordPaddingStyle, view: txtPassword)
         styleObj.applyStyle(CPStylist.MyStylesheet.ContentViewStyle, view: contentView)
-        styleObj.applyStyle(CPStylist.MyStylesheet.SubmitButtonStyle, view: signInButton)
+        styleObj.applyStyle(CPStylist.MyStylesheet.ButtonStyle, view: signInButton)
 
         
         underlineImage.backgroundColor = UNDERLINE_COLOR

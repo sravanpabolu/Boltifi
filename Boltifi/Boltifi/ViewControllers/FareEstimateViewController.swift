@@ -10,8 +10,29 @@ import Foundation
 
 class FareEstimateViewController: BaseViewController {
     
+    @IBOutlet weak var btnEstimateFare: UIButton!
+    @IBOutlet weak var btnGlobalMenu: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Styling
+        self.applyStyles()
+    }
+    
+    //MARK: - Private Methods
+    func applyStyles() {
+        //TODO: Apply styles for text fields
+        styleObj.applyStyle(CPStylist.MyStylesheet.ButtonStyle, view: self.btnEstimateFare)
+    }
+    
+    //MARK: - Button Action Methods
+    @IBAction func btnGlobalMenuTapped(sender: AnyObject) {
+        self.setUpGlobalMenu(self.btnGlobalMenu)
+    }
+    
+    @IBAction func btnEstimateFareTapped(sender: AnyObject) {
+        self.showAlertWithTextButtons(ALERT_FARE_ESTIMATE_TEXT, okBtnText: ALERT_BUTTON_OK, cancelBtnText: ALERT_BUTTON_CANCEL)
     }
     
     override func didReceiveMemoryWarning() {

@@ -2,11 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "motor_bike.png",
+      "filename" : "GlobalMenu.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "GlobalMenu@2x.png",
       "scale" : "2x"
     },
     {

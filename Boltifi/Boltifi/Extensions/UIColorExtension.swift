@@ -19,3 +19,18 @@ extension UIColor {
         )
     }
 }
+
+//for messages, sent from xib
+extension CALayer {
+    func setShadowUIColor(shadowUIColor: UIColor) {
+        self.shadowColor = shadowUIColor.CGColor
+    }
+}
+
+//@implementation CALayer (Xib)
+//
+//- (void)setShadowUIColor:(UIColor *)shadowUIColor {
+//    self.shadowColor = shadowUIColor.CGColor;
+//}
+//
+//@end

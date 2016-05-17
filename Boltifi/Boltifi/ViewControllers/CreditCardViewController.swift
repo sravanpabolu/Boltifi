@@ -10,10 +10,6 @@ import UIKit
 
 class CreditCardViewController: BaseViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate  {
     
-    
-    //MARK:- Variables & Constants
-    let styleObj = CPStylist()
-    
     //MARK:- Properties
     @IBOutlet weak var month: UITextField!
     @IBOutlet weak var contentView: UIView!
@@ -24,6 +20,7 @@ class CreditCardViewController: BaseViewController, UINavigationControllerDelega
     @IBOutlet weak var creditCard: UITextField!
     @IBOutlet weak var nameOnCreditCard: UITextField!
     @IBOutlet weak var underlineImage: UIImageView!
+    @IBOutlet weak var btnGlobalMenu: UIButton!
     
     
     //MARK:- View LifeCycle
@@ -43,6 +40,11 @@ class CreditCardViewController: BaseViewController, UINavigationControllerDelega
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    //MARK: Button Action Methods
+    @IBAction func btnGlobalMenuTapped(sender: AnyObject) {
+        self.setUpGlobalMenu(self.btnGlobalMenu)
     }
     
     // MARK:- TextField Delegates
@@ -73,8 +75,7 @@ class CreditCardViewController: BaseViewController, UINavigationControllerDelega
     }
     
     //MARK:- Private Methods
-    func applyStyles()
-    {
+    func applyStyles() {
         //Styling
         styleObj.applyStyle(CPStylist.MyStylesheet.TextFieldStyle, view: creditCard)
         styleObj.applyStyle(CPStylist.MyStylesheet.TextFieldStyle, view: year)
