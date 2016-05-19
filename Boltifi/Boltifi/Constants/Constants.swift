@@ -9,7 +9,13 @@
 import Foundation
 import UIKit
 
-
+enum GlobalMenuOptions:Int {
+    case Home
+    case SeeHowItWorks
+    case About
+    case ContactUs
+    case Logout
+}
 
 
 
