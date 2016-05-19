@@ -35,8 +35,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SWRevealViewControllerDel
         }
 
         //TODO: Remove the following line
-//        frontVC = storyboard.instantiateViewControllerWithIdentifier("RegistrationViewController")
-        let rearVC = storyboard.instantiateViewControllerWithIdentifier("GlobalMenuTableViewController")
+//        frontVC = storyboard.instantiateViewControllerWithIdentifier(IDENTIFIER_CONTACT_US_VIEW_CONTROLLER)
+        let rearVC = storyboard.instantiateViewControllerWithIdentifier(IDENTIFIER_GLOBAL_MENU_TABLE_VIEW_CONTROLLER)
         
         let frontNavigationController   = UINavigationController(rootViewController: frontVC)
         let rearNavigationController    = UINavigationController(rootViewController: rearVC)
@@ -51,34 +51,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SWRevealViewControllerDel
         self.window!.rootViewController = self.viewController;
         self.window?.makeKeyAndVisible()
 
-        
-        
-//        if(!(NSUserDefaults.standardUserDefaults().boolForKey(KEY_APP_LAUNCH_FIRST_TIME))) {
-//            //Set first time launch
-//            NSUserDefaults.standardUserDefaults().setBool(true, forKey: KEY_APP_LAUNCH_FIRST_TIME)
-//            NSUserDefaults.standardUserDefaults().synchronize()
-//           
-//            //Show Registration Screen
-//            // Access the storyboard and fetch an instance of the view controller
-//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//            let viewController: RegistrationViewController = storyboard.instantiateViewControllerWithIdentifier("RegistrationViewController") as! RegistrationViewController
-//
-//            // Then push that view controller onto the navigation stack
-//            let rootViewController = self.window!.rootViewController as! UINavigationController
-//            rootViewController.pushViewController(viewController, animated: true)
-//        } else {
-//            //Show Login Screen
-//            // Access the storyboard and fetch an instance of the view controller
-//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//            let viewController: LoginViewController = storyboard.instantiateViewControllerWithIdentifier(IDENTIFIER_LOGIN_VIEW_CONTROLLER) as! LoginViewController
-////              let viewController: CreditCardViewController = storyboard.instantiateViewControllerWithIdentifier(IDENTIFIER_CREDIT_CARD) as! CreditCardViewController
-//            
-//            // Then push that view controller onto the navigation stack
-//            let rootViewController = self.window!.rootViewController as! UINavigationController
-//            rootViewController.pushViewController(viewController, animated: true)
-//        }
-        
-        
         //For Google Maps
         GMSServices.provideAPIKey(GOOGLE_MAPS_API_KEY)
         

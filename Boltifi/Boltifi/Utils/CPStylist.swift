@@ -39,7 +39,7 @@ class CPStylist{
         {
 
         case .TextFieldStyle :
-            var border = CALayer()
+            let border = CALayer()
             border.borderColor = UNDERLINE_COLOR.CGColor //UIColor.lightGrayColor().CGColor
             border.borderWidth = 1
            // border.frame = CGRect(x: 0, y: view.frame.size.height - 1, width:1000, height: 1)
