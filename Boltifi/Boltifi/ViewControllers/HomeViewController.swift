@@ -45,8 +45,15 @@ class HomeViewController : BaseViewController, CLLocationManagerDelegate, GMSMap
             sliderImage = UIImage(named: "truck")!
         }
         
+//        print("\(sender.frame)")
+//        let thumbImageWidth:CGFloat = 64
+//        let thumbImageCenter:CGFloat = self.xPositionFromSliderValue(self.slider) - (thumbImageWidth/2)
+        
+        
+        
         let center = self.xPositionFromSliderValue(self.slider)
-        print("\(self.slider.value) ======= \(center)"  )
+//        print("\(self.slider.value) ==== \(center) ==== \(thumbImageCenter)"  )
+        
         self.slider.setThumbImage(sliderImage, forState: UIControlState.Normal)
     }
     
