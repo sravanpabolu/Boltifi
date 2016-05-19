@@ -75,7 +75,7 @@ class GlobalMenuTableViewController: UITableViewController {
             self.revealViewController().pushFrontViewController(newNavigationController, animated: true)
             
             break
-        case 2: //Contact Us
+        case 3: //Contact Us
 //            let viewControllerObj = self.storyboard?.instantiateViewControllerWithIdentifier(IDENTIFIER_CONTACT_US_VIEW_CONTROLLER) as? ContactUsViewController
 //            self.navigationController?.pushViewController(viewControllerObj!, animated: true)
 
@@ -84,7 +84,7 @@ class GlobalMenuTableViewController: UITableViewController {
             self.revealViewController().pushFrontViewController(newNavigationController, animated: true)
             
             break
-        case 2: //Logout
+        case 4: //Logout
 //            let viewControllerObj = self.storyboard?.instantiateViewControllerWithIdentifier(IDENTIFIER_ABOUT_VIEW_CONTROLLER) as? AboutViewController
 //            self.navigationController?.pushViewController(viewControllerObj!, animated: true)
             let newFrontViewController = self.storyboard?.instantiateViewControllerWithIdentifier(IDENTIFIER_ABOUT_VIEW_CONTROLLER) as? AboutViewController
