@@ -24,12 +24,21 @@ class RegistrationViewController : BaseViewController, UITextFieldDelegate {
     
     //MARK: - Button action methods
     @IBAction func btnSenderTapped(sender: AnyObject) {
-        if(!self.validateTextFields()) {
-            return
-        }
-    
-        let controller = self.storyboard?.instantiateViewControllerWithIdentifier(IDENTIFIER_HOME_VIEW_CONTROLLER) as! HomeViewController
-        self.navigationController?.pushViewController(controller, animated: true)
+        
+        let registrationWebService: RegistrationWebService = RegistrationWebService()
+        registrationWebService.registerUser(
+            self.txtName.text!,
+            email: self.txtEmail.text!,
+            mobileNumber: self.txtMobile.text!,
+            password: self.txtPassword.text!,
+            userType: "Sender");
+        
+//        if(!self.validateTextFields()) {
+//            return
+//        }
+//    
+//        let controller = self.storyboard?.instantiateViewControllerWithIdentifier(IDENTIFIER_HOME_VIEW_CONTROLLER) as! HomeViewController
+//        self.navigationController?.pushViewController(controller, animated: true)
     }
     
     @IBAction func btnDriverTapped(sender: AnyObject) {

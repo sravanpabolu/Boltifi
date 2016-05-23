@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '4F125F21DBD287C7996D30C7'
+               BlueprintIdentifier = '109C2980B5CDC3FA2FB7CEED'
                BlueprintName = 'Pods-Boltifi'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libPods-Boltifi.a'>
+               BuildableName = 'Pods_Boltifi.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

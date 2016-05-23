@@ -10,7 +10,8 @@
 #define Boltifi_Boltifi_Bridging_Header_h
 
 #import <GoogleMaps/GoogleMaps.h>
-#import <SWRevealViewController/SWRevealViewController.h>
+#import "SWRevealViewController.h"
 #import <AFNetworking/AFNetworking.h>
+//#import "AFNetworking.h"
 
 #endif

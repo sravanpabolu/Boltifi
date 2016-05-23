@@ -52,3 +52,9 @@ let ALERT_BUTTON_CANCEL = "Cancel"
 
 let NAVIGATION_BAR_COLOR = UIColor(rgb: 0xFDCC42)//F9C143
 let UNDERLINE_COLOR = UIColor(rgb: 0xDCDCDC)
+
+//MARK: Webservice urls
+let BASE_URL            = "http://52.39.228.252:8080/BoltifiUser/UserManagement?"
+//let REGISTRATION_URL    = "method=REG&name=Ravi&emailId=ravinder@gmail.com&mobileNumber=886678&password=password&userType=Sender"
+let LOGIN_URL           = "method=LOGIN&emailId=ravinder@gmail.com&password=password"
+
