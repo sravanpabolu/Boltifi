@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28745BF182BBF738EAB06EE5 /* libPods-Boltifi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A9DCB53536AC77DA9D1C5C1C /* libPods-Boltifi.a */; };
 		A044680D1CD7CB96000C5A67 /* CPStylist.swift in Sources */ = {isa = PBXBuildFile; fileRef = A044680C1CD7CB96000C5A67 /* CPStylist.swift */; };
 		A04468101CD7CD0F000C5A67 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A044680F1CD7CD0F000C5A67 /* UIColorExtension.swift */; };
 		A09651871CDD94FD00E66DD2 /* CreditCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09651861CDD94FD00E66DD2 /* CreditCardViewController.swift */; };
@@ -86,6 +87,9 @@
 		A0E4D0021CDBD85600081F0F /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		A0E4D0031CDBD85600081F0F /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		A0FCD1DB1CD7F2A2004C5905 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		A9DCB53536AC77DA9D1C5C1C /* libPods-Boltifi.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Boltifi.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4EC0858DEA1BF6752A2A6A9 /* Pods-Boltifi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boltifi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Boltifi/Pods-Boltifi.debug.xcconfig"; sourceTree = "<group>"; };
+		EC407AC846DC25696D29CB19 /* Pods-Boltifi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boltifi.release.xcconfig"; path = "Pods/Target Support Files/Pods-Boltifi/Pods-Boltifi.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,12 +111,22 @@
 				A0BB39581CD4BAFC00AE0AFB /* SystemConfiguration.framework in Frameworks */,
 				A0BB39441CD4BA9600AE0AFB /* AVFoundation.framework in Frameworks */,
 				A0BB39421CD4BA7F00AE0AFB /* GoogleMaps.framework in Frameworks */,
+				28745BF182BBF738EAB06EE5 /* libPods-Boltifi.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		377C7EF00061B83E1C2E2A36 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B4EC0858DEA1BF6752A2A6A9 /* Pods-Boltifi.debug.xcconfig */,
+				EC407AC846DC25696D29CB19 /* Pods-Boltifi.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A044680E1CD7CCFD000C5A67 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +179,8 @@
 			children = (
 				A0A97BBB1CD3DB32008420D4 /* Boltifi */,
 				A0A97BBA1CD3DB32008420D4 /* Products */,
+				377C7EF00061B83E1C2E2A36 /* Pods */,
+				F8E88FF7E88DFA8BB63ECC75 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -271,6 +287,14 @@
 			path = SWRevealViewController;
 			sourceTree = "<group>";
 		};
+		F8E88FF7E88DFA8BB63ECC75 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A9DCB53536AC77DA9D1C5C1C /* libPods-Boltifi.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -278,9 +302,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A0A97BD81CD3DB32008420D4 /* Build configuration list for PBXNativeTarget "Boltifi" */;
 			buildPhases = (
+				EE3D09D34CC402E3B6DD7F8C /* Check Pods Manifest.lock */,
 				A0A97BB51CD3DB32008420D4 /* Sources */,
 				A0A97BB61CD3DB32008420D4 /* Frameworks */,
 				A0A97BB71CD3DB32008420D4 /* Resources */,
+				BD04FE933D0C95391CEBD952 /* Embed Pods Frameworks */,
+				F276C14E3B95BBF997041D1E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -338,6 +365,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BD04FE933D0C95391CEBD952 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Boltifi/Pods-Boltifi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE3D09D34CC402E3B6DD7F8C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F276C14E3B95BBF997041D1E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Boltifi/Pods-Boltifi-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A0A97BB51CD3DB32008420D4 /* Sources */ = {
@@ -472,6 +547,7 @@
 		};
 		A0A97BD91CD3DB32008420D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4EC0858DEA1BF6752A2A6A9 /* Pods-Boltifi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -489,6 +565,7 @@
 		};
 		A0A97BDA1CD3DB32008420D4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC407AC846DC25696D29CB19 /* Pods-Boltifi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
