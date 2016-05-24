@@ -60,16 +60,19 @@ class LoginViewController : BaseViewController{
     
     @IBAction func loginBtnTapped(sender: AnyObject) {
         
-        if (txtPassword.text == nil || txtEmailAddress.text == nil ||
-            txtPassword.text!.isEmpty || txtEmailAddress.text!.isEmpty
-            ) {
-                print(ERROR_MANDATORY_EMPTY_FIELD)
-                self.showAlertWithText(ERROR_MANDATORY_EMPTY_FIELD)
-                return
-        }
+//        if (txtPassword.text == nil || txtEmailAddress.text == nil ||
+//            txtPassword.text!.isEmpty || txtEmailAddress.text!.isEmpty
+//            ) {
+//                print(ERROR_MANDATORY_EMPTY_FIELD)
+//                self.showAlertWithText(ERROR_MANDATORY_EMPTY_FIELD)
+//                return
+//        }
+
+        let webService: RegistrationWebService = RegistrationWebService()
+        webService.loginUser(self.txtEmailAddress.text!, password: self.txtPassword.text!)
         
-        let controller = self.storyboard?.instantiateViewControllerWithIdentifier(IDENTIFIER_HOME_VIEW_CONTROLLER) as! HomeViewController
-        self.navigationController?.pushViewController(controller, animated: true)
+//        let controller = self.storyboard?.instantiateViewControllerWithIdentifier(IDENTIFIER_HOME_VIEW_CONTROLLER) as! HomeViewController
+//        self.navigationController?.pushViewController(controller, animated: true)
     }
 
     

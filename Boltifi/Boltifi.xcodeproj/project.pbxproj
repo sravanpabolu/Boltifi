@@ -33,6 +33,7 @@
 		A0BB395B1CD4BC2F00AE0AFB /* GoogleMaps.bundle in Frameworks */ = {isa = PBXBuildFile; fileRef = A0BB393F1CD4BA7F00AE0AFB /* GoogleMaps.bundle */; };
 		A0BB395C1CD4BC3F00AE0AFB /* GoogleMaps.bundle in Sources */ = {isa = PBXBuildFile; fileRef = A0BB393F1CD4BA7F00AE0AFB /* GoogleMaps.bundle */; };
 		A0BB39611CD4BF7400AE0AFB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BB39601CD4BF7400AE0AFB /* Constants.swift */; };
+		A0C029CD1CF4D14800E7A41F /* HTTPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C029CC1CF4D14800E7A41F /* HTTPHelper.swift */; };
 		A0C034661CDCFD040017E108 /* GlobalMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C034651CDCFD040017E108 /* GlobalMenuTableViewController.swift */; };
 		A0C034681CDD03EF0017E108 /* GlobalMenuCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C034671CDD03EF0017E108 /* GlobalMenuCustomCell.swift */; };
 		A0C0346C1CDD29CE0017E108 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0C0346B1CDD29CE0017E108 /* Images.xcassets */; };
@@ -74,6 +75,7 @@
 		A0BB394E1CD4BAFC00AE0AFB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		A0BB39591CD4BB0800AE0AFB /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		A0BB39601CD4BF7400AE0AFB /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A0C029CC1CF4D14800E7A41F /* HTTPHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPHelper.swift; sourceTree = "<group>"; };
 		A0C034651CDCFD040017E108 /* GlobalMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalMenuTableViewController.swift; sourceTree = "<group>"; };
 		A0C034671CDD03EF0017E108 /* GlobalMenuCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalMenuCustomCell.swift; sourceTree = "<group>"; };
 		A0C0346B1CDD29CE0017E108 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 		A0CDA6571CD3FE9500F18955 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				A0C029CC1CF4D14800E7A41F /* HTTPHelper.swift */,
 				A0CDA6581CD3FE9500F18955 /* Utils.swift */,
 				A044680C1CD7CB96000C5A67 /* CPStylist.swift */,
 			);
@@ -445,6 +448,7 @@
 				A0A97BBF1CD3DB32008420D4 /* AppDelegate.swift in Sources */,
 				A0CDA65E1CD3FE9500F18955 /* Utils.swift in Sources */,
 				A0CDA6641CD3FE9500F18955 /* HomeViewController.swift in Sources */,
+				A0C029CD1CF4D14800E7A41F /* HTTPHelper.swift in Sources */,
 				A0CDA6601CD3FE9500F18955 /* BaseViewController.swift in Sources */,
 				A0BB39611CD4BF7400AE0AFB /* Constants.swift in Sources */,
 				A0DAA8B31CF390F100D1C615 /* RegistrationWebService.swift in Sources */,
