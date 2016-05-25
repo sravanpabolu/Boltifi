@@ -44,7 +44,7 @@
 		A0CDA6621CD3FE9500F18955 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CDA65B1CD3FE9500F18955 /* LoginViewController.swift */; };
 		A0CDA6641CD3FE9500F18955 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CDA65C1CD3FE9500F18955 /* HomeViewController.swift */; };
 		A0CDA6661CD3FE9500F18955 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CDA65D1CD3FE9500F18955 /* RegistrationViewController.swift */; };
-		A0DAA8B31CF390F100D1C615 /* RegistrationWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DAA8B21CF390F100D1C615 /* RegistrationWebService.swift */; };
+		A0DAA8B31CF390F100D1C615 /* WebServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DAA8B21CF390F100D1C615 /* WebServiceManager.swift */; };
 		A0E4D0041CDBD85600081F0F /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E4D0031CDBD85600081F0F /* SWRevealViewController.m */; };
 		A0FCD1DC1CD7F2A2004C5905 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FCD1DB1CD7F2A2004C5905 /* AboutViewController.swift */; };
 /* End PBXBuildFile section */
@@ -87,7 +87,7 @@
 		A0CDA65C1CD3FE9500F18955 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A0CDA65D1CD3FE9500F18955 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		A0CDA6681CD48A7900F18955 /* Boltifi-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Boltifi-Bridging-Header.h"; sourceTree = "<group>"; };
-		A0DAA8B21CF390F100D1C615 /* RegistrationWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationWebService.swift; sourceTree = "<group>"; };
+		A0DAA8B21CF390F100D1C615 /* WebServiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServiceManager.swift; sourceTree = "<group>"; };
 		A0E4D0021CDBD85600081F0F /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		A0E4D0031CDBD85600081F0F /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		A0FCD1DB1CD7F2A2004C5905 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
@@ -139,45 +139,6 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		A09651881CDDA37C00E66DD2 /* SourceCode */ = {
-			isa = PBXGroup;
-			children = (
-				A096518C1CDDA3E800E66DD2 /* Utilities */,
-				A096518B1CDDA3DE00E66DD2 /* Service */,
-				A096518A1CDDA3C000E66DD2 /* Model */,
-				A09651891CDDA3B000E66DD2 /* ViewControllers */,
-			);
-			name = SourceCode;
-			sourceTree = "<group>";
-		};
-		A09651891CDDA3B000E66DD2 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = ViewControllers;
-			sourceTree = "<group>";
-		};
-		A096518A1CDDA3C000E66DD2 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Model;
-			sourceTree = "<group>";
-		};
-		A096518B1CDDA3DE00E66DD2 /* Service */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Service;
-			sourceTree = "<group>";
-		};
-		A096518C1CDDA3E800E66DD2 /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Utilities;
-			sourceTree = "<group>";
-		};
 		A0A97BB01CD3DB32008420D4 = {
 			isa = PBXGroup;
 			children = (
@@ -200,7 +161,6 @@
 			isa = PBXGroup;
 			children = (
 				A0DAA8B11CF390DC00D1C615 /* WebServices */,
-				A09651881CDDA37C00E66DD2 /* SourceCode */,
 				A0E4D0011CDBD85600081F0F /* SWRevealViewController */,
 				A044680E1CD7CCFD000C5A67 /* Extensions */,
 				A0BB395F1CD4BF7400AE0AFB /* Constants */,
@@ -287,7 +247,7 @@
 		A0DAA8B11CF390DC00D1C615 /* WebServices */ = {
 			isa = PBXGroup;
 			children = (
-				A0DAA8B21CF390F100D1C615 /* RegistrationWebService.swift */,
+				A0DAA8B21CF390F100D1C615 /* WebServiceManager.swift */,
 			);
 			path = WebServices;
 			sourceTree = "<group>";
@@ -451,7 +411,7 @@
 				A0C029CD1CF4D14800E7A41F /* HTTPHelper.swift in Sources */,
 				A0CDA6601CD3FE9500F18955 /* BaseViewController.swift in Sources */,
 				A0BB39611CD4BF7400AE0AFB /* Constants.swift in Sources */,
-				A0DAA8B31CF390F100D1C615 /* RegistrationWebService.swift in Sources */,
+				A0DAA8B31CF390F100D1C615 /* WebServiceManager.swift in Sources */,
 				A04468101CD7CD0F000C5A67 /* UIColorExtension.swift in Sources */,
 				A0C034701CDD2FEC0017E108 /* ContactUsViewController.swift in Sources */,
 			);

@@ -1,5 +1,5 @@
 //
-//  RegistrationWebService.swift
+//  WebServiceManager.swift
 //  Boltifi
 //
 //  Created by Sravan on 24/05/16.
@@ -9,11 +9,13 @@
 import Foundation
 import AFNetworking
 
-class RegistrationWebService: NSObject {
+class WebServiceManager: NSObject {
     
+    //MARK: Objects
     let manager = AFHTTPSessionManager()
     let httpObj = HTTPHelper()
     
+    //MARK: Methods
     func registerUser(
         name: String,
         email: String,
@@ -142,5 +144,101 @@ class RegistrationWebService: NSObject {
                 
             }
         }
+    }
+    
+    func distanceBetweenAreas(fromArea: String, toArea: String) {
+        let distanceURL = "http://maps.googleapis.com/maps/api/directions/json?origin=Dilsuk%20nagar,%20Hyderabad&destination=Madhapur,%20Hyderabad&sensor=false"
+//        var distanceRequest = NSMutableURLRequest(URL: NSURL(string: distanceURL)!)
+        
+        
+//        let distanceData = NSData(contentsOfURL: NSURL(string: distanceURL)!)
+//        var error: NSError?
+//        let dictionary: Dictionary<NSObject, AnyObject> = NSJSONSerialization.JSONObjectWithData(distanceData!, options: NSJSONReadingOptions.MutableContainers) as! Dictionary<NSObject, AnyObject>
+        
+//        NSJSONSerialization.JSONObjectWithData(distanceData, options: NSJSONReadingOptions.MutableContainers)
+        
+        
+        
+//        httpObj.httpGet(distanceRequest) { (dictResult, error) -> Void in
+//            if(error == nil) {
+//                print("distance between areas response : \(dictResult)")
+//            }
+//            
+//            if(dictResult as! NSObject != []) {
+//                var routes = dictResult[0] ["routes"]
+//                
+//            }
+//        }
+        
+        self.calculateDistance(url: distanceURL) { (distance) -> Void in
+            print("Distance: \(distance)");
+        }
+    }
+    
+    func calculateDistance(url urlString: String, completion: (distance: Double?) -> Void) {
+        
+//        let service = "https://maps.googleapis.com/maps/api/directions/json"
+//        let originLat = origin.coordinate.latitude
+//        let originLong = origin.coordinate.longitude
+//        let destLat = destination.coordinate.latitude
+//        let destLong = destination.coordinate.longitude
+//        let urlString = "\(service)?origin=\(originLat),\(originLong)&destination=\(destLat),\(destLong)&mode=driving&units=metric&sensor=true&key=<YOUR_KEY>"
+        let directionsURL = NSURL(string: urlString)
+        
+        let request = NSMutableURLRequest(URL: directionsURL!)
+        
+        request.HTTPMethod = "GET"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("application/json", forHTTPHeaderField: "Accept")
+
+//        AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:baseURL];
+//        manager.responseSerializer = [AFJSONResponseSerializer serializer];
+        
+
+        
+        manager.GET(urlString, parameters: nil, progress:nil, success: { (dataTask, responseObject) -> Void in
+            print("Reponse Object: \(responseObject)")
+            
+            if let result = responseObject as? NSDictionary {
+                if let routes = result["routes"] as? [NSDictionary] {
+                    if let lines = routes[0]["overview_polyline"] as? NSDictionary {
+                        if let points = lines["points"] as? String {
+                            let path = GMSPath(fromEncodedPath: points)
+                            let distance = GMSGeometryLength(path)
+                            print("wow \(distance / 1000) KM")
+                            
+                        }
+                    }
+                }
+            }
+
+            }, failure: { (dataTask, error) -> Void in
+                print("Error: \(error.localizedDescription)")
+        })
+
+        
+//        let operation = AFHTTPRequestOperation(request: request)
+//        operation.responseSerializer = AFJSONResponseSerializer()
+        
+//        operation.setCompletionBlockWithSuccess({ (operation: AFHTTPRequestOperation!, responseObject: AnyObject!) -> Void in
+//            
+//            if let result = responseObject as? NSDictionary {
+//                if let routes = result["routes"] as? [NSDictionary] {
+//                    if let lines = routes[0]["overview_polyline"] as? NSDictionary {
+//                        if let points = lines["points"] as? String {
+//                            let path = GMSPath(fromEncodedPath: points)
+//                            let distance = GMSGeometryLength(path)
+//                            print("wow \(distance / 1000) KM")
+//                            
+//                        }
+//                    }
+//                }
+//            }
+//            }) { (operation: AFHTTPRequestOperation!, error: NSError!)  -> Void in
+//                print("\(error)")
+//        }
+//        
+//        operation.start()
+        
     }
 }

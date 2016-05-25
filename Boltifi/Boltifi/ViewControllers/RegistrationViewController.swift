@@ -25,7 +25,7 @@ class RegistrationViewController : BaseViewController, UITextFieldDelegate {
     //MARK: - Button action methods
     @IBAction func btnSenderTapped(sender: AnyObject) {
         
-        let registrationWebService: RegistrationWebService = RegistrationWebService()
+        let registrationWebService: WebServiceManager = WebServiceManager()
         registrationWebService.registerUser(
             self.txtName.text!,
             email: self.txtEmail.text!,

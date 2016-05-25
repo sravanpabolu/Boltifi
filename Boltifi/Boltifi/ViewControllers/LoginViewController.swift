@@ -68,7 +68,7 @@ class LoginViewController : BaseViewController{
 //                return
 //        }
 
-        let webService: RegistrationWebService = RegistrationWebService()
+        let webService: WebServiceManager = WebServiceManager()
         webService.loginUser(self.txtEmailAddress.text!, password: self.txtPassword.text!)
         
 //        let controller = self.storyboard?.instantiateViewControllerWithIdentifier(IDENTIFIER_HOME_VIEW_CONTROLLER) as! HomeViewController

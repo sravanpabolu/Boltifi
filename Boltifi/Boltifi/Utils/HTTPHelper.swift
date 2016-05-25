@@ -22,6 +22,7 @@ class HTTPHelper: NSObject, NSURLSessionDelegate, NSURLSessionTaskDelegate {
     
     func httpGet(request: NSMutableURLRequest!, callback: (AnyObject,
         AnyObject?) -> Void) {
+            print("Request URL: \(request.URL)");
             var configuration =
             NSURLSessionConfiguration.defaultSessionConfiguration()
             var session = NSURLSession(configuration: configuration,
@@ -48,11 +49,11 @@ class HTTPHelper: NSObject, NSURLSessionDelegate, NSURLSessionTaskDelegate {
 //                    let dictResult: AnyObject! = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: NSError) as AnyObject?
 //                    let dictResult:AnyObject = NSJSONSerialization.JSONObjectWithData(data!,
 //                        options: NSJSONReadingOptions.MutableContainers)
-                    
+                    print("respose: \(response)")
                     callback(strData!, nil)
                 }
                 else {
-                    
+                    print("Error: \(error)")
                     callback("", error!.localizedDescription)
                     
                 }
