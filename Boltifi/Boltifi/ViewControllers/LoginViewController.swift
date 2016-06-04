@@ -57,13 +57,13 @@ class LoginViewController : BaseViewController{
     
     @IBAction func loginBtnTapped(sender: AnyObject) {
         
-//        if (txtPassword.text == nil || txtEmailAddress.text == nil ||
-//            txtPassword.text!.isEmpty || txtEmailAddress.text!.isEmpty
-//            ) {
-//                DLog(ERROR_MANDATORY_EMPTY_FIELD)
-//                self.showAlertWithText(ERROR_MANDATORY_EMPTY_FIELD)
-//                return
-//        }
+        if (txtPassword.text == nil || txtEmailAddress.text == nil ||
+            txtPassword.text!.isEmpty || txtEmailAddress.text!.isEmpty
+            ) {
+                DLog(ERROR_MANDATORY_EMPTY_FIELD)
+                self.showAlertWithText(alertTitle: ALERT_TITLE, alertText: ERROR_MANDATORY_EMPTY_FIELD)
+                return
+        }
         
         self.showActivityIndicator(self.view, message: MSG_LOGIN)
         let webService: WebServiceManager = WebServiceManager()

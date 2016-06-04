@@ -27,7 +27,7 @@ let GOOGLE_MAPS_API_KEY = "AIzaSyDeQl_MfFQ1a8Ox7NmUhJWzSywNevT2w2w"
 let PICK_UP_LOCATION = "SET PICK/DROP POINT"
 let DROP_LOCAION = "Set as drop point"
 
-let ERROR_MANDATORY_EMPTY_FIELD = "Please fill all mandatory fields"
+let ERROR_MANDATORY_EMPTY_FIELD = "Please fill all the fields"
 let ERROR_PASSWORDS_NO_MATCH = "Oops.., Passwords doesn't match"
 
 let KEY_APP_LAUNCH_FIRST_TIME = "isFirstLaunch"

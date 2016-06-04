@@ -25,15 +25,13 @@ class RegistrationViewController : BaseViewController, UITextFieldDelegate {
     //MARK: - Button action methods
     @IBAction func btnSenderTapped(sender: AnyObject) {
         
-//        if(!self.validateTextFields()) {
-//            return
-//        }
+        if(!self.validateTextFields()) {
+            return
+        }
 
-        
         self.showActivityIndicator(self.view, message: MSG_REGISTRATION)
         
         let registrationWebService: WebServiceManager = WebServiceManager()
-        
         registrationWebService.registerUser(
             name: self.txtName.text!,
             email: self.txtEmail.text!,

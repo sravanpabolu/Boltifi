@@ -34,6 +34,10 @@ class FareEstimateViewController: BaseViewController {
     }
     
     @IBAction func btnEstimateFareTapped(sender: AnyObject) {
+        if(!self.validateTextFields()) {
+            return
+        }
+
         let distanceRequest = WebServiceManager()
         
         //TODO: Add validations to text fields
@@ -77,6 +81,16 @@ class FareEstimateViewController: BaseViewController {
         self.hideActivityIndicator(self.view)
         let alertText = "Distance: \(calculatedDistance).\n" + ALERT_FARE_ESTIMATE_TEXT + ALERT_CONTINUE_TEXT
         self.showAlertWithTextButtons(alertText, okBtnText: ALERT_BUTTON_OK, cancelBtnText: ALERT_BUTTON_CANCEL)
+    }
+    
+    func validateTextFields() -> Bool {
+        //Check for empty string
+        if (self.txtPickupLocation.text!.isEmpty || self.txtDropLocation.text!.isEmpty
+            ) {
+                self.showAlertWithText(alertTitle: ALERT_TITLE, alertText: ERROR_MANDATORY_EMPTY_FIELD)
+                return false
+        }
+        return true
     }
     
     override func didReceiveMemoryWarning() {
