@@ -284,7 +284,7 @@
                                                     </mask>
                                                 </variation>
                                                 <connections>
-                                                    <action selector="btnSenderTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="5Ef-Jc-zk5"/>
+                                                    <action selector="btnSenderTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="F1w-X2-Rbs"/>
                                                 </connections>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="90x-aC-nP2">
@@ -2049,6 +2049,8 @@ Track your stuff while its being delivered.</string>
                         <outlet property="btnEstimateFare" destination="swa-YZ-Mbj" id="mCw-5a-qsA"/>
                         <outlet property="btnGlobalMenu" destination="a9U-0y-HHA" id="VOW-50-jp3"/>
                         <outlet property="searchDisplayController" destination="kEp-t4-mFB" id="fVE-ik-Zfw"/>
+                        <outlet property="txtDropLocation" destination="U61-W6-Yge" id="we8-L1-gxn"/>
+                        <outlet property="txtPickupLocation" destination="6Ab-ZQ-8Bp" id="XiU-Jn-sB0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iTc-Qp-AUS" userLabel="First Responder" sceneMemberID="firstResponder"/>

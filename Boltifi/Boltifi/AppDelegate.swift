@@ -35,7 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SWRevealViewControllerDel
         }
 
         //TODO: Remove the following line
-//        frontVC = storyboard.instantiateViewControllerWithIdentifier(IDENTIFIER_CONTACT_US_VIEW_CONTROLLER)
+//        frontVC = storyboard.instantiateViewControllerWithIdentifier(IDENTIFIER_REGISTRATION_VIEW_CONTROLLER)
         let rearVC = storyboard.instantiateViewControllerWithIdentifier(IDENTIFIER_GLOBAL_MENU_TABLE_VIEW_CONTROLLER)
         
         let frontNavigationController   = UINavigationController(rootViewController: frontVC)

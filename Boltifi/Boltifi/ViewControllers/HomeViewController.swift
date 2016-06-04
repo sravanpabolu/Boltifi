@@ -45,11 +45,11 @@ class HomeViewController : BaseViewController, CLLocationManagerDelegate, GMSMap
             sliderImage = UIImage(named: "truck")!
         }
         
-//        print("\(sender.frame)")
+//        DLog("\(sender.frame)")
 //        let thumbImageWidth:CGFloat = 64
 //        let thumbImageCenter:CGFloat = self.xPositionFromSliderValue(self.slider) - (thumbImageWidth/2)        
 //        let center = self.xPositionFromSliderValue(self.slider)
-//        print("\(self.slider.value) ==== \(center) ==== \(thumbImageCenter)"  )
+//        DLog("\(self.slider.value) ==== \(center) ==== \(thumbImageCenter)"  )
         
         self.slider.setThumbImage(sliderImage, forState: UIControlState.Normal)
     }
@@ -137,8 +137,8 @@ class HomeViewController : BaseViewController, CLLocationManagerDelegate, GMSMap
             let locationObj = locationArray.lastObject as! CLLocation
             var coord = locationObj.coordinate
             
-//            println(coord.latitude)
-//            println(coord.longitude)
+//            DLogln(coord.latitude)
+//            DLogln(coord.longitude)
 //        }
     }
     
@@ -205,17 +205,17 @@ class HomeViewController : BaseViewController, CLLocationManagerDelegate, GMSMap
     }
 
     func didTapMyLocationButtonForMapView(mapView: GMSMapView!) -> Bool {
-        print("Current location button : \(__FUNCTION__)")
+        DLog("Current location button : \(__FUNCTION__)")
         return true
     }
     
     func mapView(mapView: GMSMapView!, didTapInfoWindowOfMarker marker: GMSMarker!) {
-        print(__FUNCTION__)
+        DLog(__FUNCTION__)
         self.showFareEstimateView()
     }
     
     func showFareEstimateView() {
-        print(__FUNCTION__)
+        DLog(__FUNCTION__)
 //        self.buttonsView.hidden = true
 //        self.fareEstimateView.hidden = false
 
@@ -225,7 +225,7 @@ class HomeViewController : BaseViewController, CLLocationManagerDelegate, GMSMap
     }
     
 //    func mapView(mapView: GMSMapView!, didTapMarker marker: GMSMarker!) -> Bool {
-//        println(__FUNCTION__)
+//        DLogln(__FUNCTION__)
 //        
 ////        self.locationMarker = GMSMarker(position: coordinate)
 ////        marker.map = mapView
@@ -244,19 +244,19 @@ class HomeViewController : BaseViewController, CLLocationManagerDelegate, GMSMap
 //    }
     
     func mapView(mapView: GMSMapView!, didTapOverlay overlay: GMSOverlay!) {
-        print(__FUNCTION__)
+        DLog(__FUNCTION__)
     }
     
 //    func mapView(mapView: GMSMapView!, markerInfoContents marker: GMSMarker!) -> UIView! {
-//        println(__FUNCTION__)
+//        DLogln(__FUNCTION__)
 //    }
 //    
 //    func mapView(mapView: GMSMapView!, markerInfoWindow marker: GMSMarker!) -> UIView! {
-//        println(__FUNCTION__)
+//        DLogln(__FUNCTION__)
 //    }
     
     func mapView(mapView: GMSMapView!, didTapAtCoordinate coordinate: CLLocationCoordinate2D) {
-        print(__FUNCTION__)
+        DLog(__FUNCTION__)
     }
 
 }

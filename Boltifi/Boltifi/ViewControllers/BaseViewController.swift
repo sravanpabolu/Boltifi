@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 //extension NSObject {
 //    class func fromClassName(className : String) -> NSObject {
@@ -46,8 +47,8 @@ class BaseViewController: UIViewController {
     }
 
     //MARK: Alert Methods
-    func showAlertWithText(alertText: NSString) {
-        let alert = UIAlertController(title: ALERT_TITLE, message: alertText as String, preferredStyle: UIAlertControllerStyle.Alert)
+    func showAlertWithText(alertTitle alertTitle: String, alertText: String) {
+        let alert = UIAlertController(title: alertTitle, message: alertText, preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction(UIAlertAction(title: ALERT_BUTTON_OK, style: UIAlertActionStyle.Default, handler: nil))
         self.presentViewController(alert, animated: true, completion: nil)
     }
@@ -67,6 +68,20 @@ class BaseViewController: UIViewController {
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
             self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
         }
+    }
+    
+    //MARK: Activity Indicator Methods
+    func showActivityIndicator(contentView: UIView, message: String!) {
+        let hud = MBProgressHUD.showHUDAddedTo(contentView, animated: true)
+        if(message == nil) {
+            hud.labelText = MSG_LOADING
+        } else {
+            hud.labelText = message
+        }
+    }
+    
+    func hideActivityIndicator(contentView: UIView) {
+        MBProgressHUD.hideAllHUDsForView(contentView, animated: true)
     }
     
     //TODO:
