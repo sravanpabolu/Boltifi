@@ -284,7 +284,7 @@
                                                     </mask>
                                                 </variation>
                                                 <connections>
-                                                    <action selector="btnSenderTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="5Ef-Jc-zk5"/>
+                                                    <action selector="btnSenderTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="F1w-X2-Rbs"/>
                                                 </connections>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="90x-aC-nP2">

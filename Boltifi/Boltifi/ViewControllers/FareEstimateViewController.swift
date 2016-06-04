@@ -38,9 +38,45 @@ class FareEstimateViewController: BaseViewController {
         
         //TODO: Add validations to text fields
         
-        distanceRequest.distanceBetweenAreas(self.txtPickupLocation.text!, toArea: self.txtDropLocation.text!)
-        
-//        self.showAlertWithTextButtons(ALERT_FARE_ESTIMATE_TEXT, okBtnText: ALERT_BUTTON_OK, cancelBtnText: ALERT_BUTTON_CANCEL)
+        self.showActivityIndicator(self.view, message: MSG_LOADING)
+        distanceRequest.distanceBetweenAreas(
+            fromArea: self.txtPickupLocation.text!,
+            toArea: self.txtDropLocation.text!,
+            webServiceCallBack: { (result, error) -> () in
+                
+                if error == nil {
+                    let status = result!["status"] as! NSString
+                    if status.isEqualToString(RESP_ZERO_RESULTS) {
+                        self.showAlertWithText(alertTitle: ALERT_TITLE, alertText: ALERT_NO_RESULTS)
+                    } else if status.isEqualToString(RESP_OK) {
+                        if let routes = result!["routes"] as? [NSDictionary] {
+                            if let lines = routes[0]["overview_polyline"] as? NSDictionary {
+                                if let points = lines["points"] as? String {
+                                    let path = GMSPath(fromEncodedPath: points)
+                                    let distance = GMSGeometryLength(path)
+                                    self.showAlertWithCalculatedDistance(distance)
+                                }
+                            }
+                        }
+                    } else {
+                        self.showAlertWithText(alertTitle: ALERT_ERROR_TITLE, alertText: ALERT_TRY_AGAIN)
+                    }
+                } else {
+                    //To remove optional() from logs, we need to use this if let
+                    if let errorDescription = String?(error!) {
+                        self.showAlertWithText(alertTitle: ALERT_ERROR_TITLE, alertText: "Error: \(errorDescription)")
+                    }
+                }
+                
+                self.hideActivityIndicator(self.view)
+        }
+        )
+    }
+    
+    func showAlertWithCalculatedDistance(calculatedDistance: Double) {
+        self.hideActivityIndicator(self.view)
+        let alertText = "Distance: \(calculatedDistance).\n" + ALERT_FARE_ESTIMATE_TEXT + ALERT_CONTINUE_TEXT
+        self.showAlertWithTextButtons(alertText, okBtnText: ALERT_BUTTON_OK, cancelBtnText: ALERT_BUTTON_CANCEL)
     }
     
     override func didReceiveMemoryWarning() {

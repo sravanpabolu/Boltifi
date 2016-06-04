@@ -25,20 +25,38 @@ class RegistrationViewController : BaseViewController, UITextFieldDelegate {
     //MARK: - Button action methods
     @IBAction func btnSenderTapped(sender: AnyObject) {
         
-        let registrationWebService: WebServiceManager = WebServiceManager()
-        registrationWebService.registerUser(
-            self.txtName.text!,
-            email: self.txtEmail.text!,
-            mobileNumber: self.txtMobile.text!,
-            password: self.txtPassword.text!,
-            userType: "Sender");
-        
 //        if(!self.validateTextFields()) {
 //            return
 //        }
-//    
-//        let controller = self.storyboard?.instantiateViewControllerWithIdentifier(IDENTIFIER_HOME_VIEW_CONTROLLER) as! HomeViewController
-//        self.navigationController?.pushViewController(controller, animated: true)
+
+        
+        self.showActivityIndicator(self.view, message: MSG_REGISTRATION)
+        
+        let registrationWebService: WebServiceManager = WebServiceManager()
+        
+        registrationWebService.registerUser(
+            name: self.txtName.text!,
+            email: self.txtEmail.text!,
+            mobileNumber: self.txtMobile.text!,
+            password: self.txtPassword.text!,
+            userType: "Sender",
+            webServiceCallBack: { (result, error) -> () in
+                
+                if error == nil {
+                    self.navigateToNextScreen()
+                } else {
+                    self.showAlertWithText(alertTitle: ALERT_ERROR_TITLE, alertText: "Error: \(error)")
+                }
+                
+                self.hideActivityIndicator(self.view)
+            }
+        )
+    }
+    
+    func navigateToNextScreen() {
+        self.hideActivityIndicator(self.view)
+        let controller = self.storyboard?.instantiateViewControllerWithIdentifier(IDENTIFIER_HOME_VIEW_CONTROLLER) as! HomeViewController
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     
     @IBAction func btnDriverTapped(sender: AnyObject) {
@@ -81,9 +99,9 @@ class RegistrationViewController : BaseViewController, UITextFieldDelegate {
     func textFieldDidEndEditing(textField: UITextField) {
         if(textField == self.txtEmail) {
             if(Utils.isValidEmail(textField.text!)) {
-                print("Valid Email") ;
+                DLog("Valid Email") ;
             } else {
-                print("Invalid Email") ;
+                DLog("Invalid Email") ;
             }
         }
     }
@@ -96,29 +114,21 @@ class RegistrationViewController : BaseViewController, UITextFieldDelegate {
             self.txtConfirmPassword.text!.isEmpty ||
             self.txtMobile.text!.isEmpty
             ) {
-                print(ERROR_MANDATORY_EMPTY_FIELD)
-                self.showAlertWithText(ERROR_MANDATORY_EMPTY_FIELD)
+                self.showAlertWithText(alertTitle: ALERT_TITLE, alertText: ERROR_MANDATORY_EMPTY_FIELD)
                 return false
         }
         
         if (self.txtPassword.text != self.txtConfirmPassword.text) {
-            print(ERROR_PASSWORDS_NO_MATCH)
-            self.showAlertWithText(ERROR_PASSWORDS_NO_MATCH)
+            self.showAlertWithText(alertTitle: ALERT_TITLE, alertText: ERROR_PASSWORDS_NO_MATCH)
             return false
         }
         
         return true
     }
     
-
-    
-    
-    
     //MARK: - Memory Management
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
 }

@@ -6,5 +6,9 @@ use_frameworks!
 target 'Boltifi' do
 	pod 'AFNetworking'
     #    pod 'SWRevealViewController'
+#    pod "SWActivityIndicatorView"
+#    pod 'DejalActivityView'
+#    pod "SwiftSpinner"
+    pod 'MBProgressHUD'
 end
 

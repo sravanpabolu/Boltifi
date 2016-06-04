@@ -30,12 +30,9 @@ class LoginViewController : BaseViewController{
     @IBOutlet weak var facebookButton: UIButton!
     @IBOutlet weak var btnGlobalMenu: UIButton!
     
-   // @IBOutlet weak var vwUserCredentials: UIView!
+    // @IBOutlet weak var vwUserCredentials: UIView!
     
-    
-    
-   //MARK:- View Life Cycle
-    
+    //MARK:- View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -63,18 +60,34 @@ class LoginViewController : BaseViewController{
 //        if (txtPassword.text == nil || txtEmailAddress.text == nil ||
 //            txtPassword.text!.isEmpty || txtEmailAddress.text!.isEmpty
 //            ) {
-//                print(ERROR_MANDATORY_EMPTY_FIELD)
+//                DLog(ERROR_MANDATORY_EMPTY_FIELD)
 //                self.showAlertWithText(ERROR_MANDATORY_EMPTY_FIELD)
 //                return
 //        }
-
-        let webService: WebServiceManager = WebServiceManager()
-        webService.loginUser(self.txtEmailAddress.text!, password: self.txtPassword.text!)
         
-//        let controller = self.storyboard?.instantiateViewControllerWithIdentifier(IDENTIFIER_HOME_VIEW_CONTROLLER) as! HomeViewController
-//        self.navigationController?.pushViewController(controller, animated: true)
+        self.showActivityIndicator(self.view, message: MSG_LOGIN)
+        let webService: WebServiceManager = WebServiceManager()
+        webService.loginUser(
+            self.txtEmailAddress.text!
+            , password: self.txtPassword.text!
+            , webServiceCallBack: { (result, error) -> () in
+                
+                if error == nil {
+                    self.navigateToNextScreen()
+                } else {
+                    self.showAlertWithText(alertTitle: ALERT_ERROR_TITLE, alertText: "Error: \(error)")
+                }
+                
+                self.hideActivityIndicator(self.view)
+            }
+        )
     }
-
+    
+    func navigateToNextScreen() {
+        self.hideActivityIndicator(self.view)
+        let controller = self.storyboard?.instantiateViewControllerWithIdentifier(IDENTIFIER_HOME_VIEW_CONTROLLER) as! HomeViewController
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
     
     @IBAction func signUp(sender: AnyObject) {
         let controller = self.storyboard?.instantiateViewControllerWithIdentifier(IDENTIFIER_REGISTRATION_VIEW_CONTROLLER) as! RegistrationViewController
@@ -94,7 +107,7 @@ class LoginViewController : BaseViewController{
         
         styleObj.applyStyle(CPStylist.MyStylesheet.EmailPaddingStyle, view:self.txtEmailAddress) //for image on the left side
         styleObj.applyStyle(CPStylist.MyStylesheet.PasswordPaddingStyle, view:self.txtPassword) //for image on the left side
-//        styleObj.applyStyle(CPStylist.MyStylesheet.TextFieldStyle, view: self.txtEmailAddress) //for underline
+        //        styleObj.applyStyle(CPStylist.MyStylesheet.TextFieldStyle, view: self.txtEmailAddress) //for underline
         
         
         styleObj.applyStyle(CPStylist.MyStylesheet.TextFieldStyle, view: txtEmailAddress)
@@ -103,26 +116,13 @@ class LoginViewController : BaseViewController{
         styleObj.applyStyle(CPStylist.MyStylesheet.PasswordPaddingStyle, view: txtPassword)
         styleObj.applyStyle(CPStylist.MyStylesheet.ContentViewStyle, view: contentView)
         styleObj.applyStyle(CPStylist.MyStylesheet.ButtonStyle, view: signInButton)
-
+        
         
         underlineImage.backgroundColor = UNDERLINE_COLOR
         underline1.backgroundColor = UNDERLINE_COLOR
-//        signUpButton.setTitleColor(UIColor(rgb: 0x4A4A4A), forState: UIControlState.Normal)
-//        forgotPasswordButton.setTitleColor(UIColor(rgb: 0x4A4A4A), forState: UIControlState.Normal)
-//        signInButton.backgroundColor = UIColor.orangeColor()
-//
+        //        signUpButton.setTitleColor(UIColor(rgb: 0x4A4A4A), forState: UIControlState.Normal)
+        //        forgotPasswordButton.setTitleColor(UIColor(rgb: 0x4A4A4A), forState: UIControlState.Normal)
+        //        signInButton.backgroundColor = UIColor.orangeColor()
+        //
     }
-   
-    
 }
-
-
-
-
-    
-    
-
-
-
-
-
