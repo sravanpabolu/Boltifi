@@ -53,14 +53,14 @@ let ALERT_TITLE                 = "Alert"
 let ALERT_BUTTON_OK             = "OK"
 let ALERT_BUTTON_CANCEL         = "Cancel"
 let ALERT_ERROR_TITLE           = "Error"
-let ALERT_TRY_AGAIN             = "Some error while executing the request. Please try again"
-let ALERT_NO_RESULTS            = "No results found in the given areas. Please try again"
+let ALERT_NO_RESULTS            = "No results found in the given areas. Please try again."
 //let ALERT_BUTTON_YES    = "YES"
 //let ALERT_BUTTON_NO     = "NO"
 
 let MSG_LOADING                 = "Loading..."
 let MSG_REGISTRATION            = "Registering..."
 let MSG_LOGIN                   = "Please wait while we log you in."
+let MSG_TRY_AGAIN               = "Some error while executing the request. Please try again."
 
 let NAVIGATION_BAR_COLOR = UIColor(rgb: 0xFDCC42)//F9C143
 let UNDERLINE_COLOR = UIColor(rgb: 0xDCDCDC)

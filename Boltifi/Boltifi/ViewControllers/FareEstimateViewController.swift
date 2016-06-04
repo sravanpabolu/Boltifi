@@ -63,7 +63,7 @@ class FareEstimateViewController: BaseViewController {
                             }
                         }
                     } else {
-                        self.showAlertWithText(alertTitle: ALERT_ERROR_TITLE, alertText: ALERT_TRY_AGAIN)
+                        self.showAlertWithText(alertTitle: ALERT_ERROR_TITLE, alertText: MSG_TRY_AGAIN)
                     }
                 } else {
                     //To remove optional() from logs, we need to use this if let

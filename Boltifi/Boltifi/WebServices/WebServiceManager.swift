@@ -37,9 +37,10 @@ class WebServiceManager: NSObject {
             let _password       = "&password=" + password
             let _userType       = "&userType=" + userType
             
-            var registrationURL = BASE_URL + _serviceType + _name + _email + _mobile + _password + _userType
+            let registrationURL = BASE_URL + _serviceType + _name + _email + _mobile + _password + _userType
             
-            registrationURL = "http://52.39.228.252:8080/BoltifiUser/UserManagement?method=REG&name=Tuesday&emailId=tuesday@boltifi.com&mobileNumber=8888999900&password=tuesday&userType=Sender"
+//            registrationURL = "http://52.39.228.252:8080/BoltifiUser/UserManagement?method=REG&name=Tuesday&emailId=tuesday@boltifi.com&mobileNumber=8888999900&password=tuesday&userType=Sender"
+            
             let registrationRequest = NSMutableURLRequest(URL: NSURL(string: registrationURL)!)
             httpObj.httpGet(registrationRequest) {
                 (dictResult, error) -> Void in
@@ -57,8 +58,8 @@ class WebServiceManager: NSObject {
         let _userEmail      = "&emailId=" + userEmail
         let _password       = "&password=" + password
         
-        var loginURL = BASE_URL + _serviceType + _userEmail + _password
-        loginURL = "http://52.39.228.252:8080/BoltifiUser/UserManagement?method=LOGIN&emailId=ravinder@gmail.com&password=password"
+        let loginURL = BASE_URL + _serviceType + _userEmail + _password
+//        loginURL = "http://52.39.228.252:8080/BoltifiUser/UserManagement?method=LOGIN&emailId=ravinder@gmail.com&password=password"
         
         let loginRequest = NSMutableURLRequest(URL: NSURL(string: loginURL)!)
         httpObj.httpGet(loginRequest) {
@@ -75,22 +76,33 @@ class WebServiceManager: NSObject {
     
     func distanceBetweenAreas(fromArea fromArea: String, toArea: String, webServiceCallBack: webServiceResponseCallBack) {
         
-        let distanceUrl = "http://maps.googleapis.com/maps/api/directions/json?origin=Dilsuk%20nagar,%20Hyderabad&destination=Madhapur,%20Hyderabad&sensor=false"
+//        let distanceUrl = "http://maps.googleapis.com/maps/api/directions/json?origin=Dilsuk%20nagar,%20Hyderabad&destination=Madhapur,%20Hyderabad&sensor=false"
 
-        httpSessionManager.GET(
-            distanceUrl,
-            parameters: nil,
-            progress: nil,
-            success: { (dataTask, responseObject) -> Void in
-                let response = responseObject as! NSDictionary
-                webServiceCallBack(result: response, error: nil)
-            }, failure: { (dataTask, error) -> Void in
-                webServiceCallBack(result: nil, error: error.localizedDescription)
-            }
-        )
+        let distanceUrl =
+        "http://maps.googleapis.com/maps/api/directions/json?origin=" + fromArea + "&destination=" + toArea + "&sensor=false"
+        if let encodedDistanceURL = distanceUrl.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet()) {
+            
+            DLog("Distance URL \(encodedDistanceURL)")
+            
+            httpSessionManager.GET(
+                encodedDistanceURL,
+                parameters: nil,
+                progress: nil,
+                success: { (dataTask, responseObject) -> Void in
+                    let response = responseObject as! NSDictionary
+                    DLog("Maps Response: \(response)")
+                    webServiceCallBack(result: response, error: nil)
+                }, failure: { (dataTask, error) -> Void in
+                    DLog("Maps Error: \(error.localizedDescription)")
+                    webServiceCallBack(result: nil, error: error.localizedDescription)
+                }
+            )
+        } else {
+            DLog("Try Again...");
+            webServiceCallBack(result: nil, error: MSG_TRY_AGAIN)
+        }
     }
     
-    //TODO: Not required
 //    func calculateDistance(url urlString: String, completion: (distance: Double?) -> Void) -> String {
 //        
 ////        let service = "https://maps.googleapis.com/maps/api/directions/json"
@@ -100,7 +112,7 @@ class WebServiceManager: NSObject {
 ////        let destLong = destination.coordinate.longitude
 ////        let urlString = "\(service)?origin=\(originLat),\(originLong)&destination=\(destLat),\(destLong)&mode=driving&units=metric&sensor=true&key=<YOUR_KEY>"
 //        let directionsURL = NSURL(string: urlString)
-//        
+//
 //        let request = NSMutableURLRequest(URL: directionsURL!)
 //        
 //        request.HTTPMethod = "GET"
